@@ -1,0 +1,21 @@
+<% @places.each do |place| %>
+  <%= place.name %>
+  <strong><%= place.user.email %></strong>
+  <%= link_to 'Show', place %>
+  <% if policy(place).edit? %>
+    <%= link_to 'Edit', edit_place_path(place) %>
+  <% end %>
+  <% if policy(place).destroy? %>
+    <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <br>
+<% end %>
+
+
+<br>
+<br>
+<br>
+
+<%# if policy(Place).new? %>
+<%= link_to 'New Place', new_place_path %>
+<%# end %>
