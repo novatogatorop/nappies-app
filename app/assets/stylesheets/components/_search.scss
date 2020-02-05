@@ -1,0 +1,17 @@
+.search-box {
+  display: flex;
+  width: max-content;
+}
+
+.search-input {
+  border-radius: 3px 0px 0px 3px !important;
+  width: 100%;
+  border-right-style: none !important;
+  display: -webkit-box;
+}
+
+.search-submit {
+  padding: 7px;
+  border-radius: 0px 3px 3px 0px;
+  border-left-style: none;
+}
