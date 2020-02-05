@@ -16,8 +16,12 @@ class PlacePolicy < ApplicationPolicy
     true
   end
 
+  # def new?
+  #   false
+  # end
+
   def create?
-    user_or_admin?
+    true
   end
 
   def edit?
@@ -36,5 +40,9 @@ class PlacePolicy < ApplicationPolicy
 
   def user_or_admin?
     record.user == user || user.admin
+  end
+
+  def admin?
+    record.user == user.admin
   end
 end
