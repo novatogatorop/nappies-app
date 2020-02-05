@@ -1,5 +1,11 @@
 <p><%= @place.name %></p>
-<p><%= @place.user %></p>
+<p class="show-address"><%= @place.address %></p>
+<p><%= @place.user.first_name %></p>
 
-<p><%= link_to 'Edit', edit_place_path(@place) %></p> |
+<% if policy(@place).edit? %>
+  <p><%= link_to 'Edit', edit_place_path(@place) %></p>
+<% end %>
+<% if policy(@place).destroy? %>
+  <p class="show-type"><%= link_to 'destroy', place_path(@place.id), method: :delete, data: {confirm: "Are you sure?"} %></p>
+<% end %>
 <p><%= link_to 'Back', places_path %></p>

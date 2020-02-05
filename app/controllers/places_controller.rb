@@ -13,7 +13,6 @@ class PlacesController < ApplicationController
   def new
     @place = Place.new
     authorize @place
-
   end
 
   def create
@@ -25,6 +24,9 @@ class PlacesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
   end
 
   def update

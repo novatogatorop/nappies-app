@@ -1,6 +1,7 @@
 <% @places.each do |place| %>
   <%= place.name %>
-  <strong><%= place.user.email %></strong>
+  <%= place.address %>
+  <strong><%= place.user.username %></strong>
   <%= link_to 'Show', place %>
   <% if policy(place).edit? %>
     <%= link_to 'Edit', edit_place_path(place) %>
