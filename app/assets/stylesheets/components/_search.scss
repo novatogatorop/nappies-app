@@ -8,10 +8,12 @@
   width: 100%;
   border-right-style: none !important;
   display: -webkit-box;
+  color: $black;
 }
 
 .search-submit {
   padding: 7px;
   border-radius: 0px 3px 3px 0px;
   border-left-style: none;
+  border-color: $lightgrey;
 }
