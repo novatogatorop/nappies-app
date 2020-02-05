@@ -1,5 +1,6 @@
 <% @places.each do |place| %>
   <%= place.name %>
+  <%= place.address %>
   <strong><%= place.user.email %></strong>
   <%= link_to 'Show', place %>
   <% if policy(place).edit? %>
