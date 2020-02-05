@@ -1,1 +1,106 @@
-// Specific CSS for your home-page
+html {
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  @media(min-width: 900px){
+    font-size: 16px;
+  }
+
+  @media(min-width: 1200px){
+    font-size: 18px;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+body {
+  background-color: white;
+  font-family: $body-font;
+  line-height: 1.5;
+  color: $black;
+  letter-spacing: 0.1rem;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1.12em;
+}
+
+h5 {
+  font-size: .83em;
+}
+
+h6 {
+  font-size: .75em;
+}
+
+.edit-account {
+  margin-bottom: 50px;
+}
+
+.main-container{
+  margin: 50px 50px 0px;
+}
+
+.sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.banner {
+  background-image: url(nappie-bg2.jpeg);
+  width: cover;
+  height: 100vh;
+  position: relative;
+  background-position-y: 45%;
+}
+
+.title {
+  background-color: white;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 50%;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.no-decor-color {
+  text-decoration: none;
+  color: $darkgrey;
+}
+
+.no-decor-color:hover {
+  text-decoration: none;
+  color: $nappies;
+}
