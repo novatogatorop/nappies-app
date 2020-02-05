@@ -1,7 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <div class="logo-search">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <div class="logo-text">NAPPIES</div>
+      <% end %>
+
+    <%#= render 'shared/search' %>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,25 +15,38 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+        <li class="nav-item">
+          <%= link_to current_user.username.upcase, edit_user_registration_path, class: "nav-link" %>
+          <%#= link_to "Account", edit_user_registration_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%#= link_to "My Account", account_path(current_user), class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+        <li class="nav-item">
+          <%# if policy(Place).new? %>
+            <%= link_to "Create Place", new_place_path, class: "nav-link" %>
+          <%# end %>
         </li>
+        <%# if current_user[:photo] %>
+          <%#= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%# else %>
+          <%#= image_tag "profile-icon", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%# end %>
+        <div class="dropdown-menu dropdown-menu-right dp-down-r" aria-labelledby="navbarDropdown">
+          <%= link_to "Account", edit_user_registration_path, class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item no-decor-color" %>
+          <%#= link_to "My Profile", user_path(current_user), class: "dropdown-item" %>
+        </div>
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "register", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
+
+

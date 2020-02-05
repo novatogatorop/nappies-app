@@ -1,6 +1,14 @@
+.navbar {
+  position: fixed !important;
+  z-index: 1030 !important;
+  top: 0px;
+  width: 100%;
+}
+
 .navbar-lewagon {
+  padding: 10px 50px;
   justify-content: space-between;
-  background: white;
+  border-bottom: .5px solid $lightgrey;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +17,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  margin: 0px 3px;
+  color: $black !important;
+}
+
+.logo-text {
+  color: $nappies;
+  font-weight: 700;
+}
+
+.dropdown-menu-box {
+ top: 45px;
+}
+
+.logo-search {
+  display: flex;
+}
+
+.dp-down-r {
+  right: 16px;
 }
