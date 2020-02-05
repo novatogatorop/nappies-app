@@ -4,6 +4,11 @@ class PlacesController < ApplicationController
 
   def index
     @places = policy_scope(Place)
+    if params[:query].present?
+      @places = Place.global_search(params[:query])
+    else
+      @places = Place.all
+    end
   end
 
   def show
