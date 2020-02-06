@@ -1,5 +1,8 @@
-<h1>New Place</h1>
+<div class="main-container">
+  <div class="form-box">
+    <p class="sign-title">Create Place</p>
+    <%= render 'form', place: @place %>
 
-<%= render 'form', place: @place %>
-
-<%= link_to 'Back', places_path %>
+    <%= link_to 'Back', places_path %>
+  </div>
+</div>

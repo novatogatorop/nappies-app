@@ -1,0 +1,48 @@
+
+.show-images {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.show-img {
+  height: 350px;
+}
+
+.show-details-box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 50px auto;
+}
+
+.show-detail-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: 50px;
+}
+
+.show-type {
+  margin-bottom: 0px;
+  letter-spacing: 3px;
+}
+
+.show-title {
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  line-height: 30px;
+}
+
+.show-address {
+  margin-bottom: 0px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  color: $darkgrey;
+}
+
+.show-google-map {
+  margin-top: 30px;
+  width: 100%;
+  height: 500px;
+}
