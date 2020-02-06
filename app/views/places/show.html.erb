@@ -1,3 +1,5 @@
+<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill %>
+
 <p><%= @place.name %></p>
 <p class="show-address"><%= @place.address %></p>
 <p><%= @place.user.first_name %></p>
