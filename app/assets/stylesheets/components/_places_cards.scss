@@ -1,0 +1,38 @@
+
+.card {
+  margin-bottom: 10%;
+  background-color: transparent;
+  border: none;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.link:hover {
+  color: $nappies-dark;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.place-card-details {
+  margin-top: 5px;
+}
+
+.card-type {
+  letter-spacing: 0.3px;
+  width: 100%;
+  margin: 0;
+}
+
+.card-name {
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  width: 100%;
+  margin: 0;
+}

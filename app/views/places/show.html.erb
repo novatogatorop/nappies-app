@@ -1,13 +1,19 @@
-<%= cl_image_tag @place.photo1.key, height: 300, width: 400, crop: :fill %>
-<%= cl_image_tag @place.photo2.key, height: 300, width: 400, crop: :fill %>
-<%= cl_image_tag @place.photo3.key, height: 300, width: 400, crop: :fill %>
-
-<p><%= @place.name %></p>
-<p class="show-address"><%= @place.address %></p>
-<p><%= @place.user.first_name %></p>
+<div class="show-images"
+  <%= cl_image_tag @place.photo1.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @place.photo2.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @place.photo3.key, height: 300, width: 400, crop: :fill %>
+</div>
+<div class="show-details-box">
+  <div class="show-detail-box">
+    <p class="show-type"><%= @place.user.first_name %></p>
+    <p class="show-title"><%= @place.name %></p>
+    <p class="show-address"><%= @place.address %></p>
+    <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Direction</a>
+  </div>
+</div>
 
 <% if policy(@place).edit? %>
-  <p><%= link_to 'Edit', edit_place_path(@place) %></p>
+  <p class="show-type"><%= link_to 'Edit', edit_place_path(@place) %></p>
 <% end %>
 <% if policy(@place).destroy? %>
   <p class="show-type"><%= link_to 'destroy', place_path(@place.id), method: :delete, data: {confirm: "Are you sure?"} %></p>

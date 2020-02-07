@@ -1,0 +1,60 @@
+.form-box {
+  width: 30%;
+  margin: 100px auto;
+  color: $black;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: $lightgrey;
+  color: $black;
+}
+
+.form-control {
+  border: .5px solid $lightgrey;
+  border-radius: 3px;
+  font-weight: 300;
+  color: $black !important;
+}
+
+.form-control.is-valid {
+  border-color: $lightgrey;
+  background-image: none !important;
+  color: $black !important;
+}
+
+.form-control.is-valid:focus {
+  border-color: $lightgrey !important;
+  box-shadow: none !important;
+}
+
+.sign-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 3;
+}
+
+.sign-submit {
+  color: $nappies;
+  border: .5px solid;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.sign-submit:hover {
+  color: white;
+  background-color: $nappies;
+  border-color: $nappies;
+}
+
+.form-actions {
+  margin-bottom: 3rem;
+}
+
+.sign-label {
+  margin-bottom: 0px;
+}
+
+label{
+  margin-bottom: 0rem !important;
+}

@@ -1,0 +1,30 @@
+.btn-search {
+  height:100%;
+  width: 36px;
+}
+
+.btn-get-direction {
+  letter-spacing: 1px;
+  position: absolute;
+  right: 0px;
+  color: white;
+  border: 0.05rem solid;
+  border-radius: 0.2rem;
+  width: fit-content;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: $nappies;
+}
+
+.btn-get-direction:hover {
+  color: $nappies;
+  text-decoration: none;
+  border-color: $nappies;
+  background-color: white;
+}
+
+a.btn-get-direction {
+  text-decoration: none;
+}
