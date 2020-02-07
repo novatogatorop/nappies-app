@@ -1,21 +1,23 @@
 <div class="main-container">
   <div class="index-container">
     <div class="index-cards">
-      <%= render 'shared/places_cards' %>
+      <% @places.each do |place| %>
+        <%= cl_image_tag place.photo1.key, height: 300, width: 400, crop: :fill %>
+        <%= place.name %>
+        <%= place.address %>
+        <strong><%= place.user.email %></strong>
+        <%= link_to 'Show', place %>
+        <% if policy(place).edit? %>
+          <%= link_to 'Edit', edit_place_path(place) %>
+        <% end %>
+        <% if policy(place).destroy? %>
+          <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        <br>
+      <% end %>
     </div>
     <!-- <div class="index-map"> -->
       <%#= render 'shared/map' %>
     <!-- </div> -->
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-

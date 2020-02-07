@@ -34,7 +34,5 @@
         <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color' %>
     <% end %>
     <p>Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'no-decor-color' %></p>
-
-    <%#= link_to "Back", :back, :class => 'no-decor-color' %>
   </div>
 </div>

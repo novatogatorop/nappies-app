@@ -5,7 +5,9 @@
   <div class="form-inputs">
     <%= p.input :name %>
     <%= p.input :address %>
-    <%= p.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= p.input :photo1, as: :file %>
+    <%= p.input :photo2, as: :file %>
+    <%= p.input :photo3, as: :file %>
   </div>
 
   <div class="form-actions">
