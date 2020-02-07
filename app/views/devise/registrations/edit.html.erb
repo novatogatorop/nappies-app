@@ -28,6 +28,8 @@
 
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color' %>
+
   </div>
 <% end %>
 

@@ -1,4 +1,6 @@
-<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @place.photo1.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @place.photo2.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @place.photo3.key, height: 300, width: 400, crop: :fill %>
 
 <p><%= @place.name %></p>
 <p class="show-address"><%= @place.address %></p>

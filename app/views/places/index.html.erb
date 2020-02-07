@@ -1,4 +1,9 @@
 <% @places.each do |place| %>
+  <%= image_tag "nappie-bg.jpeg", height: 250, width: 150, crop: :fill %>
+
+  <%# place.each do |p| %>
+    <%#= cl_image_tag p.photo1.key, height: 300, width: 400, crop: :fill %>
+  <%# end %>
   <%= place.name %>
   <%= place.address %>
   <strong><%= place.user.email %></strong>

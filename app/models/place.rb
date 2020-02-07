@@ -1,6 +1,8 @@
 class Place < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_one_attached :photo1
+  has_one_attached :photo2
+  has_one_attached :photo3
 
 
   include PgSearch::Model
