@@ -9,10 +9,19 @@ class PlacesController < ApplicationController
     else
       @places = Place.all
     end
+    @geo_places = @places.geocoded
+    @markers = @geo_places.map do |place|
+      {
+        lat: place.latitude,
+        lng: place.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { place: place })
+      }
+    end
   end
 
   def show
-    @places
+    @markers = Array.new
+    @markers << { lat: @place.latitude, lng: @place.longitude }
   end
 
   def new
