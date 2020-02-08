@@ -1,0 +1,51 @@
+#map {
+  position: sticky;
+  object-fit: cover;
+}
+
+.map {
+  top: 57px;
+  width: 100%;
+  height: 100vh
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  position: relative;
+  background: #fff;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  padding: 0px !important;
+  pointer-events: auto;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 20px !important;
+  right: 8px !important;
+  top: 5px !important;
+}
+
+.map-image {
+  max-width: 200px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.map-type {
+  font-size: 0.7rem;
+  letter-spacing: 0.3px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.map-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  width: 100%;
+  margin-bottom: 4px;
+}
