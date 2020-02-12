@@ -1,0 +1,102 @@
+@media(max-width: 868px) {
+  .main-container {
+    width: 90%;
+    margin: 3.5rem auto 1rem !important;
+  }
+
+  // HOME PAGE
+
+  .banner {
+    background-image: url(nappie-bg.jpeg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top !important;
+  }
+
+  .title {
+    width: 70% !important;
+    font-size: 1.3rem !important;
+    font-weight: 100 !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  // ALERT
+
+  .alert {
+    width: max-content !important;
+  }
+
+  // NAVBAR
+
+  .navbar {
+    position: fixed !important;
+    z-index: 1030 !important;
+    top: 0px;
+    width: 100vw !important;
+    overflow: hidden !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .navbar-lewagon {
+    justify-content: space-between;
+    background-color: white;
+    letter-spacing: 1px;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  .navbar-lewagon .navbar-brand img {
+    width: 40px;
+  }
+
+  .nav-link {
+    letter-spacing: 1px;
+    margin: 0px 3px;
+  }
+
+  .dropdown-menu-box {
+   top: 45px;
+  }
+
+  .logo-text {
+    display: none !important;
+  }
+
+  // SEARCH
+
+  .placeholder-search {
+    padding-left: 0.5rem !important;
+  }
+
+  .search-submit {
+    padding: 5px !important;
+  }
+
+  // DEVISE
+
+  .form-box {
+    width: 100% !important;
+    margin: 0px auto;
+  }
+
+  .account-page-form-box {
+    width: 100% !important;
+    margin: 0px auto;
+  }
+
+  .form-inputs-box {
+    margin-bottom: 1rem !important;
+  }
+
+  .sign-submit {
+    color: #9ac4c1;
+    font-weight: 600;
+    border: 5px solid;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .sign-title{
+    font-size: 1.5rem !important;
+  }
+}

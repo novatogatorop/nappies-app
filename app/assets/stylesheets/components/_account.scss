@@ -1,0 +1,32 @@
+.account-page-form-box {
+  width: 50%;
+  margin: 130px auto;
+}
+
+.account-page-avatar {
+  height: 5rem;
+  width: 5rem;
+}
+
+.account-submit {
+  letter-spacing: 0.5px;
+  color: $darkgrey;
+  border: .5px solid;
+  border-radius: 3px;
+  width: max-content;
+  margin-bottom: 5rem 0px;
+  margin-right: 50px;
+}
+
+.account-submit:hover {
+  color: $nappies;
+  border-color: $nappies;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+
+
+

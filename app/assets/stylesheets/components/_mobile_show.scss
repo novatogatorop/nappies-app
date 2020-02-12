@@ -1,0 +1,53 @@
+@media(max-width: 868px) {
+  .img-show {
+    height: 22rem !important;
+  }
+
+  .show-details-box {
+    display: flex;
+    flex-direction: column;
+    width: 90% !important;
+    margin: 2rem auto !important;
+    align-items: center;
+  }
+
+  .show-detail-box {
+    margin-bottom: 0rem !important;
+    position: unset !important;
+  }
+
+  .show-type {
+    margin-bottom: 0rem !important ;
+    letter-spacing: 0.15rem !important;
+  }
+
+  .show-title {
+    letter-spacing: 0.15rem !important;
+    margin-bottom: 0rem !important;
+    line-height: 2rem !important;
+  }
+
+  .show-address {
+    margin-bottom: 0rem !important;
+    line-height: 2rem !important;
+    letter-spacing: 0.15rem !important;
+  }
+
+  .show-google-map {
+  width: 100%;
+  height: 20rem !important;
+  margin-top: 2rem !important;
+  }
+
+  .btn-get-direction {
+  letter-spacing: 0.08rem !important;
+  position: unset !important;
+  right: 0px;
+  border: 0.05rem solid !important;
+  border-radius: 0.2rem !important;
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+}
