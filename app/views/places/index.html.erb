@@ -1,20 +1,29 @@
 <div class="main-container">
   <div class="index-container">
     <div class="index-cards">
-      <% @places.each do |place| %>
-        <%= cl_image_tag place.photo1.key, height: 300, width: 400, crop: :fill %>
-        <%= place.name %>
-        <%= place.address %>
-        <strong><%= place.user.email %></strong>
-        <%= link_to 'Show', place %>
-        <% if policy(place).edit? %>
-          <%= link_to 'Edit', edit_place_path(place) %>
+      <div class="sub-container">
+        <% @places.each do |place| %>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <%= link_to place_path(place), class:"link", :action => 'go' do %>
+                <div class="show-images">
+                  <%= cl_image_tag place.photo1.key, class: 'card-image' %>
+                </div>
+                <div class="place-card-details">
+                  <pclass="card-name"><%= place.name %></p>
+                  <p><strong><%= place.user.email %></strong></p>
+                  <% if policy(place).edit? %>
+                    <p><%= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p>
+                  <% end %>
+                  <% if policy(place).destroy? %>
+                    <p><%= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
         <% end %>
-        <% if policy(place).destroy? %>
-          <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        <br>
-      <% end %>
+      </div>
     </div>
     <div class="index-map">
       <%= render 'shared/map' %>

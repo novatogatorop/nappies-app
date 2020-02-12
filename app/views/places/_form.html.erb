@@ -3,14 +3,15 @@
   <%= p.error_notification message: p.object.errors[:base].to_sentence if p.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= p.input :name %>
-    <%= p.input :address %>
-    <%= p.input :photo1, as: :file %>
-    <%= p.input :photo2, as: :file %>
-    <%= p.input :photo3, as: :file %>
+    <p><%= p.input :name %></p>
+    <p><%= p.input :address %></p>
+    <p><%= p.input :photo1, as: :file %></p>
+    <p><%= p.input :photo2, as: :file %></p>
+    <p><%= p.input :photo3, as: :file %></p>
   </div>
 
   <div class="form-actions">
-    <%= p.button :submit %>
+    <p><%= p.button :submit %></p>
+    <p><%= link_to 'Cancel', places_path, :class => 'no-decor-color' %></p>
   </div>
 <% end %>

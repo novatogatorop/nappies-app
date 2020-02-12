@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="form-box">
-    <div class="sign-title">Resend confirmation instructions</div>
+    <h1 class="sign-title">Resend confirmation instructions</h1>
 
     <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= f.error_notification %>
