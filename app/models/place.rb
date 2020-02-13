@@ -3,6 +3,8 @@ class Place < ApplicationRecord
   has_one_attached :photo1
   has_one_attached :photo2
   has_one_attached :photo3
+  has_one_attached :photo4
+  has_one_attached :photo5
 
   include PgSearch::Model
   pg_search_scope :global_search,

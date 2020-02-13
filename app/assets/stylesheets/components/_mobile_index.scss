@@ -20,7 +20,7 @@
     margin-top: 0rem !important;
     display: flex;
     flex-direction: row;
-    overflow: auto;
+    overflow-x: auto !important;
     flex-wrap: nowrap !important;
     height: 100% !important;
   }
@@ -43,6 +43,7 @@
     width: 6.3rem !important;
     border-radius: 0.5rem;
     margin: 0;
+    font-size: small;
   }
 
   .place-card-details {
@@ -74,16 +75,18 @@
     margin-right: 0rem !important;
     width: 100vw !important;
     max-width: -webkit-fill-available;
+    overflow-x: hidden !important;
   }
 
   .map {
     height: 60vh !important;
     width: 100% !important;
     top: 0rem !important;
+    overflow-x: hidden !important;
   }
 
   .map-image {
-    max-width: 4rem;
+    height: 22vh;
   }
 }
 
