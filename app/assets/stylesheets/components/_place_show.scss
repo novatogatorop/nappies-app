@@ -6,7 +6,7 @@
 }
 
 .show-img {
-  height: 350px;
+  height: 50vh;
 }
 
 .show-details-box {
@@ -25,11 +25,10 @@
 
 .show-type {
   margin-bottom: 0px;
-  letter-spacing: 3px;
 }
 
 .show-title {
-  letter-spacing: 3px;
+  letter-spacing: 0.05rem;
   margin-bottom: 0px;
   line-height: 30px;
 }
@@ -37,7 +36,6 @@
 .show-address {
   margin-bottom: 0px;
   line-height: 40px;
-  letter-spacing: 5px;
   color: $darkgrey;
 }
 

@@ -1,23 +1,23 @@
 <div class="show-images">
-  <%= cl_image_tag @place.photo1.key, height: 300, width: 400, crop: :fill %>
-  <%= cl_image_tag @place.photo2.key, height: 300, width: 400, crop: :fill %>
-  <%= cl_image_tag @place.photo3.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @place.photo1.key, class: 'show-img' %>
+  <%= cl_image_tag @place.photo2.key, class: 'show-img' %>
+  <%= cl_image_tag @place.photo3.key, class: 'show-img' %>
 </div>
 <div class="show-details-box">
   <div class="show-detail-box">
     <p class="show-type"><%#= @place.user.first_name %></p>
-    <p class="show-title"><%= @place.name %></p>
+    <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Direction</a>
-  </div>
-  <div>
-    <% if policy(@place).edit? %>
-      <p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color' %></p>
-    <% end %>
-    <% if policy(@place).destroy? %>
-      <p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p>
-    <% end %>
-    <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
+    <div>
+      <% if policy(@place).edit? %>
+        <p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color' %></p>
+      <% end %>
+      <% if policy(@place).destroy? %>
+        <p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p>
+      <% end %>
+      <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
+    </div>
   </div>
   <div
     id="map", class="show-google-map"
