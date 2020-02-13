@@ -1,15 +1,6 @@
 html {
-  font-size: 14px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-
-  @media(min-width: 900px){
-    font-size: 16px;
-  }
-
-  @media(min-width: 1200px){
-    font-size: 18px;
-  }
 }
 
 * {
@@ -28,6 +19,7 @@ html {
 }
 
 body {
+  font-size: 16px;
   background-color: white;
   font-family: $body-font;
   font-weight: 300;
@@ -35,7 +27,6 @@ body {
   color: $black;
   letter-spacing: 0.05rem;
   border-color: $lightgrey !important;
-  overflow-y: scroll;
 }
 
 h1 {

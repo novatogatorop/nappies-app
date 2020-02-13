@@ -10,8 +10,8 @@
     <p><%= p.input :photo3, as: :file %></p>
   </div>
 
-  <div class="form-actions">
-    <p><%= p.button :submit %></p>
-    <p><%= link_to 'Cancel', places_path, :class => 'no-decor-color' %></p>
+  <div class="form-actions mt-5">
+    <%= p.button :submit, :class => 'account-submit' %>
+    <%= link_to 'Cancel', places_path, :class => 'no-decor-color' %>
   </div>
 <% end %>

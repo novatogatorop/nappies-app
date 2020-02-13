@@ -1,4 +1,10 @@
-@media(max-width: 868px) {
+
+@media(max-width: 900px) {
+
+  body {
+    font-size: 14px !important;
+  }
+
   .main-container {
     width: 90%;
     margin: 3.5rem auto 1rem !important;
@@ -30,9 +36,6 @@
   // NAVBAR
 
   .navbar {
-    position: fixed !important;
-    z-index: 1030 !important;
-    top: 0px;
     width: 100vw !important;
     overflow: hidden !important;
     padding: 0.5rem 0.75rem !important;
@@ -69,7 +72,7 @@
   }
 
   .search-submit {
-    padding: 5px !important;
+    padding: 7.5px !important;
   }
 
   // DEVISE

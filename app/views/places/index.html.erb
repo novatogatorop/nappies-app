@@ -10,14 +10,13 @@
                   <%= cl_image_tag place.photo1.key, class: 'card-image' %>
                 </div>
                 <div class="place-card-details">
-                  <pclass="card-name"><%= place.name %></p>
-                  <p><strong><%= place.user.email %></strong></p>
-                  <% if policy(place).edit? %>
-                    <p><%= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p>
-                  <% end %>
-                  <% if policy(place).destroy? %>
-                    <p><%= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p>
-                  <% end %>
+                  <p class="card-name"><%= place.name %></p>
+                  <%# if policy(place).edit? %>
+                    <p><%#= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p>
+                  <%# end %>
+                  <%# if policy(place).destroy? %>
+                    <p><%#= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p>
+                  <%# end %>
                 </div>
               <% end %>
             </div>
