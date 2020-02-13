@@ -6,17 +6,19 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="card">
               <%= link_to place_path(place), class:"link", :action => 'go' do %>
-                <div class="show-images">
+                <div class="index-images">
                   <%= cl_image_tag place.photo1.key, class: 'card-image' %>
                 </div>
                 <div class="place-card-details">
                   <p class="card-name"><%= place.name %></p>
-                  <%# if policy(place).edit? %>
-                    <p><%#= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p>
-                  <%# end %>
-                  <%# if policy(place).destroy? %>
-                    <p><%#= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p>
-                  <%# end %>
+                  <div>
+                    <% if policy(place).edit? %>
+                      <p class="show-type"><%= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p>
+                    <% end %>
+                    <% if policy(place).destroy? %>
+                      <p class="show-type"><%= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p>
+                    <% end %>
+                  </div>
                 </div>
               <% end %>
             </div>

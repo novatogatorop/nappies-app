@@ -37,15 +37,20 @@
 
   .navbar {
     width: 100vw !important;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
     padding: 0.5rem 0.75rem !important;
   }
 
   .navbar-lewagon {
+    overflow-x: hidden !important;
     justify-content: space-between;
     background-color: white;
     letter-spacing: 1px;
     border-bottom: 1px solid $lightgrey;
+  }
+
+  .navbar-nav {
+    margin-top: 5px !important;
   }
 
   .navbar-lewagon .navbar-brand img {
