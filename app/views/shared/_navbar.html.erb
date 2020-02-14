@@ -1,9 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="logo-search">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <div class="logo-text">NAPPIES</div>
-      <% end %>
-
+    <% if user_signed_in? %>
+      <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
+    <% else %>
+      <%= link_to "NAPPIES", new_user_session_path, class: "navbar-brand logo-text" %>
+    <% end %>
+    <%#= link_to places_path, class: "navbar-brand" do %>
+      <!-- <div class="logo-text">NAPPIES</div> -->
+    <%# end %>
     <%= render 'shared/search' %>
   </div>
 
@@ -43,7 +47,7 @@
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
-          <%= link_to "register", new_user_registration_path, class: "nav-link" %>
+          <strong><%= link_to "SIGN UP", new_user_registration_path, class: "nav-link" %></strong>
         </li>
       <% end %>
     </ul>

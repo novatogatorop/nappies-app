@@ -68,26 +68,6 @@ h6 {
   margin-right: -15px;
 }
 
-.banner {
-  background-image: url(nappie-bg2.jpeg);
-  width: cover;
-  height: 100vh;
-  position: relative;
-  background-position-y: 45%;
-}
-
-.title {
-  background-color: white;
-  position: absolute;
-  top: 35%;
-  left: 5%;
-  width: 50%;
-  font-size: 52px;
-  font-weight: 700;
-  text-align: left;
-  padding-left: 2%;
-}
-
 .no-decor-color {
   text-decoration: none;
   color: $black;

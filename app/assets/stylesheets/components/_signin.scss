@@ -13,7 +13,6 @@
 .form-control {
   border: .5px solid $lightgrey;
   border-radius: 3px;
-  font-weight: 300;
   color: $black !important;
 }
 
@@ -31,19 +30,22 @@
 .sign-title {
   margin-bottom: 1.5rem;
   line-height: 3;
+  font-weight: 800;
 }
 
 .sign-submit {
-  color: $nappies;
   border: .5px solid;
   border-radius: 3px;
   width: 100%;
-}
-
-.sign-submit:hover {
+  font-weight: 700;
   color: white;
   background-color: $nappies;
   border-color: $nappies;
+}
+
+.sign-submit:hover {
+  color: $nappies;
+  background-color: white;
 }
 
 .form-actions {
