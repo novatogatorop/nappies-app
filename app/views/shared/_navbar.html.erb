@@ -21,6 +21,7 @@
         </li>
         <li class="nav-item">
           <%#= link_to "My Account", account_path(current_user), class: "nav-link" %>
+          <%#= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color nav-link' %>
         </li>
         <li class="nav-item">
           <%# if policy(Place).new? %>

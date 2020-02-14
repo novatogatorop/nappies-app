@@ -7,7 +7,11 @@
             <div class="card">
               <%= link_to place_path(place), class:"link", :action => 'go' do %>
                 <div class="index-images">
-                  <%= cl_image_tag place.photo1.key, class: 'card-image' %>
+                  <% if place.photo1.attached? %>
+                    <%= cl_image_tag place.photo1.key, class: 'card-image' %>
+                  <% else %>
+                    <%= image_tag "place-icon.png", class: 'card-image' %>
+                  <% end %>
                 </div>
                 <div class="place-card-details">
                   <p class="card-name"><%= place.name %></p>

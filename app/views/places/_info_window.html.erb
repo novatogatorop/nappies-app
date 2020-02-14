@@ -1,5 +1,9 @@
 <div class="map-info-images">
-  <%= cl_image_tag place.photo1.key, class: 'map-image' %>
+  <% if place.photo1.attached? %>
+    <%= cl_image_tag place.photo1.key, class: 'map-image' %>
+  <% else %>
+    <%= image_tag "place-icon.png", class: 'map-image' %>
+  <% end %>
 </div>
 <p class="map-name"><%= place.name %></p>
 
