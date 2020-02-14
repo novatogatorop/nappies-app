@@ -13,7 +13,6 @@
   // HOME PAGE
 
   .banner {
-    background-image: url(nappie-bg.jpeg) !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: top !important;
@@ -22,7 +21,6 @@
   .title {
     width: 70% !important;
     font-size: 1.3rem !important;
-    font-weight: 100 !important;
     padding-left: 3%;
     padding-right: 3%;
   }
@@ -30,7 +28,7 @@
   // ALERT
 
   .alert {
-    width: max-content !important;
+        width: 97.7% !important;
   }
 
   // NAVBAR
@@ -53,7 +51,7 @@
     margin-top: 5px !important;
   }
 
-  .navbar-lewagon .navbar-brand img {
+  .navbar-lewagon {
     width: 40px;
   }
 
@@ -98,7 +96,6 @@
 
   .sign-submit {
     color: #9ac4c1;
-    font-weight: 600;
     border: 5px solid;
     border-radius: 5px;
     width: 100%;
