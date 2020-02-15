@@ -21,7 +21,7 @@ class PlacePolicy < ApplicationPolicy
   # end
 
   def create?
-    true
+    admin?
   end
 
   def edit?
