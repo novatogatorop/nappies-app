@@ -31,18 +31,18 @@
 </div>
 <div class="show-details-box">
   <div class="show-detail-box">
-    <p class="show-type"><%#= @place.user.first_name %></p>
+    <!-- <p class="show-type"><%#= @place.user.first_name %></p> -->
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Direction</a>
-    <div>
+    <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
+    <div class="admin-authorize">
       <% if policy(@place).edit? %>
-        <p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color' %></p>
+        <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
       <% end %>
       <% if policy(@place).destroy? %>
-        <p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p>
+        <strong><p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p></strong>
       <% end %>
-      <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
     </div>
   </div>
   <div

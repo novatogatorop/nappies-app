@@ -10,17 +10,19 @@
 
 .account-submit {
   letter-spacing: 0.5px;
-  color: $darkgrey;
+  color: white;
+  background-color: $nappies;
   border: .5px solid;
   border-radius: 3px;
   width: max-content;
   margin-bottom: 5rem 0px;
   margin-right: 50px;
+  border-color: $nappies;
 }
 
 .account-submit:hover {
   color: $nappies;
-  border-color: $nappies;
+  background-color: $white;
 }
 
 .form-group {

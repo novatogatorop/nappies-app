@@ -104,4 +104,13 @@
   .sign-title{
     font-size: 1.5rem !important;
   }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-submit {
+    margin-bottom: 1rem;
+  }
 }
