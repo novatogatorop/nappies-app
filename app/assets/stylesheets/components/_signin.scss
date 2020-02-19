@@ -6,12 +6,12 @@
 
 .form-control:focus {
   box-shadow: none !important;
-  border-color: $lightgrey;
+  border-color: $nappies;
   color: $black;
 }
 
 .form-control {
-  border: .5px solid $lightgrey;
+  border: 1px solid $lightgrey;
   border-radius: 3px;
   color: $black !important;
 }
@@ -23,7 +23,7 @@
 }
 
 .form-control.is-valid:focus {
-  border-color: $lightgrey !important;
+  border-color: $nappies !important;
   box-shadow: none !important;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .sign-submit {
-  border: .5px solid;
+  border: 1px solid;
   border-radius: 3px;
   width: 100%;
   font-weight: 700;
