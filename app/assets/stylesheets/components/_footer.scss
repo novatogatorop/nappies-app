@@ -1,24 +1,26 @@
 .footer {
-  background: #F4F4F4;
+  border-top: 1px solid $lightgrey;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  // color: rgba(0,0,0,0.3);
+  height: max-content;
+  width: 100%;
+  padding: 1rem 3rem;
 }
 
 .footer-copyright {
   display: flex;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: $darkgrey;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 2rem;
   padding: 0px 10px;
 }
 .footer-links a:hover {
@@ -28,6 +30,4 @@
 .dot {
   margin: 0px 10px;
   font-weight: 800;
-  // text-align: center;
-  // font-size: 2rem;
 }

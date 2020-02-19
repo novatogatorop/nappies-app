@@ -6,6 +6,8 @@ class PlacesController < ApplicationController
     @places = policy_scope(Place)
     if params[:query].present?
       @places = Place.global_search(params[:query])
+    elsif !params[:query].blank?
+      render ('noresult')
     else
       @places = Place.all
     end
@@ -14,7 +16,8 @@ class PlacesController < ApplicationController
       {
         lat: place.latitude,
         lng: place.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { place: place })
+        infoWindow: render_to_string(partial: "info_window", locals: { place: place }),
+        image_url: helpers.asset_url('map_pin.png')
       }
     end
   end

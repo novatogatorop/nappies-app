@@ -41,10 +41,11 @@ const addMarkersToMap = (map, markers) => {
   element.style.width = '25px';
   element.style.height = '25px';
 
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .setPopup(popup) // add this
-      .addTo(map);
+  // Pass the element as an argument to the new marker
+  new mapboxgl.Marker()
+    .setLngLat([ marker.lng, marker.lat ])
+    .setPopup(popup) // add this
+    .addTo(map);
   });
 };
 
