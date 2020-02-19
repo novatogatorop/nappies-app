@@ -1,0 +1,33 @@
+.footer {
+  border-top: 1px solid $lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+
+.footer-copyright {
+  display: flex;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: $darkgrey;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  color: $black;
+}
+
+.dot {
+  margin: 0px 10px;
+  font-weight: 800;
+}

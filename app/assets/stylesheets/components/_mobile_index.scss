@@ -59,7 +59,6 @@
 
   .card-name {
     letter-spacing: 0.05rem !important;
-    font-weight: 700;
     width: 100%;
     margin: 0;
   }
@@ -90,9 +89,19 @@
   }
 
   .map-name {
-    width: min-content;
-    text-align: left;
-    margin: 0px auto;
+    // width: min-content;
+    text-align: center;
+    // margin: 0px auto;
+  }
+
+  // FOOTER
+
+  .footer {
+    display: inherit;
+  }
+
+  .footer-links a {
+    font-size: 1rem !important;
   }
 }
 

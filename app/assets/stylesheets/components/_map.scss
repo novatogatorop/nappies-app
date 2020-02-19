@@ -14,6 +14,7 @@
 }
 
 .mapboxgl-popup-content {
+  width: 10rem;
   text-align: center;
   position: relative;
   background: #fff;
@@ -34,6 +35,7 @@
 }
 
 .map-image {
+  width: inherit;
   height: 35vh;
   border-radius: 3px 3px 0px 0px;
 }
