@@ -31,7 +31,8 @@
           <% if current_user.admin? %>
             <%= link_to "Create A Place", new_place_path, class: "nav-link" %>
           <% else %>
-            <%= link_to "Recommend A Place", edit_user_registration_path, class: "nav-link" %>
+            <a class="no-decor-color nav-link" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
+            <%#= link_to "Recommend A Place", edit_user_registration_path, class: "nav-link" %>
           <% end %>
         </li>
         <%# if current_user[:photo] %>
