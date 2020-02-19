@@ -77,3 +77,14 @@ h6 {
   text-decoration: none;
   color: $nappies;
 }
+
+.no-decor {
+  text-decoration: none;
+  color: $black;
+}
+
+.no-decor:hover {
+  text-decoration: none;
+  color: $black;
+  border-bottom: 1px solid $black;
+}
