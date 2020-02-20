@@ -10,10 +10,11 @@
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+  width: 16vh !important;
 }
 
 .mapboxgl-popup-content {
+  width: 16vh !important;
   text-align: center;
   position: relative;
   background: #fff;
@@ -47,6 +48,7 @@
 }
 
 .map-name {
+  width: 16vh !important;
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.3px;
