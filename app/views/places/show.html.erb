@@ -36,14 +36,16 @@
     <p class="show-address"><%= @place.address %></p>
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Direction</a>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
-    <div class="admin-authorize">
-      <% if policy(@place).edit? %>
-        <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
-      <% end %>
-      <% if policy(@place).destroy? %>
-        <strong><p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p></strong>
-      <% end %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="admin-authorize">
+        <% if policy(@place).edit? %>
+          <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
+        <% end %>
+        <% if policy(@place).destroy? %>
+          <strong><p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p></strong>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   <div
     id="map", class="show-google-map"

@@ -1,13 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="logo-search">
-    <% if user_signed_in? %>
-      <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
-    <% else %>
-      <%= link_to "NAPPIES", new_user_session_path, class: "navbar-brand logo-text" %>
-    <% end %>
-    <%#= link_to places_path, class: "navbar-brand" do %>
-      <!-- <div class="logo-text">NAPPIES</div> -->
-    <%# end %>
+    <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
     <%= render 'shared/search' %>
   </div>
 
