@@ -4,13 +4,22 @@ class PlacesController < ApplicationController
 
   def index
     @places = policy_scope(Place)
-    if params[:search].present?
-      @places = Place.global_search(params[:search])
-    elsif !params[:search].blank?
-      render ('noresult')
-    else
+
+    if params[:search].blank?
       @places = Place.all
+    else
+      @places = Place.global_search(params[:search])
     end
+
+
+
+    # if params[:search].present?
+    #   @places = Place.global_search(params[:search])
+    # elsif !params[:search].blank?
+    #   render ('noresult')
+    # else
+    #   @places = Place.all
+    # end
     @geo_places = @places.geocoded
     @markers = @geo_places.map do |place|
       {
