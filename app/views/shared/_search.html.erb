@@ -4,8 +4,8 @@
     <%= form_tag places_path, class: "search-form", method: :get do %>
       <div class="search-box">
         <div class="search-input">
-          <%= text_field_tag :query,
-            params[:query],
+          <%= text_field_tag :search,
+            params[:search],
             class: "search-input form-control placeholder-search",
             placeholder: "Try 'Berlin'"%>
           <%= submit_tag "🔎", class: "search-submit btn-search"  %>
@@ -18,8 +18,8 @@
     <%#= form_tag new_user_session_path, class: "search-form", method: :get do %>
       <!-- <div class="search-box">
         <div class="search-input"> -->
-          <%#= text_field_tag :query,
-            params[:query],
+          <%#= text_field_tag :search,
+            params[:search],
             class: "search-input form-control placeholder-search",
             placeholder: "Try 'Berlin'"%>
           <%#= submit_tag "🔎", class: "search-submit btn-search"  %>
