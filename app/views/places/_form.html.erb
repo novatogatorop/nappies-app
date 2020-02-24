@@ -5,6 +5,7 @@
   <div class="form-inputs">
     <p><%= p.input :name %></p>
     <p><%= p.input :address %></p>
+    <p><%= p.association :type, label: 'Type of place' %></p>
     <p><%= p.input :photo1, as: :file %></p>
     <p><%= p.input :photo2, as: :file %></p>
     <p><%= p.input :photo3, as: :file %></p>
