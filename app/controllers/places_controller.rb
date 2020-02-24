@@ -43,6 +43,7 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
+    # @place.type = Type.find_by(name: params[:type][:name])
     @place.user = current_user
     authorize @place
     if @place.save
@@ -76,6 +77,6 @@ class PlacesController < ApplicationController
   end
 
   def place_params
-    params.require(:place).permit(:name, :address, :user_id, :photo1, :photo2, :photo3, :photo4, :photo5)
+    params.require(:place).permit(:name, :address, :user_id, :type_id, :photo1, :photo2, :photo3, :photo4, :photo5)
   end
 end

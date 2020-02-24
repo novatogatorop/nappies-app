@@ -14,6 +14,11 @@
                   <% end %>
                 </div>
                 <div class="place-card-details">
+                  <% if place.type_id.nil? %>
+                    <p class="card-type">none</p>
+                  <% else %>
+                    <p class="card-type"><%= place.type.name %></p>
+                  <% end %>
                   <p class="card-name"><%= place.name %></p>
                   <!-- <div> -->
                     <%# if policy(place).edit? %>

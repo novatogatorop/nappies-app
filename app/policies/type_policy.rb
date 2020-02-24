@@ -4,4 +4,12 @@ class TypePolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def create?
+    true
+  end
+
+  def update?
+    true
+  end
 end

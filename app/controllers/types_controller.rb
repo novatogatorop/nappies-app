@@ -2,10 +2,12 @@ class TypesController < ApplicationController
   before_action :set_type, only: [:edit, :update]
   def new
     @type = Type.new
+    authorize @type
   end
 
   def create
     @type = Type.new(type_params)
+    authorize @type
     if @type.save
       redirect_to places_path, notice: 'Type was successfully created.'
     else
@@ -29,6 +31,7 @@ class TypesController < ApplicationController
 
   def set_type
     @type = Type.find(params[:id])
+    authorize @type
   end
 
   def type_params

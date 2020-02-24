@@ -1,11 +1,18 @@
-<div class="map-info-images">
+<div class="map-info">
   <%= link_to place_path(place), class:"link", :action => 'go' do %>
     <% if place.photo1.attached? %>
       <%= cl_image_tag place.photo1.key, class: 'map-image' %>
     <% else %>
       <%= image_tag "place-icon.png", class: 'map-image' %>
     <% end %>
-    <p class="map-name"><%= place.name %></p>
+    <div class="map-card-details">
+      <% if place.type_id.nil? %>
+        <p class="map-type">none</p>
+      <% else %>
+        <p class="map-type"><%= place.type.name %></p>
+      <% end %>
+      <p class="map-name"><%= place.name %></p>
+    </div>
   <% end %>
 </div>
 

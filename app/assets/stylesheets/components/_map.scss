@@ -10,12 +10,10 @@
 }
 
 .mapboxgl-popup {
-  width: 16vh !important;
+  // width: 25vh !important;
 }
 
 .mapboxgl-popup-content {
-  width: 16vh !important;
-  text-align: center;
   position: relative;
   background: #fff;
   border-radius: 5px !important;
@@ -25,33 +23,36 @@
 }
 
 .mapboxgl-popup-close-button {
-  font-size: 20px !important;
+  font-size: 1.5rem !important;
   right: 8px !important;
   top: 5px !important;
 }
 
-.map-info-images{
-  max-width: fit-content;
+.map-info{
+  width: 14vw;
 }
 
 .map-image {
-  width: 16vh !important;
+  width: 14vw;
   border-radius: 3px 3px 0px 0px;
 }
 
+.map-card-details {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: left;
+}
+
 .map-type {
-  font-size: 0.7rem;
-  letter-spacing: 0.3px;
+  font-size: larger;
   width: 100%;
   margin-bottom: 0;
   margin-top: 4px;
 }
 
 .map-name {
-  width: 16vh !important;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.3px;
+  font-size: larger;
+  font-weight: 700;
   width: 100%;
   margin-bottom: 4px;
 }
