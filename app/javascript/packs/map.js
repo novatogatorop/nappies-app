@@ -14,93 +14,109 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   } else {
     map.fitLatLngBounds(markers);
   }
+
+  // const icons = {
+  //   nappies: {
+  //     icon: 'http://vectips.com/wp-content/uploads/2017/07/project-preview-large-1.png'
+  //   }
+  // };
+
+  // function addMarker(feature) {
+  //   var marker = google.maps.Marker({
+  //     position: feature.position,
+  //     icon: icons[feature.type].icon,
+  //     map: map
+  //   });
+  // }
+
+  autocomplete();
+
+  const styles = [
+      {
+          "featureType": "landscape.natural",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "visibility": "on"
+              },
+              {
+                  "color": "#e0efef"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "visibility": "on"
+              },
+              {
+                  "hue": "#1900ff"
+              },
+              {
+                  "color": "#c0e8e8"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.park",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#c7ebd0"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 100
+              },
+              {
+                  "visibility": "simplified"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "labels",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "visibility": "on"
+              },
+              {
+                  "lightness": 700
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#cbe9e6"
+              }
+          ]
+      }
+  ];
+
+  map.addStyle({
+    styles: styles,
+    mapTypeId: 'map_style'
+  });
+  map.setStyle('map_style');
 }
 
-autocomplete();
 
-const styles = [
-    {
-        "featureType": "landscape.natural",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#e0efef"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "hue": "#1900ff"
-            },
-            {
-                "color": "#c0e8e8"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#c7ebd0"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 100
-            },
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit.line",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "lightness": 700
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#cbe9e6"
-            }
-        ]
-    }
-];
-
-map.addStyle({
-  styles: styles,
-  mapTypeId: 'map_style'
-});
-map.setStyle('map_style');
