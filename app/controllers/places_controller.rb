@@ -25,8 +25,8 @@ class PlacesController < ApplicationController
       {
         lat: place.latitude,
         lng: place.longitude,
-        infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        # infoWindow: render_to_string(partial: "info_window", locals: { place: place }),
+        infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
+        # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
         # image_url: helpers.asset_url('map_pin.png')
       }
     end
