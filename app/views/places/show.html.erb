@@ -38,7 +38,7 @@
     <% end %>
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
-    <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Direction</a>
+    <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
     <% if user_signed_in? %>
       <div class="admin-authorize">
