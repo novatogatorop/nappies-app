@@ -36,15 +36,32 @@
   }
 
   .show-google-map {
-  width: 100%;
-  height: 20rem !important;
-  margin-top: 2rem !important;
+    width: 100%;
+    height: 20rem !important;
+    margin-top: 2rem !important;
   }
 
   .btn-get-direction {
-  letter-spacing: 0.08rem !important;
-  position: unset;
-  margin-top: 5px;
-  margin-bottom: 12px;
-}
+    letter-spacing: 0.08rem !important;
+    position: unset;
+    margin-top: 5px;
+    margin-bottom: 12px;
+  }
+
+  .show-facility {
+    display: inline-table !important;
+    height: fit-content;
+  }
+
+  .facility-details {
+    display: flex;
+  }
+
+  .facility-image {
+    height: 3rem !important;
+  }
+
+  .facility-name {
+    padding-left: 1rem;
+  }
 }

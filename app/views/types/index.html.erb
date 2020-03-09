@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div class="index-container">
+    <div class="index-cards">
+      <div class="sub-container">
+        <div class="place-card-details">
+          <h1 class="show-title mb-5">Type of places</h1>
+          <% @types.each do |t| %>
+            <p class="card-type mb-3">- <%= t.name %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

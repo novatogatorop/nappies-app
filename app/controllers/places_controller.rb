@@ -11,15 +11,6 @@ class PlacesController < ApplicationController
       @places = Place.global_search(params[:search])
     end
 
-
-
-    # if params[:search].present?
-    #   @places = Place.global_search(params[:search])
-    # elsif !params[:search].blank?
-    #   render ('noresult')
-    # else
-    #   @places = Place.all
-    # end
     @geo_places = @places.geocoded
     @markers = @geo_places.map do |place|
       {
@@ -33,6 +24,8 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @facility = Facility.new
+    @place_facility = PlaceFacility.new
     @markers = Array.new
     @markers << { lat: @place.latitude,
                   lng: @place.longitude,
@@ -47,7 +40,7 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
-    # @place.type = Type.find_by(name: params[:type][:name])
+    @place_facility = PlaceFacility.new
     @place.user = current_user
     authorize @place
     if @place.save

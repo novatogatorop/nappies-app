@@ -5,6 +5,7 @@
   white-space: nowrap;
   width: 100vw;
   overflow-x: auto;
+  margin-top: 60px;
 }
 
 .show-img {
@@ -50,4 +51,28 @@
 
 .admin-authorize {
   display: inherit;
+}
+
+.show-facility {
+  display: inherit;
+  // height: 3rem;
+}
+
+.facility-details {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.facility-image {
+  height: 3rem;
+}
+
+.facility-name {
+  padding-right: 1.5rem;
+  margin: auto 0px;
+  line-height: 2.5rem;
+}
+
+.facility-none {
+  display: none;
 }
