@@ -8,4 +8,14 @@ class PlaceFacilityPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def destroy?
+    true
+  end
+
+  private
+
+  def user_or_admin?
+    record.user == user || user.admin
+  end
 end

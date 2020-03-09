@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_093157) do
+ActiveRecord::Schema.define(version: 2020_03_09_110026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_093157) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "type_id"
-    t.bigint "place_facility_id"
-    t.index ["place_facility_id"], name: "index_places_on_place_facility_id"
     t.index ["type_id"], name: "index_places_on_type_id"
     t.index ["user_id"], name: "index_places_on_user_id"
   end
@@ -96,7 +94,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_093157) do
   add_foreign_key "facilities", "place_facilities"
   add_foreign_key "place_facilities", "facilities"
   add_foreign_key "place_facilities", "places"
-  add_foreign_key "places", "place_facilities"
   add_foreign_key "places", "types"
   add_foreign_key "places", "users"
 end

@@ -25,6 +25,7 @@ class PlacesController < ApplicationController
 
   def show
     @facility = Facility.new
+    @place_facility = PlaceFacility.new
     @markers = Array.new
     @markers << { lat: @place.latitude,
                   lng: @place.longitude,
@@ -39,6 +40,7 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
+    @place_facility = PlaceFacility.new
     @place.user = current_user
     authorize @place
     if @place.save

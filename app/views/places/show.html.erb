@@ -38,17 +38,24 @@
      <p class="show-type"><%= @place.type.name %></p>
     <% end %>
 
-    <% if @place.facility_id.nil? %>
-     <p class="show-type">none</p>
-    <% else %>
-     <p class="show-type"><%= @place.facility.name %></p>
+    <% @place.place_facilities.each do |f| %>
+      <div>
+        <%= f.facility.name %>
+        <% if current_user.admin? %>
+          <%= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
+        <% end %>
+      </div>
     <% end %>
+
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
     <% if user_signed_in? %>
       <div class="admin-authorize">
+        <% if current_user.admin? %>
+            <strong><p class="show-type"><%= link_to "Add Facility", new_place_place_facility_path(@place), class: "no-decor-color mr-5" %></p></strong>
+          <% end %>
         <% if policy(@place).edit? %>
           <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
         <% end %>
