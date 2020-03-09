@@ -1,6 +1,7 @@
 class Place < ApplicationRecord
   belongs_to :user
   belongs_to :type
+  has_and_belongs_to_many :facility
   has_one_attached :photo1
   has_one_attached :photo2
   has_one_attached :photo3
