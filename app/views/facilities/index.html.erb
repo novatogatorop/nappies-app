@@ -1,0 +1,26 @@
+<div class="main-container">
+  <div class="index-container">
+    <div class="index-cards">
+      <h1 class="show-title mb-5">Facilities of places</h1>
+      <div class="sub-container">
+        <% @facilities.each do |f| %>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <div class="index-images">
+                <% if f.photo.attached? %>
+                  <%= cl_image_tag facility.photo.key, class: 'card-image' %>
+                <% else %>
+                  <%= image_tag "place-icon.png", class: 'card-image' %>
+                <% end %>
+              </div>
+              <div class="place-card-details">
+                <p class="card-name"><%= f.name %></p>
+                <p class="show-type"><%= link_to 'Edit', edit_facility_path(f), :class => 'no-decor-color' %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,10 @@
 class TypesController < ApplicationController
   before_action :set_type, only: [:edit, :update]
+
+  def index
+    @types = policy_scope(Type)
+  end
+
   def new
     @type = Type.new
     authorize @type

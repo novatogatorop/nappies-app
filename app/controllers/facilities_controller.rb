@@ -1,5 +1,10 @@
 class FacilitiesController < ApplicationController
   before_action :set_facility, only: [:edit, :update, :destroy]
+
+  def index
+    @facilities = policy_scope(Facility)
+  end
+
   def new
     @facility = Facility.new
     authorize @facility
@@ -40,6 +45,6 @@ class FacilitiesController < ApplicationController
   end
 
   def facility_params
-    params.require(:facility).permit(:name)
+    params.require(:facility).permit(:name, :photo)
   end
 end
