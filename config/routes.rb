@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'places#index'
   resources :places
   resources :types, only: [:new, :create, :edit, :update]
+  resources :facilities, only: [:new, :create, :edit, :update]
 end

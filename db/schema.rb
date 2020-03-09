@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_083242) do
+ActiveRecord::Schema.define(version: 2020_03_09_093157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 2020_03_09_083242) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "place_facility_id"
+    t.index ["place_facility_id"], name: "index_facilities_on_place_facility_id"
+  end
+
+  create_table "place_facilities", force: :cascade do |t|
+    t.bigint "place_id"
+    t.bigint "facility_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["facility_id"], name: "index_place_facilities_on_facility_id"
+    t.index ["place_id"], name: "index_place_facilities_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -51,8 +62,8 @@ ActiveRecord::Schema.define(version: 2020_03_09_083242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "type_id"
-    t.bigint "facility_id"
-    t.index ["facility_id"], name: "index_places_on_facility_id"
+    t.bigint "place_facility_id"
+    t.index ["place_facility_id"], name: "index_places_on_place_facility_id"
     t.index ["type_id"], name: "index_places_on_type_id"
     t.index ["user_id"], name: "index_places_on_user_id"
   end
@@ -82,7 +93,10 @@ ActiveRecord::Schema.define(version: 2020_03_09_083242) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "places", "facilities"
+  add_foreign_key "facilities", "place_facilities"
+  add_foreign_key "place_facilities", "facilities"
+  add_foreign_key "place_facilities", "places"
+  add_foreign_key "places", "place_facilities"
   add_foreign_key "places", "types"
   add_foreign_key "places", "users"
 end

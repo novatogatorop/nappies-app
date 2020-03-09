@@ -31,10 +31,17 @@
 </div>
 <div class="show-details-box">
   <div class="show-detail-box">
+
     <% if @place.type_id.nil? %>
      <p class="show-type">none</p>
     <% else %>
      <p class="show-type"><%= @place.type.name %></p>
+    <% end %>
+
+    <% if @place.facility_id.nil? %>
+     <p class="show-type">none</p>
+    <% else %>
+     <p class="show-type"><%= @place.facility.name %></p>
     <% end %>
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
