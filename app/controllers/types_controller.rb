@@ -14,7 +14,7 @@ class TypesController < ApplicationController
     @type = Type.new(type_params)
     authorize @type
     if @type.save
-      redirect_to places_path, notice: 'Type was successfully created.'
+      redirect_to types_path, notice: 'Type was successfully created.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class TypesController < ApplicationController
   def update
     @type.update(type_params)
     if @type.save
-      redirect_to places_path, notice: 'Type was successfully updated.'
+      redirect_to types_path, notice: 'Type was successfully updated.'
     else
       render :edit
     end

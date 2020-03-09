@@ -14,7 +14,7 @@ class FacilitiesController < ApplicationController
     @facility = Facility.new(facility_params)
     authorize @facility
     if @facility.save
-      redirect_to places_path, notice: 'Facility was successfully created.'
+      redirect_to facilities_path, notice: 'Facility was successfully created.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class FacilitiesController < ApplicationController
   def update
     @facility.update(facility_params)
     if @facility.save
-      redirect_to places_path, notice: 'Facility was successfully updated.'
+      redirect_to facilities_path, notice: 'Facility was successfully updated.'
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class FacilitiesController < ApplicationController
 
   def destroy
     @facility.destroy
-    redirect_to places_path, notice: 'Facility was successfully removed.'
+    redirect_to facilities_path, notice: 'Facility was successfully removed.'
   end
 
   private

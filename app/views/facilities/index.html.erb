@@ -8,7 +8,7 @@
             <div class="card">
               <div class="index-images">
                 <% if f.photo.attached? %>
-                  <%= cl_image_tag facility.photo.key, class: 'card-image' %>
+                  <%= cl_image_tag f.photo.key, class: 'card-image' %>
                 <% else %>
                   <%= image_tag "place-icon.png", class: 'card-image' %>
                 <% end %>
