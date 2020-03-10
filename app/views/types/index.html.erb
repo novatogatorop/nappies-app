@@ -8,7 +8,7 @@
             <p class="card-type mb-3">
               - <strong><%= t.name %></strong>
               / <%= link_to 'Edit', edit_type_path(t), :class => 'no-decor' %>
-              / <%= link_to "✖️", types_path, method: :delete, data: {confirm: "Are you sure?"} %>
+              / <%= link_to "✖️", t, method: :delete, data: {confirm: "Are you sure?"} %>
             </p>
           <% end %>
         </div>
