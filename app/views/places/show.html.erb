@@ -47,16 +47,18 @@
         <div class="facility-details">
           <%= cl_image_tag f.facility.photo.key, class: 'facility-image' %>
           <p class="facility-name"><%= f.facility.name %></p>
-          <% if current_user.admin? %>
-            <%= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
+          <% if user_signed_in? %>
+            <% if policy(@place.place_facilities).destroy? %>
+              <%= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
+            <% end %>
           <% end %>
         </div>
       <% end %>
     </div>
-    <% if user_signed_in? %>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
+    <% if user_signed_in? %>
       <div class="admin-authorize">
-        <% if current_user.admin? %>
+        <% if policy(@place.place_facilities).new? %>
             <strong><p class="show-type"><%= link_to "Add Facility", new_place_place_facility_path(@place), class: "no-decor-color mr-5" %></p></strong>
           <% end %>
         <% if policy(@place).edit? %>

@@ -6,11 +6,11 @@ class PlaceFacilityPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    user_or_admin?
   end
 
   def destroy?
-    true
+    user_or_admin?
   end
 
   private
