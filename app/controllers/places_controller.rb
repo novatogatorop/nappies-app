@@ -11,6 +11,8 @@ class PlacesController < ApplicationController
       @places = Place.global_search(params[:search])
     end
 
+    # @place_facility = PlaceFacility.all
+
     @geo_places = @places.geocoded
     @markers = @geo_places.map do |place|
       {

@@ -47,9 +47,9 @@
         <div class="facility-details">
           <%= cl_image_tag f.facility.photo.key, class: 'facility-image' %>
           <p class="facility-name"><%= f.facility.name %></p>
-          <%# if current_user.admin? %>
-            <%#= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
-          <%# end %>
+          <% if current_user.admin? %>
+            <%= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
+          <% end %>
         </div>
       <% end %>
     </div>
