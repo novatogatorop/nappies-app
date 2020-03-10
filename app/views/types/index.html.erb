@@ -5,8 +5,11 @@
         <div class="place-card-details">
           <h1 class="show-title mb-5">Type of places</h1>
           <% @types.each do |t| %>
-            <p class="card-type mb-3">- <%= t.name %> / <%= link_to '(Edit)', edit_type_path(t), :class => 'no-decor-color' %></p>
-            <p></p>
+            <p class="card-type mb-3">
+              - <strong><%= t.name %></strong>
+              / <%= link_to 'Edit', edit_type_path(t), :class => 'no-decor' %>
+              / <%= link_to "✖️", types_path, method: :delete, data: {confirm: "Are you sure?"} %>
+            </p>
           <% end %>
         </div>
       </div>
