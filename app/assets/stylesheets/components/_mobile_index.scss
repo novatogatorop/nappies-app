@@ -128,11 +128,35 @@
   // FOOTER
 
   .footer {
-    display: inherit;
+    display: flex;
+    flex-direction: column-reverse !important;
+    padding: 0px;
+    padding: 1rem !important;
+    align-items: left !important;
   }
 
-  .footer-links a {
-    font-size: 1rem !important;
+  .footer-copyright {
+    width: 100%;
+  }
+
+  .footer-terms {
+    margin: 2rem 0rem;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+
+  .footer-terms p {
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+
+  .footer-links p {
+    margin-right: 2rem;
+    margin-left: 0rem !important;
   }
 }
 
