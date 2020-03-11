@@ -140,13 +140,14 @@
   }
 
   .footer-terms {
-    margin: 2rem 0rem;
+    margin: 1rem 0rem 2rem 0rem;
     flex-direction: column !important;
     justify-content: flex-start !important;
     width: 100%;
   }
 
   .footer-terms p {
+    margin-top: 1rem;
   }
 
   .footer-links {
