@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   end
   resources :place_facilities, only: [:destroy]
   resources :types, only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :facilities, only: [:index, :new, :create, :edit, :update]
+  resources :facilities, only: [:index, :new, :create, :edit, :update, :destroy]
 end
