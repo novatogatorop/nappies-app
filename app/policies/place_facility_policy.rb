@@ -1,21 +1,16 @@
 class PlaceFacilityPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      # scope.all
+      scope.where(user: user)
     end
   end
 
   def create?
-    user_or_admin?
+    user == @user
   end
 
   def destroy?
-    user_or_admin?
-  end
-
-  private
-
-  def user_or_admin?
-    record.user == user || user.admin
+    user == @user
   end
 end
