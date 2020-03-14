@@ -1,6 +1,9 @@
 // import GMaps from 'gmaps/gmaps.js';
 // import { autocomplete } from '../components/autocomplete';
 
+// GOOGLE_API_SERVER_KEY=AIzaSyCigFIlk_BBdmIx_wscgzW7ph9VlyOkGF8
+// GOOGLE_API_BROWSER_KEY=AIzaSyBfxbMTEHTuQ9VTTwTTFXsyV9iTRHHPI3k
+
 // const mapElement = document.getElementById('map');
 // if (mapElement) { // don't try to build a map if there's no div#map to inject in
 //   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
