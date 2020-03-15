@@ -37,6 +37,16 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/navigation-guidance-day-v4'
     });
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+          },
+        trackUserLocation: true
+      })
+    );
+
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers)
     fitMapToMarkers(map, markers)
