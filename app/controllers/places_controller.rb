@@ -4,17 +4,27 @@ class PlacesController < ApplicationController
 
   def index
     @places = policy_scope(Place)
+    @types_all = Type.pluck(:id)
+    @types = []
+    @place_facility = PlaceFacility.all
+    @text_search = params[:search]
 
-    if params[:search].blank?
-      @places = Place.all
+    if params[:type].present?
+      @types = params[:type].empty? ? @types_all : params[:type]
     else
-      @places = Place.global_search(params[:search])
+      @types = @types_all
     end
 
-    # @place_facility = PlaceFacility.all
+    if @text_search.present?
+      @places = Place.global_search(params[:search]).where(type: @types)
+    else
+      @places = Place.all
+      @result = "No Result"
+    end
+
 
     @geo_places = @places.geocoded
-    @markers = @geo_places.map do |place|
+    @markers = @places.map do |place|
       {
         lat: place.latitude,
         lng: place.longitude,
