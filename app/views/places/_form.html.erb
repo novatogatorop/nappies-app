@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <p><%= p.input :name %></p>
     <p><%= p.input :address, :id => 'flat_address' %></p>
-    <p><%= p.association :type, label: 'Type of place' %></p>
+    <p><%= p.association :type, label: false, include_blank: "Select type of place", input_html: { class: "select-2 rounded-sm" }, include_hidden: false  %></p>
     <p><%= p.input :photo1, as: :file %></p>
     <p><%= p.input :photo2, as: :file %></p>
     <p><%= p.input :photo3, as: :file %></p>

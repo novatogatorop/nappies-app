@@ -1,32 +1,16 @@
 <div class="search">
 
-  <%# if user_signed_in? %>
-    <%= form_tag places_path, class: "search-form", method: :get do %>
+    <%= form_tag(places_path, method: :get, class: "search-form") do %>
       <div class="search-box">
         <div class="search-input">
-          <%= text_field_tag :search,
-            params[:search],
+          <%= text_field_tag :search, params[:search],
             class: "search-input form-control placeholder-search",
             placeholder: "Try 'Berlin'"%>
+          <%= select_tag(:type_id, options_for_select(@types_array, disable: [["Select Type", 0]]), class: "type-selection") %>
           <%= submit_tag "🔎", class: "search-submit btn-search"  %>
         </div>
         <div class="search-submit"></div>
       </div>
     <% end %>
-
-  <%# else %>
-    <%#= form_tag new_user_session_path, class: "search-form", method: :get do %>
-      <!-- <div class="search-box">
-        <div class="search-input"> -->
-          <%#= text_field_tag :search,
-            params[:search],
-            class: "search-input form-control placeholder-search",
-            placeholder: "Try 'Berlin'"%>
-          <%#= submit_tag "🔎", class: "search-submit btn-search"  %>
-        <!-- </div>
-        <div class="search-submit"></div>
-      </div> -->
-    <%# end %>
-  <%# end %>
 
 </div>
