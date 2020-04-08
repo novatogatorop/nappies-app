@@ -6,7 +6,6 @@ class PlacesController < ApplicationController
     @places = policy_scope(Place)
     @types_all = Type.pluck(:id)
     @types = []
-    @place_facility = PlaceFacility.all
     @text_search = params[:search]
 
     if params[:type].present?
@@ -21,7 +20,6 @@ class PlacesController < ApplicationController
       @places = Place.all
       @result = "No Result"
     end
-
 
     @geo_places = @places.geocoded
     @markers = @places.map do |place|
@@ -86,6 +84,6 @@ class PlacesController < ApplicationController
   end
 
   def place_params
-    params.require(:place).permit(:name, :address, :user_id, :type_id, :photo1, :photo2, :photo3, :photo4, :photo5)
+    params.require(:place).permit(:name, :address, :user_id, :type_id, :diaper, :toy, :high_chair, :play_area, :photo1, :photo2, :photo3, :photo4, :photo5)
   end
 end

@@ -41,26 +41,14 @@
 
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
+    <p class="show-address"><%= @place.diaper %></p>
+    <p class="show-address"><%= @place.toy %></p>
+    <p class="show-address"><%= @place.high_chair %></p>
+    <p class="show-address"><%= @place.play_area %></p>
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
-    <div class="show-facility">
-      <% @place.place_facilities.each do |f| %>
-        <div class="facility-details">
-          <%= cl_image_tag f.facility.photo.key, class: 'facility-image' %>
-          <p class="facility-name"><%= f.facility.name %></p>
-          <% if user_signed_in? %>
-            <% if policy(@place.place_facilities).destroy? %>
-              <%= link_to "✖️", place_facility_path(f), method: :delete, data: {confirm: "Are you sure?"} %>
-            <% end %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
     <% if user_signed_in? %>
       <div class="admin-authorize">
-        <% if policy(@place.place_facilities).new? %>
-            <strong><p class="show-type"><%= link_to "Add Facility", new_place_place_facility_path(@place), class: "no-decor-color mr-5" %></p></strong>
-          <% end %>
         <% if policy(@place).edit? %>
           <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
         <% end %>
