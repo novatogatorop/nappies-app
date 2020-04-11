@@ -14,8 +14,11 @@ class PlacesController < ApplicationController
       @types = @types_all
     end
 
+    if params[:diaper].present?
+    end
+
     if @text_search.present?
-      @places = Place.global_search(params[:search]).where(type: @types)
+      @places = Place.global_search(params[:search]).where(type: @types).where(diaper: params[:diaper])
     else
       @places = Place.all
       @result = "No Result"

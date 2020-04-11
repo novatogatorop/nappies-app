@@ -47,7 +47,7 @@ places =[
     name: 'Berlinische Galerie',
     address: 'Alte Jakobstraße 124-128, Berlin',
     user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Coffee Shop'),
+    type: Type.find_by(name: 'Restaurant'),
     diaper: true,
     toy: true,
     high_chair: true,
@@ -67,11 +67,31 @@ places =[
     name: 'Bonanza Coffee Roasters',
     address: 'Adalbertstraße 70, 10999 Berlin',
     user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Coffee Shop'),
+    type: Type.find_by(name: 'Restaurant'),
     diaper: false,
     toy: true,
     high_chair: false,
     play_area: false
+  },
+  {
+    name: 'Pasticceria Castelnuovo',
+    address: 'Via dei Tulipani 18, Milano',
+    user: User.find_by(username: 'Lala'),
+    type: Type.find_by(name: 'Restaurant'),
+    diaper: false,
+    toy: true,
+    high_chair: true,
+    play_area: false
+  },
+  {
+    name: 'Bar Luce',
+    address: 'Largo Isarco 2, Milano',
+    user: User.find_by(username: 'Lala'),
+    type: Type.find_by(name: 'Restaurant'),
+    diaper: true,
+    toy: true,
+    high_chair: true,
+    play_area: true
   }
 ]
 Place.create!(places)
