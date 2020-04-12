@@ -14,3 +14,25 @@
     <% end %>
 
 </div>
+
+
+<%= form_tag(places_path, method: :get, class: "search-form") do %>
+        <div class="search-input">
+          <%= text_field_tag :search, params[:search],
+            class: "search-input form-control placeholder-search",
+            placeholder: "Try 'Berlin'"%>
+          <%= select_tag(:type, options_from_collection_for_select(Type.all, :id, "name", params[:type] || @types_all), label: false, include_blank: "Type of place", class: "type-select") %>
+          <div class="filter-facilites">Facility
+            <%= check_box_tag(:diaper) %>
+            <%= label_tag(:diaper, "Changing Table") %>
+            <%#= check_box_tag(:toy) %>
+            <%#= label_tag(:toy, "Toys") %>
+            <%#= check_box_tag(:high_chair) %>
+            <%#= label_tag(:high_chair, "High Chair") %>
+            <%#= check_box_tag(:play_area) %>
+            <%#= label_tag(:play_area, "Play Area") %>
+          </div>
+          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
+        </div>
+        <div class="search-submit"></div>
+    <% end %>
