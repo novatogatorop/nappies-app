@@ -1,12 +1,12 @@
 class PlacesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :set_place, only: [ :show, :edit, :update, :destroy ]
 
 
   def index
     @places = policy_scope(Place)
-    @query = Place.ransack(params[:query])
-    @places = @query.result
+    @search = Place.search(params[:q])
+    @places = @search.result
 
     @geo_places = @places.geocoded
     @markers = @places.map do |place|
