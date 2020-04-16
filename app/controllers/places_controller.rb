@@ -5,8 +5,14 @@ class PlacesController < ApplicationController
 
   def index
     @places = policy_scope(Place)
-    @search = Place.search(params[:q])
-    @places = @search.result
+    # RANSACK
+    # @search = Place.search(params[:q])
+    # @places = @search.result
+
+    @places = Place.all
+    @places = @places.search_by(params[:search]) unless params[:search].blank?
+    @places = @places.diaper unless params[:diaper].blank?
+
 
     @geo_places = @places.geocoded
     @markers = @places.map do |place|

@@ -5,19 +5,17 @@
     <div class="index-cards">
 
       <div class="search-box">
-        <%= search_form_for @search, method: :get, class: "search-form" do |f| %>
-          <%= f.label :address_cont, "Name of the place" %>
-          <%= f.text_field :address_cont %>
-          <%= f.label :diaper_true, "Diaper" %>
-          <%= f.check_box :diaper_true %>
-          <%= f.label :toy_true, "Toy" %>
-          <%= f.check_box :toy_true %>
-          <%= f.label :high_chair_true, "High Chair" %>
-          <%= f.check_box :high_chair_true %>
-          <%= f.label :play_area_true, "Play Area" %>
-          <%= f.check_box :play_area_true %>
-          <%= f.submit "search" %>
-        <% end %>
+        <%= form_tag(places_path, method: :get, class: "search-form") do %>
+      <div class="search-box">
+        <div class="search-input">
+          <%= text_field_tag :search, params[:search],
+            class: "search-input form-control placeholder-search",
+            placeholder: "Try 'Berlin'"%>
+          <%= select_tag(:type_id, options_for_select(@types_array, disable: [["Select Type", 0]]), class: "type-selection") %>
+          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
+        </div>
+      </div>
+    <% end %>
       </div>
 
       <div class="sub-container">

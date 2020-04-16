@@ -36,3 +36,32 @@
         </div>
         <div class="search-submit"></div>
     <% end %>
+
+
+    <!-- RANSACK -->
+
+    <div class="search-box">
+        <%= search_form_for @search, method: :get, class: "search-form" do |f| %>
+          <%= f.label :address_cont, "Name of the place" %>
+          <%= f.text_field :address_cont %>
+          <%= f.label :diaper_true, "Diaper" %>
+          <%= f.check_box :diaper_true %>
+          <%= f.label :toy_true, "Toy" %>
+          <%= f.check_box :toy_true %>
+          <%= f.label :high_chair_true, "High Chair" %>
+          <%= f.check_box :high_chair_true %>
+          <%= f.label :play_area_true, "Play Area" %>
+          <%= f.check_box :play_area_true %>
+          <%= f.submit "search" %>
+        <% end %>
+      </div>
+
+
+      <%= form_for "", url: places_path, role:"search", method: :get do %>
+          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
+          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
+        <% end %>
+        <%= link_to 'Diaper', places_path(:diaper => true) %>
+        <%= link_to 'Toy', places_path(:toy => true) %>
+        <%= link_to 'High Chair', places_path(:high_chair => true) %>
+        <%= link_to 'Play Area', places_path(:play_area => true) %>
