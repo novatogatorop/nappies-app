@@ -4,23 +4,9 @@
   <div class="index-container">
     <div class="index-cards">
 
-      <div class="search-box">
-        <%= form_tag(places_path, method: :get, class: "search-form") do %>
-      <div class="search-box">
-        <div class="search-input">
-          <%= text_field_tag :search, params[:search],
-            class: "search-input form-control placeholder-search",
-            placeholder: "Try 'Berlin'"%>
-          <%= select_tag(:type_id, options_for_select(@types_array, disable: [["Select Type", 0]]), class: "type-selection") %>
-          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
-        </div>
-      </div>
-    <% end %>
-      </div>
-
       <div class="sub-container">
 
-        <h3><%= @result %></h3>
+        <h3><%#= @no_result %></h3>
 
         <% @places.each do |place| %>
           <div class="col-xs-12 col-sm-6 col-md-3">

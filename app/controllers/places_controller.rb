@@ -5,14 +5,18 @@ class PlacesController < ApplicationController
 
   def index
     @places = policy_scope(Place)
-    # RANSACK
-    # @search = Place.search(params[:q])
-    # @places = @search.result
-
     @places = Place.all
-    @places = @places.search_by(params[:search]) unless params[:search].blank?
-    @places = @places.diaper unless params[:diaper].blank?
+    query = params[:query]
+    results = query.present? ? Place.global_search(query) : Place.all
 
+    if params[:filter] == 'Select Filter'
+      @places = results
+    else
+      # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair
+      symbol = params[:filter].gsub(/ /, '_').downcase!.to_sym
+      # @places = results.where(:high_chair => true)
+      @places = results.where(symbol => true)
+    end
 
     @geo_places = @places.geocoded
     @markers = @places.map do |place|
@@ -25,43 +29,6 @@ class PlacesController < ApplicationController
       }
     end
   end
-
-
-
-
-  # def index
-  #   @places = policy_scope(Place)
-  #   @types_all = Type.pluck(:id)
-  #   @types = []
-  #   @text_search = params[:search]
-
-  #   if params[:type].present?
-  #     @types = params[:type].empty? ? @types_all : params[:type]
-  #   else
-  #     @types = @types_all
-  #   end
-
-  #   if params[:diaper].present?
-  #   end
-
-  #   if @text_search.present?
-  #     @places = Place.global_search(params[:search]).where(type: @types).where(diaper: params[:diaper])
-  #   else
-  #     @places = Place.all
-  #     @result = "No Result"
-  #   end
-
-  #   @geo_places = @places.geocoded
-  #   @markers = @places.map do |place|
-  #     {
-  #       lat: place.latitude,
-  #       lng: place.longitude,
-  #       infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
-  #       # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-  #       image_url: helpers.asset_url('map-pin-nappies-border-small.png')
-  #     }
-  #   end
-  # end
 
   def show
     @facility = Facility.new

@@ -1,67 +1,20 @@
 <div class="search">
-
-    <%= form_tag(places_path, method: :get, class: "search-form") do %>
-      <div class="search-box">
-        <div class="search-input">
-          <%= text_field_tag :search, params[:search],
-            class: "search-input form-control placeholder-search",
-            placeholder: "Try 'Berlin'"%>
-          <%= select_tag(:type_id, options_for_select(@types_array, disable: [["Select Type", 0]]), class: "type-selection") %>
-          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
-        </div>
-        <div class="search-submit"></div>
+  <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
+    <div class="search-box">
+      <div class="search-input">
+        <%= text_field_tag :query, params[:query],
+          class: "search-input form-control placeholder-search",
+          placeholder: "Try 'Berlin'"%>
+        <%= select_tag "filter", options_for_select(['Select Filter',
+                  'Diaper',
+                  'Toy',
+                  'High Chair',
+                  'Play Area']), class:'custom-select' %>
+        <%= submit_tag "🔎", class: "search-submit btn-search"  %>
       </div>
-    <% end %>
-
+    </div>
+  <% end %>
 </div>
 
 
-<%= form_tag(places_path, method: :get, class: "search-form") do %>
-        <div class="search-input">
-          <%= text_field_tag :search, params[:search],
-            class: "search-input form-control placeholder-search",
-            placeholder: "Try 'Berlin'"%>
-          <%= select_tag(:type, options_from_collection_for_select(Type.all, :id, "name", params[:type] || @types_all), label: false, include_blank: "Type of place", class: "type-select") %>
-          <div class="filter-facilites">Facility
-            <%= check_box_tag(:diaper) %>
-            <%= label_tag(:diaper, "Changing Table") %>
-            <%#= check_box_tag(:toy) %>
-            <%#= label_tag(:toy, "Toys") %>
-            <%#= check_box_tag(:high_chair) %>
-            <%#= label_tag(:high_chair, "High Chair") %>
-            <%#= check_box_tag(:play_area) %>
-            <%#= label_tag(:play_area, "Play Area") %>
-          </div>
-          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
-        </div>
-        <div class="search-submit"></div>
-    <% end %>
 
-
-    <!-- RANSACK -->
-
-    <div class="search-box">
-        <%= search_form_for @search, method: :get, class: "search-form" do |f| %>
-          <%= f.label :address_cont, "Name of the place" %>
-          <%= f.text_field :address_cont %>
-          <%= f.label :diaper_true, "Diaper" %>
-          <%= f.check_box :diaper_true %>
-          <%= f.label :toy_true, "Toy" %>
-          <%= f.check_box :toy_true %>
-          <%= f.label :high_chair_true, "High Chair" %>
-          <%= f.check_box :high_chair_true %>
-          <%= f.label :play_area_true, "Play Area" %>
-          <%= f.check_box :play_area_true %>
-          <%= f.submit "search" %>
-        <% end %>
-      </div>
-
-
-      <%= form_for "", url: places_path, role:"search", method: :get do %>
-          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-          <%= submit_tag "🔎", class: "search-submit btn-search"  %>
-        <% end %>
-        <%= link_to 'Diaper', places_path(:diaper => true) %>
-        <%= link_to 'Toy', places_path(:toy => true) %>
-        <%= link_to 'High Chair', places_path(:high_chair => true) %>
-        <%= link_to 'Play Area', places_path(:play_area => true) %>
