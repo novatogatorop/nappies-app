@@ -2,42 +2,11 @@
   <div class="logo-search">
     <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
   </div>
-  <div class="search-pop">
-
-    <button type="button" class="search-submit" data-toggle="modal" data-target="#loginModal">
-      <i class="fas fa-search"></i>
-    </button>
-
-
-    <div class="modal"id="loginModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
-              <div class="search-box">
-                  <%= text_field_tag :query, params[:query],
-                    class: "search-input placeholder-search",
-                    placeholder: "City, place name, type..."%>
-                  <%= select_tag "filter", options_for_select(['Select Filter',
-                            'Diaper',
-                            'Toy',
-                            'High Chair',
-                            'Play Area']), class: "search-select" %>
-          </div>
-          <div class="modal-footer">
-            <button class="btn" type="button" data-dismiss="modal" >Close</button>
-                  <button type="submit" class="search-submit">Search</button>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+  <div class="search-mobile">
+    <%= render 'shared/search-mobile' %>
   </div>
-  <div class="search">
-    <%#= render 'shared/search' %>
+  <div class="search-desktop">
+    <%= render 'shared/search-desktop' %>
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
