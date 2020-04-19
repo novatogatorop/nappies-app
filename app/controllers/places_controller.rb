@@ -9,7 +9,7 @@ class PlacesController < ApplicationController
     query = params[:query]
     results = query.present? ? Place.global_search(query) : Place.all
 
-    if params[:filter] == 'Select Filter'
+    if params[:filter].blank? || params[:filter] == 'Select Filter'
       @places = results
     else
       # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair

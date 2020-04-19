@@ -6,6 +6,24 @@
 
       <div class="sub-container">
 
+        <div class="search">
+  <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
+    <div class="search-box">
+      <div class="search-input">
+        <%= text_field_tag :query, params[:query],
+          class: "search-input form-control placeholder-search",
+          placeholder: "Try 'Berlin'"%>
+        <%= select_tag "filter", options_for_select(['Select Filter',
+                  'Diaper',
+                  'Toy',
+                  'High Chair',
+                  'Play Area']), class:'custom-select' %>
+        <%= submit_tag "🔎", class: "search-submit btn-search"  %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
         <h3><%#= @no_result %></h3>
 
         <% @places.each do |place| %>
