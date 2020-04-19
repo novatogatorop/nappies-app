@@ -13,6 +13,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <% if current_user.admin? %>
+            <%= link_to "Create A Place", new_place_path, class: "nav-link" %>
+          <% else %>
+            <a class="no-decor-color nav-link" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
+            <%#= link_to "Recommend A Place", edit_user_registration_path, class: "nav-link" %>
+          <% end %>
+        </li>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to current_user.username.upcase, edit_user_registration_path, class: "nav-link" %>
@@ -21,14 +29,6 @@
         <li class="nav-item">
           <%#= link_to "My Account", account_path(current_user), class: "nav-link" %>
           <%#= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color nav-link' %>
-        </li>
-        <li class="nav-item">
-          <% if current_user.admin? %>
-            <%= link_to "Create A Place", new_place_path, class: "nav-link" %>
-          <% else %>
-            <a class="no-decor-color nav-link" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
-            <%#= link_to "Recommend A Place", edit_user_registration_path, class: "nav-link" %>
-          <% end %>
         </li>
         <% if current_user.admin? %>
           <% if current_user[:photo] %>
