@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'place_facilities/new'
-  get 'facilities/new'
-  get 'facilities/edit'
   devise_for :users
-  root to: 'places#index'
+  # root to: 'places#index'
+  get 'search', to: 'places#index'
 
   resources :places
   # resources :places do

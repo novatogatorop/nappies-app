@@ -71,13 +71,43 @@
 
   // SEARCH
 
-  .placeholder-search {
-    padding-left: 0.5rem !important;
-  }
+  .search-box {
+    display: flow-root;
+    width: -webkit-fill-available;
+}
 
-  .search-submit {
-    padding: 7.5px !important;
+.search-input {
+  width: 40%;
+  height: 50px;
+  color: $black;
+  padding: 0.375rem 0.75rem;
+  border: 0.5px solid #F2F2F2 !important;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.search-select {
+  width: 40%;
+  height: 50px;
+  padding: 0.375rem 0.75rem;
+  background-color:  transparent !important;
+  border: 0.5px solid #F2F2F2 !important;
+  border-radius: 0px !important;
+  margin-right: 5px;
+}
+
+
+.search-submit {
+  border: 0.5px solid #F2F2F2 !important;
+  padding: 0.375rem 0.75rem;
+  background-color:  transparent !important;
+  border-radius: 5px;
+  height: 50px;
+  width: 8%;
+  &:hover {
+    color: $nappies;
   }
+}
 
   // DEVISE
 

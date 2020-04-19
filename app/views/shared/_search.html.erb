@@ -1,20 +1,17 @@
-<div class="search">
-  <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
-    <div class="search-box">
-      <div class="search-input">
-        <%= text_field_tag :query, params[:query],
-          class: "search-input form-control placeholder-search",
-          placeholder: "Try 'Berlin'"%>
-        <%= select_tag "filter", options_for_select(['Select Filter',
-                  'Diaper',
-                  'Toy',
-                  'High Chair',
-                  'Play Area']), class:'custom-select' %>
-        <%= submit_tag "🔎", class: "search-submit btn-search"  %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= form_for :search, url: places_path, class: "search-form", method: :get do %>
+  <div class="search-box">
+      <%= text_field_tag :query, params[:query],
+        class: "search-input placeholder-search",
+        placeholder: "City, place name, type..."%>
+      <%= select_tag "filter", options_for_select(['Select Filter',
+                'Diaper',
+                'Toy',
+                'High Chair',
+                'Play Area']), class: "search-select" %>
+      <%#= submit_tag "🔎", class: "search-submit"  %>
+      <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+  </div>
+<% end %>
 
 
 
