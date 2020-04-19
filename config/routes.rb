@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'place_facilities/new'
+  get 'facilities/new'
+  get 'facilities/edit'
   root to: 'places#index'
-  # get 'search', to: 'places#index'
-
-  resources :places
   resources :places do
     resources :place_facilities, only: [:new, :create]
   end
