@@ -9,11 +9,11 @@ class PlacesController < ApplicationController
     query = params[:query]
     results = query.present? ? Place.global_search(query) : Place.all
 
-    if params[:filter].blank? || params[:filter] == 'Select Filter'
+    if params[:facility].blank? || params[:facility] == 'Select Facility'
       @places = results
     else
       # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair
-      symbol = params[:filter].gsub(/ /, '_').downcase!.to_sym
+      symbol = params[:facility].gsub(/ /, '_').downcase!.to_sym
       # @places = results.where(:high_chair => true)
       @places = results.where(symbol => true)
     end
