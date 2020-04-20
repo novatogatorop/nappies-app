@@ -1,4 +1,4 @@
-@media(max-width: 868px) {
+@media only screen and (max-width: 575px) {
 
   // PLACES
 
@@ -7,22 +7,20 @@
     flex-direction:column-reverse;
     margin: 0rem !important;
     width: 100% !important;
+    padding: 0.5rem 0.75rem !important;
   }
 
   .index-cards {
-    // height: 30vh !important;
-    width: 100vw !important;
+    width: 90% !important;
     margin: 0.4rem auto 0rem !important;
-    // height: 30vh !important;
   }
 
   .sub-container {
-    margin-top: 0rem !important;
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
     overflow-x: auto !important;
     flex-wrap: nowrap !important;
-    height: 100% !important;
+    margin: 0px;
   }
 
   .col-xs-12 {

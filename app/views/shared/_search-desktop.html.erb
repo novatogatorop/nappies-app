@@ -1,0 +1,17 @@
+<%= form_for :search, url: places_path, class: "search-form", method: :get do %>
+  <div class="search-box">
+      <%= text_field_tag :query, params[:query],
+        class: "search-input placeholder-search",
+        placeholder: "City, place name, type..."%>
+      <%= select_tag "facility", options_for_select(['Select Facility',
+                'Diaper',
+                'Toy',
+                'High Chair',
+                'Play Area']), class: "search-select" %>
+      <%#= submit_tag "🔎", class: "search-submit"  %>
+      <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+  </div>
+<% end %>
+
+
+

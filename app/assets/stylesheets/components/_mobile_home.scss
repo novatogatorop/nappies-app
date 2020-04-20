@@ -1,13 +1,12 @@
 
-@media(max-width: 900px) {
+@media only screen and (max-width: 575px) {
 
   body {
     font-size: 14px !important;
   }
 
   .main-container {
-    width: 90%;
-    margin: 3.5rem auto 1rem !important;
+    width: 100vw !important;
   }
 
   // HOME PAGE
@@ -42,7 +41,7 @@
 
   .navbar-lewagon {
     overflow-x: hidden !important;
-    justify-content: space-between;
+    justify-content: unset !important;
     background-color: white;
     letter-spacing: 1px;
     border-bottom: 1px solid $lightgrey;
@@ -50,6 +49,10 @@
 
   .navbar-nav {
     margin-top: 5px !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
   }
 
   .navbar-lewagon {
@@ -70,14 +73,84 @@
   }
 
   // SEARCH
-
-  .placeholder-search {
-    padding-left: 0.5rem !important;
+  .search-desktop {
+    display: none;
   }
 
-  .search-submit {
-    padding: 7.5px !important;
+  .search-mobile {
+    display: content !important;
   }
+
+  .search-button-mobile {
+    border: none !important;
+    height: 2.4rem;
+    background-color:  transparent !important;
+    font-size: 1.25rem;
+    &:hover {
+      color: $nappies;
+    }
+  }
+
+  .modal-dialog {
+    position: relative;
+    width: 44vh;
+    margin: 0.5rem;
+    pointer-events: none;
+  }
+
+  .modal-backdrop {
+    z-index: -1;
+  }
+
+  .search-box-mobile {
+    display: flow-root;
+    width: 100%;
+    display: flex;
+    flex-direction: column;;
+  }
+
+  .search-input-mobile {
+    width: 100%;
+    height: 2.4rem;
+    padding: 0px 1.2rem;
+    color: $black;
+    border: 0.5px solid #F2F2F2 !important;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 16px;
+  }
+
+  .search-select-mobile {
+    width: 100%;
+    height: 2.4rem;
+    padding: 0px 1.2rem;
+    background-color:  transparent !important;
+    border: 0.5px solid #F2F2F2 !important;
+    border-radius: 5px !important;
+    margin-right: 5px;
+    margin-bottom: 16px;
+  }
+
+  .search-popup-footer {
+    border-top: 0.5px solid #F2F2F2 !important;
+    display: flex-inline;
+    width: 100%;
+    text-align-last: justify;
+    padding-top: 16px;
+  }
+
+  .search-submit-mobile {
+    border: 0.5px solid #F2F2F2 !important;
+    height: 2.4rem;
+    padding: 0px 1.2rem;
+    background-color:  transparent !important;
+    border-radius: 5px;
+    // height: 50px;
+    &:hover {
+      color: $nappies;
+    }
+  }
+
 
   // DEVISE
 

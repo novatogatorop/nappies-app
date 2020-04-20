@@ -21,4 +21,13 @@ class Place < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  # scope :diaper, -> { where(diaper: true) }
+  # scope :toy, -> { where(toy: true) }
+  # scope :high_chair, -> { where(high_chair: true) }
+  # scope :play_area, -> { where(play_area: true) }
+
+  # def self.search_by(search_term)
+  #   where("LOWER(address) LIKE :search_term", search_term: "%#{search_term.downcase}%")
+  # end
 end
