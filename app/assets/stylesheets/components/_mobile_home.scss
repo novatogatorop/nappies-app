@@ -1,13 +1,12 @@
 
-@media(max-width: 900px) {
+@media only screen and (max-width: 900px) {
 
   body {
     font-size: 14px !important;
   }
 
   .main-container {
-    width: 90%;
-    margin: 3.5rem auto 1rem !important;
+    width: 100vw !important;
   }
 
   // HOME PAGE
@@ -42,7 +41,7 @@
 
   .navbar-lewagon {
     overflow-x: hidden !important;
-    justify-content: space-between;
+    justify-content: unset !important;
     background-color: white;
     letter-spacing: 1px;
     border-bottom: 1px solid $lightgrey;
@@ -50,6 +49,10 @@
 
   .navbar-nav {
     margin-top: 5px !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
   }
 
   .navbar-lewagon {
@@ -71,10 +74,21 @@
 
   // SEARCH
   .search-desktop {
+    display: none;
+  }
+
+  .search-mobile {
+    display: content !important;
   }
 
   .search-button-mobile {
-
+    border: none !important;
+    height: 2.4rem;
+    background-color:  transparent !important;
+    font-size: 1.25rem;
+    &:hover {
+      color: $nappies;
+    }
   }
 
   .modal-dialog {
