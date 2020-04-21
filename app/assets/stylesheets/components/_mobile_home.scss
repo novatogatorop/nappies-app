@@ -145,6 +145,8 @@
     padding: 0px 1.2rem;
     background-color:  transparent !important;
     border-radius: 5px;
+    cursor: pointer;
+    transition: opacity .3s ease, transform .3s ease !important;
     // height: 50px;
     &:hover {
       color: $nappies;
