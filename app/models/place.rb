@@ -1,8 +1,8 @@
 class Place < ApplicationRecord
   belongs_to :user
   belongs_to :type
-  has_many :facilities, through: :place_facilities
-  has_many :place_facilities, dependent: :destroy
+  # has_many :facilities, through: :place_facilities
+  # has_many :place_facilities, dependent: :destroy
   has_one_attached :photo1
   has_one_attached :photo2
   has_one_attached :photo3

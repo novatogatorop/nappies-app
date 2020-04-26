@@ -1,4 +1,4 @@
 class PlaceFacility < ApplicationRecord
-  belongs_to :place
-  belongs_to :facility
+  # belongs_to :place
+  # belongs_to :facility
 end

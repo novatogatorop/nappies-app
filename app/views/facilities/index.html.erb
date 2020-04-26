@@ -1,17 +1,17 @@
-<div class="main-container">
+<!-- <div class="main-container">
   <div class="index-container">
     <div class="index-cards">
       <h1 class="show-title mb-5">Facilities of places</h1>
       <div class="sub-container">
-        <% @facilities.each do |f| %>
+        <%# @facilities.each do |f| %>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="card">
               <div class="index-images">
-                <% if f.photo.attached? %>
-                  <%= cl_image_tag f.photo.key, class: 'card-image' %>
-                <% else %>
+                <%# if f.photo.attached? %>
+                  <%#= cl_image_tag f.photo.key, class: 'card-image' %>
+                <%# else %>
                   <%= image_tag "place-icon.png", class: 'card-image' %>
-                <% end %>
+                <%# end %>
               </div>
               <div class="place-card-details">
                 <p class="card-name"><%= f.name %></p>
@@ -20,9 +20,10 @@
               </div>
             </div>
           </div>
-        <% end %>
+        <%# end %>
       </div>
     </div>
   </div>
   <h2 class="mt-5"><%= link_to 'Create Facility', new_facility_path, :class => 'no-decor' %></h2>
 </div>
+ -->
