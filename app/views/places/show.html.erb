@@ -42,31 +42,31 @@
     <h1 class="show-title"><%= @place.name %></h1>
     <p class="show-address"><%= @place.address %></p>
     <div class="show-facility">
-      <div class="facility-details">
-        <% if @place.diaper == true %>
-          <%= image_tag "icon-diaper.png", class: 'facility-image' %>
+      <!-- <div class="facility-details">
+        <%# if @place.diaper == true %>
+          <%#= image_tag "icon-diaper.png", class: 'facility-image' %>
           <p class="facility-name">Changing Table</p>
-        <% end %>
+        <%# end %>
       </div>
       <div class="facility-details">
-        <% if @place.toy == true %>
-          <%= image_tag "icon-toy.png", class: 'facility-image' %>
+        <%# if @place.toy == true %>
+          <%#= image_tag "icon-toy.png", class: 'facility-image' %>
           <p class="facility-name">Toys</p>
-        <% end %>
+        <%# end %>
       </div>
       <div class="facility-details">
-        <% if @place.high_chair == true %>
-          <%= image_tag "icon-high-chair.png", class: 'facility-image' %>
+        <%# if @place.high_chair == true %>
+          <%#= image_tag "icon-high-chair.png", class: 'facility-image' %>
           <p class="facility-name">High Chair</p>
-        <% end %>
+        <%# end %>
       </div>
       <div class="facility-details">
-        <% if @place.play_area == true %>
-          <%= image_tag "icon-play-area.png", class: 'facility-image' %>
+        <%# if @place.play_area == true %>
+          <%#= image_tag "icon-play-area.png", class: 'facility-image' %>
           <p class="facility-name">Play Area</p>
-        <% end %>
+        <%# end %>
       </div>
-    </div>
+    </div> -->
     <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
     <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
     <% if user_signed_in? %>
