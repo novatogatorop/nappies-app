@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_130015) do
     t.bigint "type_id"
     t.boolean "diaper", default: false
     t.boolean "toy", default: false
-    t.boolean "high_Chair", default: false
+    t.boolean "high_chair", default: false
     t.boolean "play_area", default: false
     t.index ["type_id"], name: "index_places_on_type_id"
     t.index ["user_id"], name: "index_places_on_user_id"
