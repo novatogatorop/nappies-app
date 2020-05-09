@@ -1,32 +1,32 @@
 <div class="show-images">
   <% if @place.photo1.attached? %>
-    <%= cl_image_tag @place.photo1.key, crop: :fill, class: 'show-img' %>
+    <%= cl_image_tag @place.photo1.key, width: 300, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", class: 'show-img' %>
+    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo2.attached? %>
-    <%= cl_image_tag @place.photo2.key, class: 'show-img' %>
+    <%= cl_image_tag @place.photo2.key, width: 300, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", class: 'show-img' %>
+    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo3.attached? %>
-    <%= cl_image_tag @place.photo3.key, class: 'show-img' %>
+    <%= cl_image_tag @place.photo3.key, width: 300, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", class: 'show-img' %>
+    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo4.attached? %>
-    <%= cl_image_tag @place.photo4.key, class: 'show-img' %>
+    <%= cl_image_tag @place.photo4.key, width: 300, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", class: 'show-img' %>
+    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo5.attached? %>
-    <%= cl_image_tag @place.photo5.key, class: 'show-img' %>
+    <%= cl_image_tag @place.photo5.key, width: 300, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", class: 'show-img' %>
+    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
   <% end %>
 </div>
 <div class="show-details-box">
