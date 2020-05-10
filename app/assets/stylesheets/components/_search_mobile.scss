@@ -3,10 +3,6 @@
     display: none;
   }
 
-  .search-mobile {
-
-  }
-
   .search-button-navbar {
     color: $black;
     // height: 3rem;
@@ -25,6 +21,7 @@
 
   .search-button-x {
     display: none;
+    margin-left: auto;
     color: $black;
     font-size: 1.5rem;
     border: none !important;
@@ -72,7 +69,8 @@
   .search-popup-footer {
     display: flex-inline;
     width: 100%;
-    text-align-last: justify;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .search-submit-navbar {
