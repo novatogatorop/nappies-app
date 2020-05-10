@@ -1,43 +1,14 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar-desktop navbar-expand-sm navbar-light navbar-lewagon">
   <div class="logo-search">
     <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
-  </div>
-  <div class="search-mobile d-block d-sm-none">
-    <button type="button" class="search-button-mobile" data-toggle="modal" data-target="#loginModal">
-      <i class="fas fa-search"></i>
-    </button>
-    <div class="modal"id="loginModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
-              <div class="search-box-mobile">
-                <%= text_field_tag :query, params[:query],
-                  class: "search-input-mobile",
-                  placeholder: "City, place name, type..."%>
-                <%= select_tag "facility", options_for_select(['Select Facility',
-                          'Diaper',
-                          'Toy',
-                          'High Chair',
-                          'Play Area']), class: "search-select-mobile" %>
-                <div class="search-popup-footer">
-                  <button class="btn" type="button" data-dismiss="modal" >Close</button>
-                  <button type="submit" class="search-submit-mobile">Search</button>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="search-desktop">
     <%= render 'shared/search-desktop' %>
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -30,48 +30,6 @@
         width: 97.7% !important;
   }
 
-  // NAVBAR
-
-  .navbar {
-    position: fixed !important;
-    width: 100vw !important;
-    overflow-x: hidden !important;
-    padding: 0.5rem 0.75rem !important;
-  }
-
-  .navbar-lewagon {
-    overflow-x: hidden !important;
-    justify-content: unset !important;
-    background-color: white;
-    letter-spacing: 1px;
-    border-bottom: 1px solid $lightgrey;
-  }
-
-  .navbar-nav {
-    margin-top: 5px !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-  }
-
-  .navbar-lewagon {
-    width: 40px;
-  }
-
-  .nav-link {
-    letter-spacing: 1px;
-    margin: 0px 3px;
-  }
-
-  .dropdown-menu-box {
-   top: 45px;
-  }
-
-  .logo-text {
-    display: none !important;
-  }
-
   // SEARCH
   .search-desktop {
     display: none;

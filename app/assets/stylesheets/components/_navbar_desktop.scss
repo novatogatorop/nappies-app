@@ -1,4 +1,9 @@
-.navbar {
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-desktop {
+  display: flex;
   position: fixed !important;
   z-index: 2 !important;
   top: 0px;
