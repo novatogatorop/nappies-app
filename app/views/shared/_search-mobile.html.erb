@@ -1,27 +1,25 @@
-<button type="button" class="search-button-mobile" data-toggle="modal" data-target="#loginModal">
-      <i class="fas fa-search"></i>
+<div class="dropdown">
+    <button class="btn-dropdown dropdown-toggle logo-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      NAPPIES
     </button>
-    <div class="modal"id="loginModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <%= form_for :search, url: places_path, class: "search-form", method: :get do %>
-              <div class="search-box-mobile">
-                <%= text_field_tag :query, params[:query],
-                  class: "search-input-mobile",
-                  placeholder: "City, place name, type..."%>
-                <%= select_tag "facility", options_for_select(['Select Facility',
-                          'Diaper',
-                          'Toy',
-                          'High Chair',
-                          'Play Area']), class: "search-select-mobile" %>
-                <div class="search-popup-footer">
-                  <button class="btn" type="button" data-dismiss="modal" >Close</button>
-                  <button type="submit" class="search-submit-mobile">Search</button>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <% if user_signed_in? %>
+        <%= link_to current_user.username.upcase, edit_user_registration_path, class: "dropdown-item" %>
+        <% if current_user.admin? %>
+          <%= link_to "Create A Place", new_place_path, class: "dropdown-item" %>
+        <% else %>
+          <a class="no-decor-color dropdown-item" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
+        <% end %>
+        <% if current_user.admin? %>
+          <% if current_user[:photo] %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-item" %>
+          <% else %>
+            <%= image_tag "profile-icon.png", class: "avatar-bordered dropdown-item" %>
+          <% end %>
+        <% end %>
+      <% else %>
+          <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+          <strong><%= link_to "SIGN UP", new_user_registration_path, class: "dropdown-item" %></strong>
+      <% end %>
     </div>
+  </div>

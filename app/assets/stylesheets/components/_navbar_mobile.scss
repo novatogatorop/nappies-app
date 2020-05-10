@@ -1,0 +1,23 @@
+@media only screen and (max-width: 575px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .logo-search {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    position: fixed !important;
+    z-index: 2 !important;
+    top: 0px;
+    width: 100vw;
+    background-color: white;
+    padding: 0.75rem;
+    flex-direction: column;
+    // border-bottom: 0.5px solid #F2F2F2;
+  }
+
+  // DROPDOWN
+}

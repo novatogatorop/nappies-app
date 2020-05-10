@@ -8,10 +8,11 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <%= favicon_link_tag asset_path('nappie-logo.png') %>
+    <%= favicon_link_tag asset_path('nappies-logo.png') %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar-desktop' %>
+    <%= render 'shared/navbar-mobile' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
