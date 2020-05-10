@@ -1,50 +1,30 @@
 <div class="navbar-mobile">
-  <div class="dropdown">
-    <button class="btn-dropdown dropdown-toggle logo-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      NAPPIES
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <% if user_signed_in? %>
-        <%= link_to current_user.username.upcase, edit_user_registration_path, class: "dropdown-item" %>
-        <% if current_user.admin? %>
-          <%= link_to "Create A Place", new_place_path, class: "dropdown-item" %>
-        <% else %>
-          <a class="no-decor-color dropdown-item" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
-        <% end %>
-        <% if current_user.admin? %>
-          <% if current_user[:photo] %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-item" %>
-          <% else %>
-            <%= image_tag "profile-icon.png", class: "avatar-bordered dropdown-item" %>
-          <% end %>
-        <% end %>
-      <% else %>
-          <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
-          <strong><%= link_to "SIGN UP", new_user_registration_path, class: "dropdown-item" %></strong>
+  <div class="search-mobile">
+    <button class="search-button-navbar"><i class="fas fa-search"></i></button>
+    <button class="search-button-x"><i class="fas fa-times"></i></button>
+    <div class="search-form-mobile">
+      <%= form_for :search, url: places_path, class: "search-form form-container", method: :get do %>
+        <div class="search-box-mobile">
+            <%= text_field_tag :query, params[:query],
+              class: "search-input-mobile",
+              placeholder: "City, place name, type..."%>
+          <%= select_tag "facility", options_for_select(['Select Facility',
+                    'Diaper',
+                    'Toy',
+                    'High Chair',
+                    'Play Area']), class: "search-select-mobile" %>
+          <div class="search-popup-footer">
+            <button type="submit" class="search-submit-navbar"><i class="fas fa-search"></i> search</button>
+            <!-- <button class="search-submit-navbar cancel-button">Close</button> -->
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
 
-  <div class="mobile-search-button">
-    <button class="open-button""><i class="fas fa-search"></i></button>
-  </div>
-
-  <div class="search-popup">
-    <%= form_for :search, url: places_path, class: "search-form form-container", method: :get do %>
-      <div class="search-box-mobile">
-        <%= text_field_tag :query, params[:query],
-          class: "search-input-mobile",
-          placeholder: "City, place name, type..."%>
-        <%= select_tag "facility", options_for_select(['Select Facility',
-                  'Diaper',
-                  'Toy',
-                  'High Chair',
-                  'Play Area']), class: "search-select-mobile" %>
-        <div class="search-popup-footer">
-          <button class="btn cancel-button">Close</button>
-          <button type="submit" class="search-submit-mobile">Search</button>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <!-- <div class="dropdown-mobile">
+    <button class="search-button-navbar">
+      <%#= image_tag "nappies-logo.png", class: "logo-mobile" %>
+    </button>
+  </div> -->
 </div>
