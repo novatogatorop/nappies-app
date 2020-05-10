@@ -1,4 +1,33 @@
 <div class="navbar-mobile">
+  <!-- DROPDOWN -->
+  <div class="dropdown-mobile">
+    <div class="logo-navbar"><%= image_tag "nappies-logo.png", class: "logo-mobile" %></div>
+    <div class="logo-navbar-close"><%= image_tag "nappies-logo.png", class: "logo-mobile" %></div>
+    <div class="dropdown-list">
+      <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.username.upcase, edit_user_registration_path, :class => 'no-decor-dropdown' %></li>
+          <% if current_user.admin? %>
+            <li><%= link_to "Create A Place", new_place_path, :class => 'no-decor-dropdown' %></li>
+          <% else %>
+            <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
+          <% end %>
+          <% if current_user.admin? %>
+            <% if current_user[:photo] %>
+              <li><%= cl_image_tag current_user.photo.key, class: "avatar" %></li>
+            <% else %>
+              <li><%= image_tag "profile-icon.png", class: "avatar" %></li>
+            <% end %>
+          <% end %>
+        <% else %>
+            <li><%= link_to "Login", new_user_session_path, :class => 'no-decor-dropdown' %></li>
+            <li><strong><%= link_to "SIGN UP", new_user_registration_path, :class => 'no-decor-dropdown' %></strong></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
   <div class="search-mobile">
     <button class="search-button-navbar"><i class="fas fa-search"></i></button>
     <button class="search-button-x"><i class="fas fa-times"></i></button>
@@ -21,10 +50,4 @@
       <% end %>
     </div>
   </div>
-
-  <!-- <div class="dropdown-mobile">
-    <button class="search-button-navbar">
-      <%#= image_tag "nappies-logo.png", class: "logo-mobile" %>
-    </button>
-  </div> -->
 </div>

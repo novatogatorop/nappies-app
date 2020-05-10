@@ -15,9 +15,52 @@
     width: 100vw;
     background-color: white;
     padding: 0.75rem;
-    flex-direction: column;
+    // flex-direction: column;
     // border-bottom: 0.5px solid #F2F2F2;
   }
 
   // DROPDOWN
+
+  .dropdown-mobile {
+    flex-grow: 1;
+  }
+
+  .logo-navbar{
+    margin-bottom: 0px;
+  }
+
+  .logo-navbar-close {
+    display: none;
+  }
+
+  .logo-mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-list {
+    // width: 100vw 97.7%;
+    display: none;
+  }
+
+  .dropdown-list ul li {
+    list-style: none !important;
+    margin-bottom: 16px;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .no-decor-dropdown {
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      text-decoration: none;
+      color: $nappies;
+    }
+  }
 }
