@@ -39,21 +39,15 @@
   color: $darkgrey;
 }
 
-.show-google-map {
-  margin-top: 30px;
-  width: 100%;
-  height: 500px;
-}
-
 .show-facility {
   display: inherit;
   // height: 3rem;
+  // margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .facility-details {
   display: inherit;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
 }
 
 .facility-image {
@@ -70,12 +64,6 @@
   display: none;
 }
 
-// CONTENT FOOTER
-
-.show-content-footer {
-  display: flex;
-}
-
 // ADMIN
 
 .admin-box {
@@ -90,4 +78,19 @@
   width: 30%;
   justify-content: space-between;
   border-top: 0.05rem solid;
+}
+
+// MAP
+
+.show-google-map {
+  margin: 3rem 0;
+  width: 100%;
+  height: 500px;
+}
+
+// CONTENT FOOTER
+
+.show-content-footer {
+  display: flex;
+  width: 100%;
 }
