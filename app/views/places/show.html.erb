@@ -72,8 +72,8 @@
       <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
     </div>
     <div class="admin-box">
-      <div>ADMIN</div>
       <% if user_signed_in? %>
+      <div>ADMIN</div>
         <div class="admin-authorize">
           <% if policy(@place).edit? %>
             <p><i class="far fa-edit"> </i><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></p>
