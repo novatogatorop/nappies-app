@@ -1,32 +1,32 @@
 <div class="show-images">
   <% if @place.photo1.attached? %>
-    <%= cl_image_tag @place.photo1.key, width: 300, class: 'show-img' %>
+    <%= cl_image_tag @place.photo1.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
+    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo2.attached? %>
-    <%= cl_image_tag @place.photo2.key, width: 300, class: 'show-img' %>
+    <%= cl_image_tag @place.photo2.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
+    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo3.attached? %>
-    <%= cl_image_tag @place.photo3.key, width: 300, class: 'show-img' %>
+    <%= cl_image_tag @place.photo3.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
+    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo4.attached? %>
-    <%= cl_image_tag @place.photo4.key, width: 300, class: 'show-img' %>
+    <%= cl_image_tag @place.photo4.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
+    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo5.attached? %>
-    <%= cl_image_tag @place.photo5.key, width: 300, class: 'show-img' %>
+    <%= cl_image_tag @place.photo5.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", width: 300, class: 'show-img' %>
+    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 </div>
 <div class="show-details-box">
@@ -67,18 +67,24 @@
         <% end %>
       </div>
     </div>
-    <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
-    <p><%= link_to 'Back', places_path, :class => 'no-decor-color' %></p>
-    <% if user_signed_in? %>
-      <div class="admin-authorize">
-        <% if policy(@place).edit? %>
-          <strong><p class="show-type"><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor-color mr-5' %></p></strong>
-        <% end %>
-        <% if policy(@place).destroy? %>
-          <strong><p class="show-type"><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor-color', method: :delete, data: {confirm: "Are you sure?"} %></p></strong>
-        <% end %>
-      </div>
-    <% end %>
+    <div class="show-content-footer">
+      <div class="btn-back"><i class="fas fa-arrow-left"></i> <%= link_to 'Back', places_path, :class => 'no-decor-grey' %></div>
+      <a class="btn-get-direction" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
+    </div>
+    <div class="admin-box">
+      <div>ADMIN</div>
+      <% if user_signed_in? %>
+        <div class="admin-authorize">
+          <% if policy(@place).edit? %>
+            <p><i class="far fa-edit"> </i><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></p>
+          <% end %>
+          <div> | </div>
+          <% if policy(@place).destroy? %>
+            <p><i class="far fa-trash-alt"></i> </i><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor', method: :delete, data: {confirm: "Are you sure?"} %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
   <!-- GOOGLE MAPS -->
  <!--  <div
