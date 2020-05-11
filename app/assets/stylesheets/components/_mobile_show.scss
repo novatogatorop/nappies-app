@@ -48,6 +48,13 @@
     margin-bottom: 12px;
   }
 
+  .btn-back {
+    letter-spacing: 0.08rem !important;
+    position: unset;
+    margin-top: 5px;
+    margin-bottom: 12px;
+  }
+
   .show-facility {
     display: inline-table !important;
     height: fit-content;
@@ -63,5 +70,11 @@
 
   .facility-name {
     padding-left: 1rem;
+  }
+
+  // ADMIN
+
+  .admin-authorize {
+   width: 50% !important;
   }
 }
