@@ -30,16 +30,16 @@
           <%#= link_to "My Account", account_path(current_user), class: "nav-link" %>
           <%#= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color nav-link' %>
         </li>
-        <% if current_user.admin? %>
-          <% if current_user[:photo] %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% else %>
-            <%= image_tag "profile-icon.png", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% end %>
-          <div class="dropdown-menu dropdown-menu-right dp-down-r" aria-labelledby="navbarDropdown">
-            <%= link_to "Type", types_path, class: "dropdown-item" %>
-          </div>
-        <% end %>
+        <%# if current_user.admin? %>
+          <%# if current_user[:photo] %>
+            <%#= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%# else %>
+            <%#= image_tag "profile-icon.png", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%# end %>
+          <!-- <div class="dropdown-menu dropdown-menu-right dp-down-r" aria-labelledby="navbarDropdown"> -->
+            <%#= link_to "Type", types_path, class: "dropdown-item" %>
+          <!-- </div> -->
+        <%# end %>
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>

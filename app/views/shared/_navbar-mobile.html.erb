@@ -12,13 +12,13 @@
           <% else %>
             <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
           <% end %>
-          <% if current_user.admin? %>
-            <% if current_user[:photo] %>
-              <li><%= cl_image_tag current_user.photo.key, class: "avatar" %></li>
-            <% else %>
-              <li><%= image_tag "profile-icon.png", class: "avatar" %></li>
-            <% end %>
-          <% end %>
+          <%# if current_user.admin? %>
+            <%# if current_user[:photo] %>
+              <!-- <li><%#= cl_image_tag current_user.photo.key, height: 400, crop: :fill, class: "avatar" %></li> -->
+            <%# else %>
+              <!-- <li><%#= image_tag "profile-icon.png", height: 400, crop: :fill, class: "avatar" %></li> -->
+            <%# end %>
+          <%# end %>
         <% else %>
             <li><%= link_to "Login", new_user_session_path, :class => 'no-decor-dropdown' %></li>
             <li><strong><%= link_to "SIGN UP", new_user_registration_path, :class => 'no-decor-dropdown' %></strong></li>
