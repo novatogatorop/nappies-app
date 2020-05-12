@@ -1,39 +1,52 @@
-.btn-back {
-  margin-right: auto;
-  letter-spacing: 1px;
-  border: 0.05rem solid;
-  border-radius: 3px;
+.btn-nappies {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  &:hover {
-    background-color: #f2f2f2;
-    border-color: #f2f2f2;
-  }
-}
-
-.btn-get-direction {
+  background-color: $nappies;
   letter-spacing: 1px;
-  color: white;
+  color: white !important;
   border: 0.05rem solid;
   border-color: $nappies;
   border-radius: 3px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
+  &:hover {
+    color: $nappies !important;
+    text-decoration: none;
+    background-color: white;
+  }
+}
+
+.btn-minor {
+  color: black;
+  background-color: transparent;
+  letter-spacing: 1px;
+  border: 0.05rem solid;
+  border-radius: 3px;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: #9ac4c1;
+  border-color: $lightgrey;
+  &:hover {
+  border-color: black;
+  }
 }
 
-.btn-get-direction:hover {
-  color: $nappies;
+.no-decor-color {
   text-decoration: none;
-  background-color: white;
+  color: $black;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    color: black;
+  }
 }
 
-a.btn-get-direction {
+.no-decor {
   text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: $black;
+  }
 }
