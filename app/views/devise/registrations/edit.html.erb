@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container index-container">
   <div class="account-page-form-box">
     <h1 class="sign-title">PERSONAL DATA <%#= resource_name.to_s.humanize %></h1>
 
@@ -29,8 +29,8 @@
       </div>
 
       <div class="form-actions mt-5">
-        <%= f.button :submit, "UPDATE PERSONAL INFORMATION", :class => 'account-submit' %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color' %>
+        <%= f.button :submit, "UPDATE PERSONAL INFORMATION", :class => 'btn btn-nappies mr-auto' %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'btn btn-minor no-decor' %>
       </div>
     <% end %>
     <div class="mt-5">
