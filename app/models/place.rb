@@ -9,6 +9,11 @@ class Place < ApplicationRecord
   has_one_attached :photo4
   has_one_attached :photo5
 
+  validates :name, presence: true, uniqueness: true, format: { with: /\A\w+\z/,
+    message: "only allows standard English letters, numbers and underscores" }
+  validates :address, presence: true, uniqueness: true
+  validates :type_id, presence: true
+
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [ :name, :address ],
