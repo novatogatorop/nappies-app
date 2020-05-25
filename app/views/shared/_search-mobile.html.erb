@@ -7,11 +7,11 @@
           <%= text_field_tag :query, params[:query],
             class: "search-input-mobile",
             placeholder: "City, place name, type..."%>
-        <%= select_tag "facility", options_for_select(['Select Facility',
+        <%= select_tag "facility", options_for_select(['Facility',
                   'Diaper',
                   'Toy',
                   'High Chair',
-                  'Play Area']), class: "search-select-mobile" %>
+                  'Play Area']), class: "select2 search-select-mobile" %>
         <div class="search-popup-footer">
           <button type="submit" class="search-submit-navbar"><i class="fas fa-search"></i> search</button>
           <!-- <button class="search-submit-navbar cancel-button">Close</button> -->
