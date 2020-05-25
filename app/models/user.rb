@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   has_many :places
 
-  validates :username, presence: true, uniqueness: true, format: { with: /\A\w+\z/,
-    message: "only allows standard English letters, numbers and underscores" }
+  validates :username, presence: true, uniqueness: true
   validates :first_name, :last_name, presence: true
   validates :email, format: { with: /\A.*@.*\.com\z/ }, presence: true, uniqueness: true
 
