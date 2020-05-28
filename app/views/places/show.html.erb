@@ -43,7 +43,7 @@
     <p class="show-address"><%= @place.address %></p>
     <div class="show-facility">
       <div class="facility-details">
-        <% if @place.diaper == true %>
+        <% if @place.changing_table == true %>
           <%= image_tag "icon-diaper.png", class: 'facility-image' %>
           <p class="facility-name">Changing Table</p>
         <% end %>
