@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_140931) do
+ActiveRecord::Schema.define(version: 2020_05_28_125156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_140931) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "diaper", default: false
+    t.boolean "changing_table", default: false
     t.boolean "toy", default: false
     t.boolean "high_chair", default: false
     t.boolean "play_area", default: false
