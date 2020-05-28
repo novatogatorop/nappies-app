@@ -1,43 +1,56 @@
 <div class="main-container index-container">
-  <!-- <div class="index-container"> -->
-    <div class="index-cards">
-      <div class="sub-container">
-        <h3><%#= @no_result %></h3>
-        <% @places.each do |place| %>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card">
-              <%= link_to place_path(place), class:"link", :action => 'go' do %>
-                <div class="index-images">
-                  <% if place.photo1.attached? %>
-                    <%= cl_image_tag place.photo1.key, class: 'card-image' %>
-                  <% else %>
-                    <%= image_tag "place-icon.png", class: 'card-image' %>
-                  <% end %>
+  <div class="index-cards">
+    <div class="sub-container">
+      <h3><%#= @no_result %></h3>
+      <% @places.each do |place| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card">
+            <%= link_to place_path(place), class:"link", :action => 'go' do %>
+              <div class="index-images">
+                <% if place.photo1.attached? %>
+                  <%= cl_image_tag place.photo1.key, class: 'card-image' %>
+                <% else %>
+                  <%= image_tag "place-icon.png", class: 'card-image' %>
+                <% end %>
+              </div>
+              <div class="place-card-details">
+                <div class="index-facility">
+                  <div class="index-facility-details mr-1">
+                    <% if place.changing_table == true %>
+                      <%= image_tag "icon-diaper.png", class: 'index-facility-image' %>                    <% end %>
+                  </div>
+                  <div class="index-facility-details mr-1">
+                    <% if place.high_chair == true %>
+                      <%= image_tag "icon-high-chair.png", class: 'index-facility-image' %>
+                    <% end %>
+                  </div>
+                  <div class="index-facility-details mr-1">
+                    <% if place.toy == true %>
+                      <%= image_tag "icon-toy.png", class: 'index-facility-image' %>
+                    <% end %>
+                  </div>
+                  <div class="index-facility-details">
+                    <% if place.play_area == true %>
+                      <%= image_tag "icon-play-area.png", class: 'index-facility-image' %>
+                    <% end %>
+                  </div>
                 </div>
-                <div class="place-card-details">
-                  <% if place.type_id.nil? %>
-                    <p class="card-type">none</p>
-                  <% else %>
-                    <p class="card-type"><%= place.type.name %></p>
-                  <% end %>
-                  <p class="card-name"><%= place.name %></p>
-                  <!-- <div> -->
-                    <%# if policy(place).edit? %>
-                      <!-- <p class="show-type"><%#= link_to 'Edit', edit_place_path(place), :class => 'no-decor-color' %></p> -->
-                    <%# end %>
-                    <%# if policy(place).destroy? %>
-                      <!-- <p class="show-type"><%#= link_to 'Destroy', place, method: :delete, :class => 'no-decor-color', data: { confirm: 'Are you sure?' } %></p> -->
-                    <%# end %>
-                  <!-- </div> -->
-                </div>
-              <% end %>
-            </div>
+
+                <% if place.type_id.nil? %>
+                  <p class="card-type">none</p>
+                <% else %>
+                  <p class="card-type"><%= place.type.name %></p>
+                <% end %>
+                <p class="card-name"><%= place.name %></p>
+
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
-    <div class="index-map">
-      <%= render 'shared/map' %>
-    </div>
-  <!-- </div> -->
+  </div>
+  <div class="index-map">
+    <%= render 'shared/map' %>
+  </div>
 </div>

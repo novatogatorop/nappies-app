@@ -41,6 +41,20 @@
 
 .place-card-details {
   margin-top: 5px;
+  position: relative;
+}
+
+.index-facility {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.3rem;
+}
+
+.index-facility-image {
+  height: 2rem;
+  width: 2rem;
+  background-color: $lightgrey;
+  border-radius: 50%;
 }
 
 .card-type {
