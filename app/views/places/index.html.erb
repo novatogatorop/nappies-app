@@ -12,14 +12,8 @@
                 <% else %>
                   <%= image_tag "place-icon.png", class: 'card-image' %>
                 <% end %>
+              </div>
               <div class="place-card-details">
-                <% if place.type_id.nil? %>
-                  <p class="card-type">none</p>
-                <% else %>
-                  <p class="card-type"><%= place.type.name %></p>
-                <% end %>
-                <p class="card-name"><%= place.name %></p>
-
                 <div class="index-facility">
                   <div class="index-facility-details mr-1">
                     <% if place.diaper == true %>
@@ -41,7 +35,13 @@
                     <% end %>
                   </div>
                 </div>
-              </div>
+
+                <% if place.type_id.nil? %>
+                  <p class="card-type">none</p>
+                <% else %>
+                  <p class="card-type"><%= place.type.name %></p>
+                <% end %>
+                <p class="card-name"><%= place.name %></p>
 
               </div>
             <% end %>
