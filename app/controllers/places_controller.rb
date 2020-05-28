@@ -18,7 +18,14 @@ class PlacesController < ApplicationController
       @places = results.where(symbol => true)
     end
 
-    @geo_places = @places.geocoded
+    if @places.present?
+      @places
+    else
+      @places = Place.geocoded
+      @response = "Sorry, we couldn't find anything 😓"
+    end
+
+    # @geo_places = @places.geocoded
     @markers = @places.map do |place|
       {
         lat: place.latitude,
@@ -31,8 +38,6 @@ class PlacesController < ApplicationController
   end
 
   def show
-    # @facility = Facility.new
-    # @place_facility = PlaceFacility.new
     @markers = Array.new
     @markers << { lat: @place.latitude,
                   lng: @place.longitude,

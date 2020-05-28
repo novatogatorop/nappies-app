@@ -1,7 +1,9 @@
 <div class="main-container index-container">
   <div class="index-cards">
+          <div class="response">
+            <%= @response %>
+          </div>
     <div class="sub-container">
-      <h3><%#= @no_result %></h3>
       <% @places.each do |place| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
