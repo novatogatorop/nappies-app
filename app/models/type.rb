@@ -1,5 +1,5 @@
 class Type < ApplicationRecord
   has_many :places
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
 end

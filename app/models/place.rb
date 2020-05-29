@@ -9,8 +9,8 @@ class Place < ApplicationRecord
   has_one_attached :photo4
   has_one_attached :photo5
 
-  validates :name, presence: true, uniqueness: true
-  validates :address, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :address, presence: true
   validates :type_id, presence: true
 
   include PgSearch::Model
@@ -26,7 +26,7 @@ class Place < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  # scope :diaper, -> { where(diaper: true) }
+  # scope :changing_table, -> { where(changing_table: true) }
   # scope :toy, -> { where(toy: true) }
   # scope :high_chair, -> { where(high_chair: true) }
   # scope :play_area, -> { where(play_area: true) }
