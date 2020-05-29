@@ -5,11 +5,15 @@
   <div class="form-inputs">
     <p><%= p.input :name %></p>
     <p><%= p.input :address, :id => 'flat_address' %></p>
-    <p><%= p.association :type, label: false, include_blank: "Select type of place", input_html: { class: "select2 rounded-sm" }, include_hidden: false  %></p>
-    <p><%= p.input :diaper, as: :boolean, checked_value: true, unchecked_value: false %></p>
-    <p><%= p.input :toy, as: :boolean, checked_value: true, unchecked_value: false %></p>
-    <p><%= p.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false %></p>
-    <p><%= p.input :play_area, as: :boolean, checked_value: true, unchecked_value: false %></p>
+    <div>Type of place *</div>
+    <div><%= p.association :type, label: false, include_blank: "Select type of place", input_html: { class: "select2 rounded-sm" }, include_hidden: false  %></div>
+    <div>Facility *</div>
+    <div class="form-facility-box">
+      <p><%= p.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false %></p>
+      <p><%= p.input :toy, as: :boolean, checked_value: true, unchecked_value: false %></p>
+      <p><%= p.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false %></p>
+      <p><%= p.input :play_area, as: :boolean, checked_value: true, unchecked_value: false %></p>
+    </div>
     <p><%= p.input :photo1, as: :file %></p>
     <p><%= p.input :photo2, as: :file %></p>
     <p><%= p.input :photo3, as: :file %></p>
