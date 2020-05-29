@@ -12,6 +12,7 @@ const searchPopup = () => {
     searchButtonX.style.marginBottom = "16px";
     dropdown.style.display = "none";
     searchMobile.style.width = "100%";
+    searchMobile.style.height = "100vh";
   });
 };
 
@@ -27,6 +28,7 @@ const closePopup = () => {
     searchButton.style.display = "block";
     dropdown.style.display = "block";
     searchMobile.style.width = "";
+    searchMobile.style.height = "0";
   });
 };
 
