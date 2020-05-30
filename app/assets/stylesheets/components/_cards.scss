@@ -1,0 +1,49 @@
+.cards {
+ display: grid;
+}
+
+.card {
+  // background-color: white;
+  // width: 100%;
+  margin-bottom: 0rem !important;
+  margin-bottom: 10%;
+  will-change: auto;
+  border: none;
+}
+
+.card-image {
+  width: 6.5rem !important;
+  border-radius: 0.5rem;
+  margin: 0;
+  font-size: small;
+  // width: 100%;
+  // border-radius: 3px;
+}
+
+.card-details {
+  margin-top: 0.2rem;
+  will-change: auto;
+  // margin-top: 5px;
+  // position: relative;
+}
+
+.card-facility-icon {
+  height: 1.15rem;
+  width: 1.15rem;
+  background-color: $lightgrey;
+  border-radius: 50%;
+}
+
+.card-type {
+  letter-spacing: 0.3px;
+  width: 100%;
+  margin: 0;
+}
+
+.card-name {
+  letter-spacing: 0.05rem !important;
+  width: 100%;
+  margin: 0;
+  font-weight: 700 !important;
+  // letter-spacing: 0.3px;
+}

@@ -1,58 +1,56 @@
-<div class="main-container index-container">
+<div class="nappies-container">
+  <div class="index-map">
+    <%= render 'shared/map' %>
+  </div>
   <div class="index-cards">
-          <div class="response">
-            <%= @response %>
-          </div>
-    <div class="sub-container">
+    <div class="response">
+      <%= @response %>
+    </div>
+    <div class="cards">
       <% @places.each do |place| %>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="card">
-            <%= link_to place_path(place), class:"link", :action => 'go' do %>
-              <div class="index-images">
-                <% if place.photo1.attached? %>
-                  <%= cl_image_tag place.photo1.key, class: 'card-image' %>
-                <% else %>
-                  <%= image_tag "place-icon.png", class: 'card-image' %>
-                <% end %>
-              </div>
-              <div class="place-card-details">
-                <div class="index-facility">
-                  <div class="index-facility-details mr-1">
-                    <% if place.changing_table == true %>
-                      <%= image_tag "icon-diaper.png", class: 'index-facility-image' %>                    <% end %>
-                  </div>
-                  <div class="index-facility-details mr-1">
-                    <% if place.high_chair == true %>
-                      <%= image_tag "icon-high-chair.png", class: 'index-facility-image' %>
-                    <% end %>
-                  </div>
-                  <div class="index-facility-details mr-1">
-                    <% if place.toy == true %>
-                      <%= image_tag "icon-toy.png", class: 'index-facility-image' %>
-                    <% end %>
-                  </div>
-                  <div class="index-facility-details">
-                    <% if place.play_area == true %>
-                      <%= image_tag "icon-play-area.png", class: 'index-facility-image' %>
-                    <% end %>
-                  </div>
-                </div>
-
-                <% if place.type_id.nil? %>
-                  <p class="card-type">none</p>
-                <% else %>
-                  <p class="card-type"><%= place.type.name %></p>
-                <% end %>
-                <p class="card-name"><%= place.name %></p>
-
-              </div>
+        <div class="card">
+          <%= link_to place_path(place), class:"link", :action => 'go' do %>
+          <div class="card-image">
+            <% if place.photo1.attached? %>
+            <%= cl_image_tag place.photo1.key, width: 400, height: 300, crop: :fill, class: 'card-image' %>
+            <% else %>
+            <%= image_tag "place-icon.png", width: 400, height: 300, crop: :fill, class: 'card-image' %>
             <% end %>
           </div>
+          <div class="card-details">
+            <div class="card-facility">
+              <div class="card-facility-icons mr-1">
+                <% if place.changing_table == true %>
+                <%= image_tag "icon-diaper.png", class: 'card-facility-icon' %>                    <% end %>
+              </div>
+              <div class="card-facility-icons mr-1">
+                <% if place.high_chair == true %>
+                <%= image_tag "icon-high-chair.png", class: 'card-facility-icon' %>
+                <% end %>
+              </div>
+              <div class="card-facility-icons mr-1">
+                <% if place.toy == true %>
+                <%= image_tag "icon-toy.png", class: 'card-facility-icon' %>
+                <% end %>
+              </div>
+              <div class="card-facility-icons">
+                <% if place.play_area == true %>
+                <%= image_tag "icon-play-area.png", class: 'card-facility-icon' %>
+                <% end %>
+              </div>
+            </div>
+
+            <% if place.type_id.nil? %>
+            <p class="card-type">none</p>
+            <% else %>
+            <p class="card-type"><%= place.type.name %></p>
+            <% end %>
+            <p class="card-name"><%= place.name %></p>
+
+          </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  </div>
-  <div class="index-map">
-    <%= render 'shared/map' %>
   </div>
 </div>
