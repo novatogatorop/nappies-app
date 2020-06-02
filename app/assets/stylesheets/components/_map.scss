@@ -2,7 +2,11 @@
   position: fixed;
   object-fit: cover;
   width: 100%;
-  height: 70vh;
+  height: 70%;
+}
+
+.index-map {
+  z-index: -1;
 }
 
 .map-info{

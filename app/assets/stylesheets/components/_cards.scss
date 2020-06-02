@@ -1,45 +1,42 @@
-.cards {
+.nappies-cards {
  display: grid;
+ grid-template-columns: 1fr;
+ justify-items: center;
+ row-gap: 2rem;
 }
 
-.card {
-  // background-color: white;
-  // width: 100%;
-  margin-bottom: 0rem !important;
-  margin-bottom: 10%;
-  will-change: auto;
-  border: none;
+.nappies-card-box {
+  width: 100%;
 }
 
-.card-details {
-  display: flex;
-  margin-top: 0.2rem;
-  will-change: auto;
-  // margin-top: 5px;
-  // position: relative;
+.nappies-card {
 }
 
 .card-image {
   object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card-details {
+  display: flex;
+  margin-top: 0.5rem;
+  will-change: auto;
 }
 
 .card-type {
-  letter-spacing: 0.3px;
-  width: 100%;
+  letter-spacing: 0.05rem;
   margin: 0;
 }
 
 .card-name {
-  letter-spacing: 0.05rem !important;
-  width: 100%;
+  letter-spacing: 0.05rem;
   margin: 0;
   font-weight: 700 !important;
-  // letter-spacing: 0.3px;
 }
 
 .card-facility {
   display: inline-flex;
-  flex-grow: 1;
+  margin-left: auto;
 }
 
 .card-facility-icon {

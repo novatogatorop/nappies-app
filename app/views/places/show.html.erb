@@ -2,7 +2,7 @@
   <% if @place.photo1.attached? %>
     <%= cl_image_tag @place.photo1.key, height: 400, crop: :fill, class: 'show-img' %>
   <% else %>
-    <%= image_tag "place-icon.png", height: 400, crop: :fill, class: 'show-img' %>
+    <%= image_tag "place-icon-landscape.png", height: 400, crop: :fill, class: 'show-img' %>
   <% end %>
 
   <% if @place.photo2.attached? %>
