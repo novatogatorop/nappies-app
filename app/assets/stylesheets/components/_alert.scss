@@ -1,9 +1,10 @@
 .alert {
+  width: 97.7% !important;
   position: fixed;
   top: 67px;
   right: .5%;
   z-index: 1000;
-  width: 50%;
+  // width: 50%;
 }
 
 .alert-info {

@@ -1,12 +1,60 @@
 #map {
-  position: sticky !important;
+  position: fixed;
   object-fit: cover;
+  width: 100%;
+  height: 70%;
 }
 
-.index-google-map {
-  top: 57px;
+.index-map {
+  z-index: -1;
+}
+
+.map-info{
+  width: 30vw;
+  // width: 14vw;
+}
+
+.map-image {
+  width: 30vw;
+  // width: 14vw;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.map-card-details {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: left;
+}
+
+.map-type {
+  font-weight: 300 !important;
+  // font-size: 14px !important;
   width: 100%;
-  height: 100vh
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.map-name {
+  font-weight: 700 !important;
+  // font-size: 14px !important;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.mapboxgl-popup-content {
+  position: relative;
+  background: #fff;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  padding: 0px !important;
+  pointer-events: auto;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 1.5rem !important;
+  right: 8px !important;
+  top: 5px !important;
 }
 
 // .gm-style .gm-style-iw-c {
@@ -27,49 +75,3 @@
 //   max-width: 14vw !important;
 //   max-height: fit-content !important;
 // }
-
-.mapboxgl-popup-content {
-  position: relative;
-  background: #fff;
-  border-radius: 5px !important;
-  box-shadow: none !important;
-  padding: 0px !important;
-  pointer-events: auto;
-}
-
-.mapboxgl-popup-close-button {
-  font-size: 1.5rem !important;
-  right: 8px !important;
-  top: 5px !important;
-}
-
-.map-info{
-  width: 14vw;
-}
-
-.map-image {
-  width: 14vw;
-  border-radius: 3px 3px 0px 0px;
-}
-
-.map-card-details {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  text-align: left;
-}
-
-.map-type {
-  font-weight: 300 !important;
-  font-size: 16px !important;
-  width: 100%;
-  margin-bottom: 0;
-  margin-top: 4px;
-}
-
-.map-name {
-  font-weight: 700 !important;
-  font-size: 16px !important;
-  font-weight: 700;
-  width: 100%;
-  margin-bottom: 4px;
-}

@@ -1,0 +1,47 @@
+.nappies-cards {
+ display: grid;
+ grid-template-columns: 1fr;
+ justify-items: center;
+ row-gap: 2rem;
+}
+
+.nappies-card-box {
+  width: 100%;
+}
+
+.nappies-card {
+}
+
+.card-image {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card-details {
+  display: flex;
+  margin-top: 0.5rem;
+  will-change: auto;
+}
+
+.card-type {
+  letter-spacing: 0.05rem;
+  margin: 0;
+}
+
+.card-name {
+  letter-spacing: 0.05rem;
+  margin: 0;
+  font-weight: 700 !important;
+}
+
+.card-facility {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.card-facility-icon {
+  height: 1.15rem;
+  width: 1.15rem;
+  background-color: $lightgrey;
+  border-radius: 50%;
+}

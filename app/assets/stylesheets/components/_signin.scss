@@ -4,6 +4,10 @@
   color: $black;
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
 .form-control:focus {
   box-shadow: none !important;
   border-color: $nappies;
