@@ -1,4 +1,3 @@
-
 const searchPopup = () => {
   const searchPopup =document.querySelector(".search-form-mobile")
   const searchButton =document.querySelector(".search-button-navbar")

@@ -1,82 +1,80 @@
-
-.navbar-desktop {
-  display: none;
-}
-
-.navbar-mobile {
-  display: flex;
-  position: fixed !important;
-  z-index: 2 !important;
-  top: 0px;
-  width: 100vw;
-  background-color: white;
-  padding: 0.75rem;
-  justify-content: space-between;
-  height: calc(15% - 0.75rem);
-  // border-bottom: $border-light;
-  // flex-direction: column;
-  // border-bottom: 0.5px solid #F2F2F2;
-}
-
-// DROPDOWN
-
-.dropdown-mobile {
-  flex-grow: 1;
-}
-
-.logo-navbar{
-  margin-bottom: 0px;
-  flex-grow: 1;
-}
-
-.logo-mobile {
-  width: 2.5rem;
-  height: 2.5rem;
-  &:hover {
-    cursor: pointer;
+@media only screen and (max-width: 575px) {
+  .navbar-desktop {
+    display: none;
   }
-}
 
-.logo-navbar-close {
-  display: none;
-  margin-right: auto;
-  color: $black;
-  font-size: 1.5rem;
-  border: none !important;
-  background-color: transparent !important;
-  width: 2.5rem;
-  height: 2.5rem;
-  &:hover {
-    border: 0.5px solid #F2F2F2 !important;
-    border-radius: 50%;
-    background-color: #F2F2F2 !important;
+  .logo-desktop {
+    display: none;
   }
-}
 
-.dropdown-list {
-  // width: 100vw 97.7%;
-  display: none;
-}
-
-.dropdown-list ul li {
-  list-style: none !important;
-  margin-bottom: 16px;
-  width: 100%;
-  &:hover {
-    cursor: pointer;
+  .navbar-mobile {
+    display: flex;
+    position: fixed !important;
+    z-index: 2 !important;
+    top: 0px;
+    width: 100vw;
+    background-color: white;
+    padding: 0.75rem;
+    justify-content: space-between;
+    // flex-direction: column;
+    // border-bottom: 0.5px solid #F2F2F2;
   }
-}
 
-.no-decor-dropdown {
-  text-decoration: none;
-  color: $black;
-  &:hover {
+  // DROPDOWN
+
+  .dropdown-mobile {
+    flex-grow: 1;
+  }
+
+  .logo-navbar{
+    margin-bottom: 0px;
+    flex-grow: 1;
+  }
+
+  .logo-navbar-close {
+    display: none;
+    margin-right: auto;
+    color: $black;
+    font-size: 1.5rem;
+    border: none !important;
+    background-color: transparent !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    &:hover {
+      border: 0.5px solid #F2F2F2 !important;
+      border-radius: 50%;
+      background-color: #F2F2F2 !important;
+    }
+  }
+
+  .logo-mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-list {
+    // width: 100vw 97.7%;
+    display: none;
+  }
+
+  .dropdown-list ul li {
+    list-style: none !important;
+    margin-bottom: 16px;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .no-decor-dropdown {
     text-decoration: none;
-    color: $nappies;
+    color: $black;
+    &:hover {
+      text-decoration: none;
+      color: $nappies;
+    }
   }
 }
-
-.logo-search {
-  display: none;
-}
-

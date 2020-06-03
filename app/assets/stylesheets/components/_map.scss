@@ -1,11 +1,10 @@
 #map {
   position: fixed;
-  object-fit: cover;
-  width: 100%;
-  height: 70%;
 }
 
 .index-map {
+  width: 100%;
+  height: 70%;
   z-index: -1;
 }
 
