@@ -1,11 +1,11 @@
 #map {
-  position: fixed;
+  // position: fixed;
 }
 
 .index-map {
-  width: 100%;
-  height: 70%;
   z-index: -1;
+  width: 100vw;
+  height: 90vh;
 }
 
 .map-info{

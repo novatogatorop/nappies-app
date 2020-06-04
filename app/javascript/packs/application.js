@@ -5,6 +5,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { searchPopup, closePopup } from '../components/search_mobile';
 import { dropdownPopup, dropdownClose } from '../components/dropdown_mobile';
 import { initSelect2 } from '../components/init_select2';
+import { mapButton, listButton } from '../components/map_button';
 
 
 
@@ -17,3 +18,5 @@ closePopup();
 dropdownPopup();
 dropdownClose();
 initSelect2();
+mapButton();
+listButton();
