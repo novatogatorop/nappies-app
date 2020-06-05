@@ -1,16 +1,11 @@
 <div class="nappies-container">
-  <div class="btn-map-box">
-    <div class="btn-map"><i class="fas fa-map-marked-alt"></i></div>
-  </div>
   <div class="btn-list-box">
-    <div class="btn-list"><i class="fas fa-list"></i></div>
+    <a class=btn-list href="#all-cards"><i class="fas fa-list"></i></a>
   </div>
-  <div
-    id="map", class="index-map"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="btn-map-box">
+    <a class=btn-map href="#map"><i class="fas fa-map-marked-alt"></i></a>
   </div>
-  <div class="index-cards">
+  <div id="all-cards" class="index-cards">
     <div class="response">
       <%= @response %>
     </div>
@@ -56,5 +51,10 @@
         </div>
       <% end %>
     </div>
+  </div>
+  <div
+    id="map", class="index-map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
