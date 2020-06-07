@@ -3,42 +3,49 @@
 }
 
 .index-map {
-  z-index: -1;
+  z-index: 2;
   width: 100vw;
   height: 90vh;
 }
 
-.map-info{
-  width: 30%;
-  // width: 14vw;
+// MAP INFO WINDOW
+
+.map-image {
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-search-form-mobile {
-  // width: 30vw;
-  // width: 14vw;
-  padding: 5%;
-  height: 100vh;
-  border-radius: 3px 3px 0px 0px;
+.map-info-card-details {
+  display: flex;
+  margin-top: 0.5rem;
+  will-change: auto;
 }
 
-.map-card-details {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  text-align: left;
-}
-
-.map-type {
+.map-info-type {
   font-weight: 300 !important;
-  width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   margin-top: 4px;
 }
 
-.map-name {
+.map-info-name {
   font-weight: 700 !important;
-  font-weight: 700;
-  width: 100%;
   margin-bottom: 4px;
+}
+
+.map-info-facility {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.map-info-facility-icon {
+  height: $f-med;
+  width: $f-med;
+  // background-color: $lightgrey;
+  // border-radius: 50%;
+}
+
+.mapboxgl-popup {
+  max-width: fit-content !important;
 }
 
 .mapboxgl-popup-content {

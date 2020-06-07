@@ -13,7 +13,7 @@
       <% @places.each do |place| %>
         <div class="nappies-card">
           <%= link_to place_path(place), class:"link", :action => 'go' do %>
-          <div class="card-image">
+          <div>
             <% if place.photo1.attached? %>
             <%= cl_image_tag place.photo1.key, width: 350, height: 250, crop: :fill, class: 'card-image' %>
             <% else %>
@@ -26,21 +26,21 @@
               <p class="card-name"><%= place.name %></p>
             </div>
             <div class="card-facility">
-              <div class="card-facility-icons mr-1">
+              <div class="mr-1">
                 <% if place.changing_table == true %>
                 <%= image_tag "icon-diaper.png", class: 'card-facility-icon' %>                    <% end %>
               </div>
-              <div class="card-facility-icons mr-1">
+              <div class="mr-1">
                 <% if place.high_chair == true %>
                 <%= image_tag "icon-high-chair.png", class: 'card-facility-icon' %>
                 <% end %>
               </div>
-              <div class="card-facility-icons mr-1">
+              <div class="mr-1">
                 <% if place.toy == true %>
                 <%= image_tag "icon-toy.png", class: 'card-facility-icon' %>
                 <% end %>
               </div>
-              <div class="card-facility-icons">
+              <div>
                 <% if place.play_area == true %>
                 <%= image_tag "icon-play-area.png", class: 'card-facility-icon' %>
                 <% end %>
