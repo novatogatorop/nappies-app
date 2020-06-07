@@ -15,9 +15,9 @@
           <%= link_to place_path(place), class:"link", :action => 'go' do %>
           <div>
             <% if place.photo1.attached? %>
-            <%= cl_image_tag place.photo1.key, width: 350, height: 250, crop: :fill, class: 'card-image' %>
+            <%= cl_image_tag place.photo1.key, width: 300, height: 200, crop: :fill, class: 'card-image' %>
             <% else %>
-            <%= image_tag "place-icon-landscape.png", width: 350, height: 250, crop: :fill, class: 'card-image' %>
+            <%= image_tag "place-icon-landscape.png", width: 300, height: 200, crop: :fill, class: 'card-image' %>
             <% end %>
           </div>
           <div class="card-details">
