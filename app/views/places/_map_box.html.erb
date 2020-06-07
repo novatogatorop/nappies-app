@@ -1,18 +1,39 @@
 <div class="map-info">
   <%= link_to place_path(place), class:"link", :action => 'go' do %>
+  <div>
     <% if place.photo1.attached? %>
-      <%= cl_image_tag place.photo1.key, class: 'map-image' %>
+      <%= cl_image_tag place.photo1.key, width: 250, height: 150, crop: :fill, class: 'map-image' %>
     <% else %>
-      <%= image_tag "place-icon.png", class: 'map-image' %>
+      <%= image_tag "place-icon-landscape.png", width: 250, height: 150, crop: :fill, class: 'map-image' %>
     <% end %>
-    <div class="map-card-details">
-      <% if place.type_id.nil? %>
-        <p class="map-type">none</p>
-      <% else %>
-        <p class="map-type"><%= place.type.name %></p>
-      <% end %>
-      <p class="map-name"><%= place.name %></p>
+  </div>
+  <div class="map-info-card-details">
+    <div>
+      <p class="map-info-type"><%= place.type.name %></p>
+      <p class="map-info-name"><%= place.name %></p>
     </div>
+    <div class="map-info-facility">
+      <div class="map-info-facility-icons mr-1">
+        <% if place.changing_table == true %>
+        <%= image_tag "icon-diaper.png", class: 'map-info-facility-icon' %>                    <% end %>
+      </div>
+      <div class="map-info-facility-icons mr-1">
+        <% if place.high_chair == true %>
+        <%= image_tag "icon-high-chair.png", class: 'map-info-facility-icon' %>
+        <% end %>
+      </div>
+      <div class="map-info-facility-icons mr-1">
+        <% if place.toy == true %>
+        <%= image_tag "icon-toy.png", class: 'map-info-facility-icon' %>
+        <% end %>
+      </div>
+      <div class="map-info-facility-icons">
+        <% if place.play_area == true %>
+        <%= image_tag "icon-play-area.png", class: 'map-info-facility-icon' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
   <% end %>
 </div>
 

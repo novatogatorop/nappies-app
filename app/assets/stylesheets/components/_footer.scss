@@ -1,58 +1,69 @@
-.footer {
-  color: $black;
-  border-top: 1px solid $lightgrey;
-  display: flex;
-  justify-content: space-between;
-  height: max-content;
-  width: 100%;
-  padding: 2rem 50px;
-  background-color: white;
-}
 
-.footer-copyright {
-  // margin-left: 50px;
-  display: flex;
-  width: 33.333%;
-}
+  // FOOTER
 
-.footer-copyright p {
-  margin-bottom: 0px !important;
-}
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+    padding: 1rem;
+    align-items: left;
+    background-color: white;
+    color: $black;
+    border-top: 1px solid $lightgrey;
+    justify-content: space-between;
+    height: max-content;
+    width: 100%;
+    background-color: white;
 
-.footer-terms {
-  width: 33.333%;
-  display: flex;
-  justify-content: space-evenly;
-}
+    // padding: 2rem 50px;
+  }
 
-.footer-terms p {
-  margin-bottom: 0px !important;
-}
+  .footer-copyright {
+    width: 100%;
+    display: flex;
+    // width: 33.333%;
+  }
 
-.footer-terms p:hover {
-  color: $black;
-  margin-bottom: 0px !important;
-}
+  .footer-copyright div {
+    margin-bottom: 0px !important;
+  }
 
-.footer-links {
-  // margin-right: 50px;
-  width: 33.333%;
-  display: flex;
-  justify-content: flex-end;
-}
+  .footer-terms {
+    margin: 1rem 0rem 2rem 0rem;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    display: flex;
 
-.footer-links a {
-  color: $black;
-  text-decoration: none;
-}
+      // width: 33.333%;
+    // justify-content: space-evenly;
+  }
 
-.footer-links p {
-  margin-bottom: 0px !important;
-  font-size: 1.5rem;
-  margin-left: 2rem;
-}
+  .footer-terms div {
+    margin-top: 1rem;
+    // margin-bottom: 0px !important;
+  }
 
-.footer-links a:hover {
-  color: $black;
-  margin-bottom: 0px !important;
-}
+  .footer-terms div:hover {
+    color: $black;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: flex-start !important;
+    display: flex;
+
+      // width: 33.333%;
+    // justify-content: flex-end;
+  }
+
+  .footer-links a {
+    color: $black;
+    text-decoration: none;
+    margin-right: 2rem;
+    margin-left: 0rem !important;
+  }
+
+  .footer-links a:hover {
+    color: $black;
+  }

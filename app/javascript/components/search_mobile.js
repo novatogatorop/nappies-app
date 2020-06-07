@@ -1,10 +1,10 @@
-
 const searchPopup = () => {
   const searchPopup =document.querySelector(".search-form-mobile")
   const searchButton =document.querySelector(".search-button-navbar")
   const searchButtonX =document.querySelector(".search-button-x")
   const dropdown =document.querySelector(".dropdown-mobile")
   const searchMobile =document.querySelector(".search-mobile")
+  const navbar =document.querySelector(".navbar-mobile")
   searchButton.addEventListener('click', (event) => {
     searchPopup.style.display = "block";
     searchButton.style.display = "none";
@@ -13,6 +13,7 @@ const searchPopup = () => {
     dropdown.style.display = "none";
     searchMobile.style.width = "100%";
     searchMobile.style.height = "100vh";
+    navbar.style.height = "100%";
   });
 };
 
@@ -22,6 +23,7 @@ const closePopup = () => {
   const searchPopup =document.querySelector(".search-form-mobile")
   const dropdown =document.querySelector(".dropdown-mobile")
   const searchMobile =document.querySelector(".search-mobile")
+  const navbar =document.querySelector(".navbar-mobile")
   searchButtonX.addEventListener('click', (event) => {
     searchPopup.style.display = 'none';
     searchButtonX.style.display = "none";
@@ -29,6 +31,7 @@ const closePopup = () => {
     dropdown.style.display = "block";
     searchMobile.style.width = "";
     searchMobile.style.height = "0";
+    navbar.style.height = "10%";
   });
 };
 

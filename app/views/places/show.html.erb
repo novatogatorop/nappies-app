@@ -33,37 +33,37 @@
   <div class="show-detail-box">
 
     <% if @place.type_id.nil? %>
-     <p class="show-type">none</p>
+     <div class="show-type">none</p>
     <% else %>
-     <p class="show-type"><%= @place.type.name %></p>
+     <div class="show-type"><%= @place.type.name %></div>
     <% end %>
 
 
     <h1 class="show-title"><%= @place.name %></h1>
-    <p class="show-address"><%= @place.address %></p>
+    <p class="show-address"><%= @place.address %></div>
     <div class="show-facility">
       <div class="facility-details">
         <% if @place.changing_table == true %>
           <%= image_tag "icon-diaper.png", class: 'facility-image' %>
-          <p class="facility-name">Changing Table</p>
+          <div class="facility-name">Changing Table</div>
         <% end %>
       </div>
       <div class="facility-details">
         <% if @place.high_chair == true %>
           <%= image_tag "icon-high-chair.png", class: 'facility-image' %>
-          <p class="facility-name">High Chair</p>
+          <div class="facility-name">High Chair</div>
         <% end %>
       </div>
       <div class="facility-details">
         <% if @place.toy == true %>
           <%= image_tag "icon-toy.png", class: 'facility-image' %>
-          <p class="facility-name">Toys</p>
+          <div class="facility-name">Toys</div>
         <% end %>
       </div>
       <div class="facility-details">
         <% if @place.play_area == true %>
           <%= image_tag "icon-play-area.png", class: 'facility-image' %>
-          <p class="facility-name">Play Area</p>
+          <div class="facility-name">Play Area</div>
         <% end %>
       </div>
     </div>
@@ -72,30 +72,23 @@
         <div>ADMIN</div>
           <div class="admin-authorize">
             <% if policy(@place).edit? %>
-              <p><i class="far fa-edit"> </i><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></p>
+              <div><i class="far fa-edit"> </i><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></div>
             <% end %>
             <div> | </div>
             <% if policy(@place).destroy? %>
-              <p><i class="far fa-trash-alt"></i> </i><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor', method: :delete, data: {confirm: "Are you sure?"} %></p>
+              <div><i class="far fa-trash-alt"></i> </i><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor', method: :delete, data: {confirm: "Are you sure?"} %></div>
             <% end %>
           </div>
       </div>
     <% end %>
   </div>
-  <!-- GOOGLE MAPS -->
- <!--  <div
-    id="map", class="show-google-map"
-    data-markers="<%#= @markers.to_json %>"
-  ></div> -->
-
-  <!-- MAPBOX -->
   <div
-    id="map", class="show-google-map"
+    id="map", class="show-map"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <div class="show-content-footer">
-    <div class="btn btn-minor mr-auto"><i class="fas fa-arrow-left"></i> <%= link_to 'Back', places_path, :class => 'no-decor' %></div>
+    <div class="btn btn-minor mr-auto"><i class="fas fa-arrow-left"></i><%= link_to 'Back', root_path, :class => 'no-decor' %></div>
     <a class="btn btn-nappies no-decor" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
   </div>
 </div>

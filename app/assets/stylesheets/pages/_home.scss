@@ -1,6 +1,9 @@
+// MOBILE
 html {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 * {
@@ -19,56 +22,27 @@ html {
 }
 
 body {
-  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  font-size: $f-base;
   background-color: white;
   font-family: $body-font;
-  font-weight: 300;
+  font-weight: $light-fw;
   line-height: 1.5;
   color: $black;
   letter-spacing: 0.05rem;
   border-color: $lightgrey !important;
 }
 
-h1 {
-  font-size: 2em;
-}
+h1 { font-size: $f-lg; }
 
-h2 {
-  font-size: 1.5em;
-}
+h2 { font-size: $f-med; }
 
-h3 {
-  font-size: 1.17em;
-}
+p { font-size: $f-base; }
 
-h4 {
-  font-size: 1.12em;
-}
-
-h5 {
-  font-size: .83em;
-}
-
-h6 {
-  font-size: .75em;
-}
-
-.edit-account {
-  margin-bottom: 50px;
-}
-
-.nappies-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 15%;
-  // width: 100vw !important;
-  // margin-left: -15px;
-  // margin-right: -15px;
-}
-
-.nappies-navbar {
-  height: 20%;
-}
+p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0rem;
+  }
 
 .mr-auto {
   margin-right: auto;
@@ -76,4 +50,52 @@ h6 {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.nappies-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  position: relative;
+}
+
+// DEVISE
+.edit-account {
+  margin-bottom: 50px;
+}
+
+.form-box {
+  width: 100% !important;
+  margin: 0px auto;
+}
+
+.account-page-form-box {
+  width: 100% !important;
+  margin: 0px auto;
+}
+
+.form-inputs-box {
+  margin-bottom: 1rem !important;
+}
+
+.sign-submit {
+  color: #9ac4c1;
+  border: 5px solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.sign-title{
+  font-size: $f-med !important;
+}
+
+.account-submit {
+  margin-bottom: 1rem;
+}
+
+// DESKTOP
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: $f-base;
+  }
 }
