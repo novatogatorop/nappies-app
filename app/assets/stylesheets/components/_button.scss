@@ -59,17 +59,16 @@
 .btn-map {
   left: 40%;
   bottom: 5%;
-  z-index: 2;
+  z-index: 1;
   position: fixed;
-  font-size: 1.75rem;
+  font-size: $f-med;
   text-align: center;
-  width: 20%;
-  height: 3rem;
+  width: 20vw;
   background-color: $normalgrey;
   color: white;
   border-radius: 2.5rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,.1);
-  transition: all 0.3s ease-in-out;
+  transition: 0.2s ease;
 }
 
 .btn-map:active {
@@ -82,12 +81,11 @@
   display: none;
   left: 40%;
   bottom: 5%;
-  z-index: 2;
+  z-index: 1;
   position: fixed;
-  font-size: 1.75rem;
+  font-size: $f-med;
   text-align: center;
-  width: 20%;
-  height: 3rem;
+  width: 20vw;
   background-color: $normalgrey;
   color: white;
   border-radius: 2.5rem;

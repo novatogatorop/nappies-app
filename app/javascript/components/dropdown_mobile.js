@@ -4,6 +4,7 @@ const dropdownPopup = () => {
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
+  const navbar =document.querySelector(".navbar-mobile")
   logoOpen.addEventListener('click', (event) => {
     dropdownList.style.display = "block";
     searchButton.style.display = "none";
@@ -12,6 +13,7 @@ const dropdownPopup = () => {
     logoOpen.style.display = "none";
     dropdownMobile.style.width = "100%";
     dropdownMobile.style.height = "100vh";
+    navbar.style.height = "100%";
   });
 };
 
@@ -21,6 +23,7 @@ const dropdownClose = () => {
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
+  const navbar =document.querySelector(".navbar-mobile")
   logoClose.addEventListener('click', (event) => {
     dropdownList.style.display = "none";
     logoClose.style.display = "none";
@@ -29,6 +32,7 @@ const dropdownClose = () => {
     searchButton.style.display = "block";
     dropdownMobile.style.width = "";
     dropdownMobile.style.height = "0";
+    navbar.style.height = "10%";
   });
 };
 

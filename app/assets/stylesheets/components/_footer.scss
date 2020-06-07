@@ -24,7 +24,7 @@
     // width: 33.333%;
   }
 
-  .footer-copyright p {
+  .footer-copyright div {
     margin-bottom: 0px !important;
   }
 
@@ -39,14 +39,13 @@
     // justify-content: space-evenly;
   }
 
-  .footer-terms p {
+  .footer-terms div {
     margin-top: 1rem;
     // margin-bottom: 0px !important;
   }
 
-  .footer-terms p:hover {
+  .footer-terms div:hover {
     color: $black;
-    margin-bottom: 0px !important;
   }
 
   .footer-links {
@@ -61,18 +60,10 @@
   .footer-links a {
     color: $black;
     text-decoration: none;
-  }
-
-  .footer-links p {
     margin-right: 2rem;
     margin-left: 0rem !important;
-    font-size: 1.5rem;
-
-    // margin-bottom: 0px !important;
-    // margin-left: 2rem;
   }
 
   .footer-links a:hover {
     color: $black;
-    margin-bottom: 0px !important;
   }
