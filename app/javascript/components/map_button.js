@@ -9,7 +9,6 @@ const listButton = () => {
   btnBox.addEventListener('click', (event) => {
     btnMap.style.display = "block";
     btnList.style.display = "none";
-    // map.style.paddingTop = "0";
     cards.style.marginTop = "0";
     cards.style.paddingTop = "12vh";
     map.style.marginTop = "0";
@@ -30,7 +29,6 @@ const mapButton = () => {
   btnBox.addEventListener('click', (event) => {
     btnMap.style.display = "none";
     btnList.style.display = "block";
-    // map.style.paddingTop = "0";
     cards.style.paddingTop = "0";
     cards.style.marginTop = "20vh";
     map.style.marginTop = "12vh";

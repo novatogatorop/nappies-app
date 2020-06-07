@@ -57,41 +57,45 @@
 }
 
 .btn-map {
-  left: 35%;
+  left: 40%;
   bottom: 5%;
   z-index: 2;
   position: fixed;
   font-size: 1.75rem;
   text-align: center;
-  width: 9rem;
+  width: 20%;
   height: 3rem;
-  background-color: white;
+  background-color: $normalgrey;
+  color: white;
   border-radius: 2.5rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 5px rgba(0,0,0,.1);
   transition: all 0.3s ease-in-out;
 }
 
-.btn-map:hover {
-  opacity: 1;
+.btn-map:active {
+  text-decoration: none;
+  color: white;
 }
 
 // LIST BUTTON
 .btn-list {
   display: none;
-  left: 35%;
+  left: 40%;
   bottom: 5%;
   z-index: 2;
   position: fixed;
   font-size: 1.75rem;
   text-align: center;
-  width: 9rem;
+  width: 20%;
   height: 3rem;
-  background-color: white;
+  background-color: $normalgrey;
+  color: white;
   border-radius: 2.5rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 5px rgba(0,0,0,.1);
   transition: all 0.3s ease-in-out;
 }
 
-.btn-list:hover {
-  opacity: 1;
+.btn-list:active {
+  text-decoration: none;
+  color: white;
 }
