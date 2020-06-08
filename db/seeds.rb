@@ -34,6 +34,16 @@ puts "Done with Types #{ Type.count}"
 puts 'Creating places'
 places =[
   {
+    name: "me Collectors Room Berlin",
+    address: "Maybachufer 20, Berlin",
+    user: User.find_by(username: 'Lala'),
+    type: Type.find_by(name: 'Coffee Shop'),
+    changing_table: true,
+    toy: true,
+    high_chair: true,
+    play_area: true
+  },
+  {
     name: "Populus Coffee",
     address: "Maybachufer 20, Berlin",
     user: User.find_by(username: 'Lala'),
@@ -84,7 +94,7 @@ places =[
     play_area: false
   },
   {
-    name: 'Bar Luce',
+    name: 'Dussmann Das KulturKaufhaus',
     address: 'Largo Isarco 2, Milano',
     user: User.find_by(username: 'Lala'),
     type: Type.find_by(name: 'Restaurant'),

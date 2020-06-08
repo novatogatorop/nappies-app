@@ -23,17 +23,19 @@
 .show-type {
   letter-spacing: 0.1rem !important;
   line-height: 2rem !important;
+  margin-bottom: $space-med;
 }
 
 .show-title {
   letter-spacing: 0.05rem !important;
   line-height: 2rem !important;
+  margin-bottom: $space-med;
 }
 
 .show-address {
   line-height: 2rem !important;
   letter-spacing: 0.1rem !important;
-  color: $darkgrey;
+  margin-bottom: $space-med;
 }
 
 .show-facility {

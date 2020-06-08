@@ -9,6 +9,10 @@
 }
 
 // MAP INFO WINDOW
+.map-info-card {
+  width: 250px !important;
+}
+
 .map-image {
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
@@ -44,7 +48,7 @@
 }
 
 .mapboxgl-popup {
-  max-width: fit-content;
+  max-width: 250px !important;
 }
 
 .mapboxgl-popup-content {
