@@ -22,7 +22,7 @@ class PlacesController < ApplicationController
       @places
     else
       @places = Place.geocoded
-      @response = "Sorry, we couldn't find anything 😓"
+      @response = "No results were found for the search '#{query}'."
     end
 
     # @geo_places = @places.geocoded
