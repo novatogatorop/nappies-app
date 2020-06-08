@@ -18,3 +18,8 @@ $f-lg: 2rem;
 $border-radius-lg: 5px;
 $border-radius:    4px;
 $border-radius-sm: 3px;
+
+// Spacers:
+$space-sm: 0.5rem; //Change only this value
+$space-med: 2 * $space-sm; // DO NOT CHANGE
+$space-lg: 3 * $space-sm; // DO NOT CHANGE
