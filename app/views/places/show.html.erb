@@ -39,7 +39,7 @@
     <% end %>
 
 
-    <h1 class="show-title"><%= @place.name %></h1>
+    <div class="show-title"><%= @place.name %></div>
     <div class="show-address"><%= @place.address %></div>
     <div class="show-facility">
       <div class="facility-details">
@@ -72,7 +72,7 @@
         <div>ADMIN</div>
           <div class="admin-authorize">
             <% if policy(@place).edit? %>
-              <div><i class="far fa-edit"> </i><%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></div>
+              <div><i class="far fa-edit"></i> <%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></div>
             <% end %>
             <div> | </div>
             <% if policy(@place).destroy? %>
@@ -89,6 +89,6 @@
   </div>
   <div class="show-content-footer">
     <div class="btn btn-minor mr-auto"><i class="fas fa-arrow-left"></i><%= link_to 'Back', root_path, :class => 'no-decor' %></div>
-    <a class="btn btn-nappies no-decor" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
+    <a class="btn btn-nappies no-decor ml-1" href="https://maps.google.com/?q=<%= @place.latitude %>,<%= @place.longitude %>" target="_blank">Directions</a>
   </div>
 </div>

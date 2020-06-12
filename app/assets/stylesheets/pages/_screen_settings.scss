@@ -1,0 +1,46 @@
+// // Small tablets and smartphones landscape view
+// @media screen and (max-width: 615px) and (min-width: 945px) {
+//   .nappies-cards {
+//    grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// // Tablets and small desktops
+// @media screen and (max-width: 947px) and (min-width: 1331px) {
+//   .nappies-cards {
+//    grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// // Large tablets and desktops
+// @media screen and (max-width: 1334px) and (min-width: 1965px) {
+//   .nappies-cards {
+//    grid-template-columns: 1fr 1fr 1fr 1fr;
+//   }
+// }
+
+// // Large desktops
+// @media screen and (min-width: 1968px) {
+//   .nappies-cards {
+//    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+//   }
+// }
+
+
+
+
+
+// // Small tablets and large smartphones (landscape view)
+// $screen-vsm-min: 375px;
+
+// // Small tablets and large smartphones (landscape view)
+// $screen-sm-min: 576px;
+
+// // Small tablets (portrait view)
+// $screen-md-min: 768px;
+
+// // Tablets and small desktops
+// $screen-lg-min: 992px;
+
+// // Large tablets and desktops
+// $screen-xl-min: 1200px;

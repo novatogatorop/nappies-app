@@ -1,58 +1,58 @@
-@media only screen and (min-width: 575px) {
+// @media only screen and (min-width: 575px) {
 
-  // IMAGES
-  .show-images {
-    display: flex;
-    overflow: auto;
-    white-space: nowrap;
-    width: 100vw;
-    overflow-x: auto;
-    margin-top: 60px;
-  }
+//   // IMAGES
+//   .show-images {
+//     display: flex;
+//     overflow: auto;
+//     white-space: nowrap;
+//     width: 100vw;
+//     overflow-x: auto;
+//     margin-top: 60px;
+//   }
 
-  .show-details-box {
-    width: 60%;
-    margin: 50px auto;
-  }
+//   .show-details-box {
+//     width: 60%;
+//     margin: 50px auto;
+//   }
 
-  .show-detail-box {
-    position: relative;
-  }
+//   .show-detail-box {
+//     position: relative;
+//   }
 
-  .show-type {
-    line-height: 2.5rem;
-  }
+//   .show-type {
+//     line-height: 2.5rem;
+//   }
 
-  .show-title {
-    letter-spacing: 0.05rem;
-    line-height: 2.5rem;
-  }
+//   .show-title {
+//     letter-spacing: 0.05rem;
+//     line-height: 2.5rem;
+//   }
 
-  .show-address {
-    line-height: 2.5rem;
-  }
+//   .show-address {
+//     line-height: 2.5rem;
+//   }
 
-  .show-facility {
-    // display: inherit;
-    // margin-top: 1.5rem;
-  }
+//   .show-facility {
+//     // display: inherit;
+//     // margin-top: 1.5rem;
+//   }
 
-  .facility-details {
-    display: inherit;
-  }
+//   .facility-details {
+//     display: inherit;
+//   }
 
-  .facility-name {
-    padding-right: 1.5rem;
-  }
+//   .facility-name {
+//     padding-right: 1.5rem;
+//   }
 
-  // ADMIN
-  .admin-authorize {
-    width: 30%;
-  }
+//   // ADMIN
+//   .admin-authorize {
+//     width: 30%;
+//   }
 
-  // MAP
-  .show-map {
-    margin: 3rem 0;
-    height: 500px;
-  }
-}
+//   // MAP
+//   .show-map {
+//     margin: 3rem 0;
+//     height: 500px;
+//   }
+// }

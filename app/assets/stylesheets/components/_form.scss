@@ -8,7 +8,7 @@
 .form-box {
   width: 30%;
   margin: 100px auto;
-  color: $black;
+  color: $darkgrey;
 }
 
 .form-group {
@@ -18,19 +18,19 @@
 .form-control:focus {
   box-shadow: none !important;
   border-color: $nappies;
-  color: $black;
+  color: $darkgrey;
 }
 
 .form-control {
   border: 1px solid $lightgrey;
   border-radius: 3px;
-  color: $black !important;
+  color: $darkgrey !important;
 }
 
 .form-control.is-valid {
   border-color: $lightgrey;
   background-image: none !important;
-  color: $black !important;
+  color: $darkgrey !important;
 }
 
 .form-control.is-valid:focus {
@@ -48,7 +48,7 @@
   border: 1px solid;
   border-radius: 3px;
   width: 100%;
-  font-weight: 700;
+  font-weight: $heavy-fw;
   color: white;
   background-color: $nappies;
   border-color: $nappies;

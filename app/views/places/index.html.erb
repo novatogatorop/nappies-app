@@ -9,21 +9,21 @@
     <div class="response">
       <%= @response %>
     </div>
-    <div class="nappies-cards">
+    <div class="nappies-cards container-cards">
       <% @places.each do |place| %>
         <div class="nappies-card">
           <%= link_to place_path(place), class:"link", :action => 'go' do %>
-          <div>
+          <!-- <div> -->
             <% if place.photo1.attached? %>
-            <%= cl_image_tag place.photo1.key, width: 300, height: 200, crop: :fill, class: 'card-image' %>
+            <%= cl_image_tag place.photo1.key, width: 270, height: 170, crop: :fill, class: 'card-image' %>
             <% else %>
-            <%= image_tag "place-icon-landscape.png", width: 300, height: 200, crop: :fill, class: 'card-image' %>
+            <%= image_tag "place-icon-landscape.png", width: 270, height: 170, crop: :fill, class: 'card-image' %>
             <% end %>
-          </div>
+          <!-- </div> -->
           <div class="card-details">
             <div>
-              <p class="card-type"><%= place.type.name %></p>
-              <p class="card-name"><%= place.name %></p>
+              <div class="card-type"><%= place.type.name %></div>
+              <div class="card-name"><%= place.name %></div>
             </div>
             <div class="card-facility">
               <div class="mr-1">
