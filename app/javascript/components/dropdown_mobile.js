@@ -1,42 +1,41 @@
 const dropdownPopup = () => {
-  const logoOpen =document.querySelector(".logo-navbar")
-  const logoClose =document.querySelector(".logo-navbar-close")
+  const listOpen =document.querySelector(".list-navbar")
+  const listClose =document.querySelector(".list-navbar-x")
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
-  const navbar =document.querySelector(".navbar-mobile")
   const nappiesCon =document.querySelector(".nappies-container")
-  logoOpen.addEventListener('click', (event) => {
+  const footer =document.querySelector(".footer")
+  listOpen.addEventListener('click', (event) => {
     dropdownList.style.display = "block";
     searchButton.style.display = "none";
-    logoClose.style.marginBottom = "16px";
-    logoClose.style.display = "block";
-    logoOpen.style.display = "none";
+    footer.style.display = "none";
+    listClose.style.display = "flex";
+    listOpen.style.display = "none";
     nappiesCon.style.display = "none";
     dropdownMobile.style.width = "100%";
     dropdownMobile.style.height = "100vh";
-    navbar.style.height = "100%";
   });
 };
 
 const dropdownClose = () => {
-  const logoClose =document.querySelector(".logo-navbar-close")
-  const logoOpen =document.querySelector(".logo-navbar")
+  const listClose =document.querySelector(".list-navbar-x")
+  const listOpen =document.querySelector(".list-navbar")
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
-  const navbar =document.querySelector(".navbar-mobile")
   const nappiesCon =document.querySelector(".nappies-container")
-  logoClose.addEventListener('click', (event) => {
+  const footer =document.querySelector(".footer")
+  listClose.addEventListener('click', (event) => {
     dropdownList.style.display = "none";
-    logoClose.style.display = "none";
-    logoOpen.style.display = "block";
+    listClose.style.display = "none";
+    listOpen.style.display = "flex";
+    footer.style.display = "flex";
     nappiesCon.style.display = "flex";
-    logoOpen.style.marginBottom = "0px";
+    listOpen.style.marginBottom = "0px";
     searchButton.style.display = "block";
     dropdownMobile.style.width = "";
     dropdownMobile.style.height = "0";
-    navbar.style.height = "10%";
   });
 };
 
