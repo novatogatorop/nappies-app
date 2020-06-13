@@ -1,100 +1,96 @@
-  .search-desktop {
-    display: none;
-  }
+.search-mobile {
+}
 
-  .search-mobile {
-  }
+.search-button-navbar {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  margin-right: 20px;
+  color: $darkgrey;
+  font-size: $f-med;
+  border: none !important;
+  background-color: transparent !important;
+  // &:hover {
+  //   border: 0.5px solid $lightgrey !important;
+  //   border-radius: 50%;
+  //   background-color: $lightgrey !important;
+  // }
+}
 
-  .search-button-navbar {
-    display: flex;
-    height: 60px;
-    align-items: center;
-    margin-right: 20px;
-    color: $darkgrey;
-    font-size: $f-med;
-    border: none !important;
+.search-button-x {
+  display: none;
+  margin-right: 20px;
+  height: 60px;
+  align-items: center;
+  margin-left: auto;
+  color: $darkgrey;
+  font-size: $f-med;
+  border: none !important;
+  background-color: transparent !important;
+  // &:hover {
+  //   border: 0.5px solid $lightgrey !important;
+  //   border-radius: 50%;
+  //   background-color: $lightgrey !important;
+  // }
+}
+
+.search-form-mobile {
+  display: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+  width: calc(100% - 40px);
+  height: 100vh;
+}
+
+
+.search-input-mobile {
+  width: 100%;
+  height: 3rem;
+  padding: 0px 1.2rem;
+  color: $darkgrey;
+  border: 0.5px solid #F2F2F2 !important;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+input {
+  font-family: "Roboto", "Helvetica", "sans-serif" !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+  color: #000 !important;
+  letter-spacing: 0.05rem !important;
+}
+
+.search-select-mobile {
+  width: 100%;
+  height: 3rem;
+  padding: 0px 1.2rem;
+  background-color:  transparent !important;
+  border: 0.5px solid #F2F2F2 !important;
+  border-radius: 5px !important;
+  margin-right: 5px;
+  margin-bottom: 16px;
+}
+
+.search-popup-footer {
+  display: flex-inline;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-submit-navbar {
+  color: white;
+  height: 3rem;
+  padding: 0px 1.2rem;
+  border: 0.5px solid $nappies !important;
+  letter-spacing: 0.15rem;
+  // border: 0.5px solid #F2F2F2 !important;
+  background-color: $nappies !important;
+  border-radius: 5px;
+  &:hover {
+    color: $nappies;
     background-color: transparent !important;
-    // &:hover {
-    //   border: 0.5px solid $lightgrey !important;
-    //   border-radius: 50%;
-    //   background-color: $lightgrey !important;
-    // }
   }
-
-  .search-button-x {
-    display: none;
-    margin-right: 20px;
-    height: 60px;
-    align-items: center;
-    margin-left: auto;
-    color: $darkgrey;
-    font-size: $f-med;
-    border: none !important;
-    background-color: transparent !important;
-    // &:hover {
-    //   border: 0.5px solid $lightgrey !important;
-    //   border-radius: 50%;
-    //   background-color: $lightgrey !important;
-    // }
-  }
-
-  .search-form-mobile {
-    display: none;
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: white;
-    width: calc(100% - 40px);
-    height: 100vh;
-  }
-
-
-  .search-input-mobile {
-    width: 100%;
-    height: 3rem;
-    padding: 0px 1.2rem;
-    color: $darkgrey;
-    border: 0.5px solid #F2F2F2 !important;
-    border-radius: 5px;
-    margin-bottom: 16px;
-  }
-
-  input {
-    font-family: "Roboto", "Helvetica", "sans-serif" !important;
-    font-weight: 300 !important;
-    line-height: 1.5 !important;
-    color: #000 !important;
-    letter-spacing: 0.05rem !important;
-  }
-
-  .search-select-mobile {
-    width: 100%;
-    height: 3rem;
-    padding: 0px 1.2rem;
-    background-color:  transparent !important;
-    border: 0.5px solid #F2F2F2 !important;
-    border-radius: 5px !important;
-    margin-right: 5px;
-    margin-bottom: 16px;
-  }
-
-  .search-popup-footer {
-    display: flex-inline;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .search-submit-navbar {
-    color: white;
-    height: 3rem;
-    padding: 0px 1.2rem;
-    border: 0.5px solid $nappies !important;
-    letter-spacing: 0.15rem;
-    // border: 0.5px solid #F2F2F2 !important;
-    background-color: $nappies !important;
-    border-radius: 5px;
-    &:hover {
-      color: $nappies;
-      background-color: transparent !important;
-    }
-  }
+}
