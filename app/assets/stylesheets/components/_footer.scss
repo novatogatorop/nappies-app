@@ -1,69 +1,68 @@
+// FOOTER
 
-  // FOOTER
+.footer {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+  background-color: white;
+  color: $darkgrey;
+  justify-content: space-between;
+  height: 30%;
+  width: 100%;
+  background-color: $s-lightgrey;
+}
 
-  .footer {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 0px;
-    padding: 1rem;
-    align-items: left;
-    background-color: white;
-    color: $darkgrey;
-    justify-content: space-between;
-    height: max-content;
-    width: 100%;
-    background-color: $s-lightgrey;
+// .footer-copyright {
+//   width: 100%;
+//   display: flex;
+//   // width: 33.333%;
+// }
 
-    // padding: 2rem 50px;
-  }
+.footer-copyright div {
+  margin-bottom: 0px !important;
+}
 
-  .footer-copyright {
-    width: 100%;
-    display: flex;
+.footer-terms {
+  margin: 1rem 0rem 2rem 0rem;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  width: 100%;
+  display: flex;
+
     // width: 33.333%;
+  // justify-content: space-evenly;
+}
+
+.footer-links {
+
+}
+
+.footer-links a {
+  font-size: $f-med;
+  color: $darkgrey;
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-left: 0rem !important;
+}
+
+.footer-links a:hover {
+  color: $darkgrey;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding-left: 32px;
+    padding-right: 32px;
   }
+}
 
-  .footer-copyright div {
-    margin-bottom: 0px !important;
+// Large tablets and desktops
+@media only screen and (min-width: 1220px) {
+  .footer {
+    padding-left: 72px;
+    padding-right: 72px;
   }
-
-  .footer-terms {
-    margin: 1rem 0rem 2rem 0rem;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    width: 100%;
-    display: flex;
-
-      // width: 33.333%;
-    // justify-content: space-evenly;
-  }
-
-  .footer-terms div {
-    margin-top: 1rem;
-    // margin-bottom: 0px !important;
-  }
-
-  .footer-terms div:hover {
-    color: $darkgrey;
-  }
-
-  .footer-links {
-    width: 100%;
-    justify-content: flex-start !important;
-    display: flex;
-
-      // width: 33.333%;
-    // justify-content: flex-end;
-  }
-
-  .footer-links a {
-    font-size: $f-med;
-    color: $darkgrey;
-    text-decoration: none;
-    margin-right: 2rem;
-    margin-left: 0rem !important;
-  }
-
-  .footer-links a:hover {
-    color: $darkgrey;
-  }
+}
