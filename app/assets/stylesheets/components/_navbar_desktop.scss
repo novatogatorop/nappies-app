@@ -22,8 +22,14 @@
   }
 
   .logo-text {
+    // font-size: $f-med;
     color: $nappies !important;
     font-weight: $heavy-fw !important;
+    font-size: $f-med;
+    &:hover {
+      color: $nappies-light;
+      text-decoration: none !important;
+    }
   }
 
   .logo-desktop {

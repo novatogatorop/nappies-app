@@ -4,11 +4,18 @@
   top: 67px;
   right: .5%;
   z-index: 1000;
-  // width: 50%;
+  color: $darkgrey;
 }
 
 .alert-info {
-  color: white !important;
-  background-color: $nappies !important;
-  border-color: transparent;
+  background-color: $s-lightgrey !important;
+  border-color: transparent !important;
+  border-radius: 5px;
+}
+
+// Small tablets and smartphones landscape view
+@media only screen and (min-width: 768px) {
+  .alert {
+    width: 50% !important;
+  }
 }

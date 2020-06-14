@@ -21,8 +21,9 @@
                     input_html: { autocomplete: "new-password" }, placeholder: "new password confirmation *", label: false %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Change my password", :class => 'btn btn-nappies' %>
+      <div class="form-actions mt-5">
+        <%= link_to "cancel", places_path, class: "btn-n btn-n-secondary mr-auto" %>
+        <%= f.button :submit, "Change my password", :class => 'btn-n btn-n-primary' %>
       </div>
     <% end %>
 

@@ -1,12 +1,14 @@
 .btn-n {
-  display: inline-block;
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   letter-spacing: 0.05rem !important;
   cursor: pointer;
   padding: 10px 16px !important;
-  height: 100%;
+  height: 50px;
   border-radius: 5px;
-  font-weight: $heavy-fw !important;
+  font-weight: 700 !important;
   box-sizing: border-box;
   text-decoration: none !important;
   transition: all 200ms ease;

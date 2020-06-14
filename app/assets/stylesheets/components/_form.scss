@@ -29,6 +29,7 @@
   border: 1px solid $lightgrey;
   border-radius: 5px;
   color: $darkgrey !important;
+  height: 50px;
 }
 
 .form-control.is-valid {
@@ -89,10 +90,14 @@ label {
 }
 
 .form-facility-box {
-  border: 1px solid #F2F2F2;
+  border: $border-light;
   border-radius: 5px;
-  color: #000 !important;
-  padding-left: 0.5rem;
+  padding: 1rem 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.form-facility-box p {
+  margin-bottom: none !important;
 }
 
 .close-account {

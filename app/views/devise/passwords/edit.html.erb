@@ -1,5 +1,5 @@
 <div class="form-container">
-  <div class="form-box">
+  <div class="account-page-form-box">
     <h1 class="sign-title">Change your password</h1>
 
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
@@ -21,8 +21,9 @@
                     input_html: { autocomplete: "new-password" }, placeholder: "new password confirmation *", label: false %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Change my password", :class => 'btn btn-nappies' %>
+      <div class="form-actions mt-5">
+        <%= link_to "cancel", places_path, class: "btn-n btn-n-secondary mr-auto" %>
+        <%= f.button :submit, "Change my password", :class => 'btn-n btn-n-primary' %>
       </div>
     <% end %>
 
