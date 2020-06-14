@@ -12,13 +12,15 @@ $f-base: 1rem;
 $f-med: 1.5rem;
 $f-lg: 2rem;
 
-
-// BORDER RADIUS
-$border-radius-lg: 5px;
-$border-radius:    4px;
-$border-radius-sm: 3px;
-
 // Spacers:
 $space-sm: 0.5rem; //Change only this value
 $space-med: 2 * $space-sm; // DO NOT CHANGE
 $space-lg: 4 * $space-sm; // DO NOT CHANGE
+
+// BORDER RADIUS
+$border-radius-lg: 5px;
+$border-radius-med: 4px;
+$border-radius-sm: 3px;
+
+$border-light : 0.1rem solid hsl(0, 0%, 90%);
+

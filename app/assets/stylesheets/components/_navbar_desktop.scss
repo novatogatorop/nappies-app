@@ -1,3 +1,7 @@
+@media only screen and (max-width: 945px) {
+  .navbar-desktop { display: none;}
+}
+
 @media only screen and (min-width: 947px) {
   .navbar-mobile {
     display: none !important;
@@ -12,24 +16,9 @@
     width: 100%;
     padding: 0 32px;
     background-color: white;
-  }
-
-  .navbar-lewagon {
     justify-content: space-between;
     border-bottom: $border-light;
-  }
-
-  .navbar-lewagon .navbar-collapse {
     flex-grow: 0;
-  }
-
-  .navbar-lewagon .navbar-brand img {
-    width: 40px;
-  }
-
-  .nav-link {
-    margin: 0px 3px;
-    color: $darkgrey !important;
   }
 
   .logo-text {
@@ -37,20 +26,18 @@
     font-weight: $heavy-fw !important;
   }
 
-  .dropdown-menu-box {
-   top: 45px;
-  }
-
   .logo-desktop {
     display: flex;
     align-items: center;
   }
 
-  .dp-down-r {
-    right: 16px;
+  .content-navbar {
+    display: flex;
+    align-items: center;
   }
 
-  .navbar-collapse {
+  .content-right {
+    margin-left: $space-med;
   }
 }
 
