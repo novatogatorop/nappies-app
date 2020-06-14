@@ -1,5 +1,5 @@
 <div class="form-container">
-  <div class="form-box">
+  <div class="account-page-form-box">
     <h1 class="sign-title">Resend confirmation instructions</h1>
 
     <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -14,8 +14,9 @@
                     input_html: { autocomplete: "email" }, placeholder: "email", label: false %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Resend confirmation instructions", :class => 'btn btn-nappies' %>
+      <div class="form-actions mt-5">
+        <%= link_to "cancel", places_path, class: "btn-n btn-n-secondary mr-auto" %>
+        <%= f.button :submit, "Resend confirmation instructions", :class => 'btn-n btn-n-primary' %>
       </div>
     <% end %>
 

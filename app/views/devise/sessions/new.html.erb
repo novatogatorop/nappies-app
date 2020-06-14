@@ -1,5 +1,5 @@
 <div class="form-container">
-  <div class="form-box">
+  <div class="account-page-form-box">
     <h1 class="sign-title">Sign in</h1>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -14,8 +14,9 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Submit", :class => 'btn btn-nappies' %>
+      <div class="form-actions mt-5">
+        <%= link_to "cancel", places_path, class: "btn-n btn-n-secondary mr-auto" %>
+        <%= f.button :submit, "Submit", :class => 'btn-n btn-n-primary' %>
       </div>
     <% end %>
 

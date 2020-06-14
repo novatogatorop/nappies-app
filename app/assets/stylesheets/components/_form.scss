@@ -1,7 +1,10 @@
 .form-container {
   width: 100%;
   display: flex;
-  padding: 10%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: white;
 }
 
@@ -12,19 +15,21 @@
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .form-control:focus {
   box-shadow: none !important;
   border-color: $nappies;
   color: $darkgrey;
+  box-shadow: 0 0 0 4px $nappies-light !important;
 }
 
 .form-control {
   border: 1px solid $lightgrey;
-  border-radius: 3px;
+  border-radius: 5px;
   color: $darkgrey !important;
+  height: 50px;
 }
 
 .form-control.is-valid {
@@ -35,18 +40,29 @@
 
 .form-control.is-valid:focus {
   border-color: $nappies !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 0 4px $nappies-light !important;
+}
+
+.sign-title-header {
+  display: inline-flex;
 }
 
 .sign-title {
   margin-bottom: 1.5rem;
   line-height: 3;
-  font-weight: 800;
+  font-weight: $heavy-fw;
+}
+.sign-title-user {
+  color: $nappies;
+  margin-bottom: 1.5rem;
+  line-height: 3;
+  font-weight: $heavy-fw;
+  margin-right: 14px;
 }
 
 .sign-submit {
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
   font-weight: $heavy-fw;
   color: white;
@@ -69,13 +85,58 @@
   margin-bottom: 0px;
 }
 
-label{
-  margin-bottom: 0rem !important;
+label {
+  font-weight: $heavy-fw;
 }
 
 .form-facility-box {
-  border: 1px solid #F2F2F2;
-  border-radius: 3px;
-  color: #000 !important;
-  padding-left: 0.5rem;
+  border: $border-light;
+  border-radius: 5px;
+  padding: 1rem 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.form-facility-box p {
+  margin-bottom: none !important;
+}
+
+.close-account {
+  padding-top: 3rem;
+}
+
+.close-account-label {
+  border-bottom: $border-light;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.close-account-content {
+  display: flex;
+}
+
+.close-account-content h2{
+  font-weight: $heavy-fw;
+}
+
+.close-account-content a {
+  margin-left: auto;
+}
+
+// Small tablets and smartphones landscape view
+@media only screen and (min-width: 768px) {
+  .form-container {
+    padding-top: 100px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+// Large tablets and desktops
+@media only screen and (min-width: 1220px) {
+  .form-container {
+    padding-top: 150px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
 }

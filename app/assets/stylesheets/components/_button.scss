@@ -1,3 +1,50 @@
+.btn-n {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05rem !important;
+  cursor: pointer;
+  padding: 10px 16px !important;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 700 !important;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  transition: all 200ms ease;
+}
+
+.btn-n-primary {
+  transition: all 200ms ease;
+  background: $nappies;
+  color: white !important;
+  &:hover {
+    text-decoration: none !important;
+    background: $nappies-light;
+  }
+}
+
+.btn-n-secondary {
+  transition: all 200ms ease;
+  background: $s-lightgrey;
+  color: $darkgrey;
+  &:hover {
+    color: $darkgrey;
+    text-decoration: none !important;
+    background: $lightgrey;
+  }
+}
+
+.btn-n-warning {
+  transition: all 200ms ease;
+  background: $nappies-warning-light;
+  color: white !important;
+  &:hover {
+    text-decoration: none;
+    background: $nappies-warning;
+  }
+}
+
 .btn-nappies {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -8,7 +55,7 @@
   color: white !important;
   border: 0.05rem solid;
   border-color: $nappies;
-  border-radius: 3px;
+  border-radius: 5px;
   &:hover {
     color: $nappies !important;
     text-decoration: none;
@@ -21,7 +68,7 @@
   background-color: transparent;
   letter-spacing: 1px;
   border: 0.05rem solid;
-  border-radius: 3px;
+  border-radius: 5px;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   padding-left: 1rem;

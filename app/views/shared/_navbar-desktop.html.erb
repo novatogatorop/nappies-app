@@ -1,54 +1,33 @@
-<div class="navbar-desktop navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar-desktop">
   <div class="logo-desktop">
-    <%= link_to "NAPPIES", places_path, class: "navbar-brand logo-text" %>
+    <%= link_to "NAPPIES", places_path, class: "logo-text" %>
   </div>
   <div class="search-desktop">
     <%= render 'shared/search-desktop' %>
   </div>
-
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <% if current_user.admin? %>
-            <%= link_to "Create A Place", new_place_path, class: "nav-link" %>
-          <% else %>
-            <a class="no-decor-color nav-link" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
-            <%#= link_to "Recommend A Place", edit_user_registration_path, class: "nav-link" %>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to current_user.username.upcase, edit_user_registration_path, class: "nav-link" %>
-          <%#= link_to "Account", edit_user_registration_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%#= link_to "My Account", account_path(current_user), class: "nav-link" %>
-          <%#= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'no-decor-color nav-link' %>
-        </li>
-        <%# if current_user.admin? %>
-          <%# if current_user[:photo] %>
-            <%#= cl_image_tag current_user.photo.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <%# else %>
-            <%#= image_tag "profile-icon.png", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <%# end %>
-          <!-- <div class="dropdown-menu dropdown-menu-right dp-down-r" aria-labelledby="navbarDropdown"> -->
-            <%#= link_to "Type", types_path, class: "dropdown-item" %>
-          <!-- </div> -->
-        <%# end %>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <strong><%= link_to "SIGN UP", new_user_registration_path, class: "nav-link" %></strong>
-        </li>
-      <% end %>
-    </ul>
+  <div class="content-navbar">
+    <% if user_signed_in? %>
+      <div>
+        <% if current_user.admin? %>
+          <%= link_to "Create A Place", new_place_path, class: "no-decor-color" %>
+        <% else %>
+          <a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to current_user.username.upcase, edit_user_registration_path, class: "no-decor-color content-right" %>
+      </div>
+      <div>
+        <strong><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color content-right' %></strong>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to "Login", new_user_session_path, class: "no-decor-color" %>
+      </div>
+      <div>
+        <strong><%= link_to "SIGN UP", new_user_registration_path, class: "no-decor-color content-right" %></strong>
+      </div>
+    <% end %>
   </div>
 </div>
 
