@@ -17,7 +17,7 @@
 }
 
 .btn-minor {
-  color: black;
+  color: $darkgrey;
   background-color: transparent;
   letter-spacing: 1px;
   border: 0.05rem solid;
@@ -28,26 +28,26 @@
   padding-right: 1rem;
   border-color: $lightgrey;
   &:hover {
-  border-color: black;
+  border-color: $darkgrey;
   }
 }
 
 .no-decor-color {
   text-decoration: none;
-  color: $black;
+  color: $darkgrey;
   &:hover {
     text-decoration: none;
     border-bottom: 1px solid black;
-    color: black;
+    color: $darkgrey;
   }
 }
 
 .no-decor {
   text-decoration: none;
-  color: black;
+  color: $darkgrey;
   &:hover {
     text-decoration: none;
-    color: $black;
+    color: $darkgrey;
   }
 }
 

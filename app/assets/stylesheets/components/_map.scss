@@ -5,7 +5,7 @@
 .index-map {
   z-index: 2;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 }
 
 // MAP INFO WINDOW
@@ -25,14 +25,14 @@
 }
 
 .map-info-type {
-  font-weight: 300 !important;
   margin-bottom: 4px;
   margin-top: 4px;
+  font-weight: $heavy-fw !important;
 }
 
 .map-info-name {
-  font-weight: 700 !important;
   margin-bottom: 4px;
+  font-weight: $light-fw !important;
 }
 
 .map-info-facility {

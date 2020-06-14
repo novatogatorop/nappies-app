@@ -1,8 +1,16 @@
 .nappies-cards {
- display: grid;
- grid-template-columns: 1fr;
- justify-items: center;
- row-gap: 2rem;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 36px;
+  justify-content: space-evenly;
+  justify-items: center;
+  // row-gap: 1%;
+}
+
+.container-cards {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .nappies-card-box {
@@ -10,7 +18,7 @@
 }
 
 .nappies-card {
-  width: 300px !important;
+  width: 270px !important;
 }
 
 .card-image {
@@ -27,12 +35,12 @@
 .card-type {
   letter-spacing: 0.05rem;
   margin: 0;
+  font-weight: $heavy-fw;
 }
 
 .card-name {
   letter-spacing: 0.05rem;
   margin: 0;
-  font-weight: 700 !important;
 }
 
 .card-facility {
@@ -45,4 +53,30 @@
   width: $f-lg;
   // background-color: $lightgrey;
   // border-radius: 50%;
+}
+
+// Small tablets and smartphones landscape view
+@media only screen and (min-width: 768px) {
+  .container-cards {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+// Tablets and small desktops
+@media only screen and (min-width: 947px) {
+
+}
+
+// Large tablets and desktops
+@media only screen and (min-width: 1220px) {
+  .container-cards {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+// Large desktops
+@media only screen and (min-width: 1968px) {
+
 }
