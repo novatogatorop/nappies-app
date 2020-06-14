@@ -17,6 +17,9 @@
       <div>
         <%= link_to current_user.username.upcase, edit_user_registration_path, class: "no-decor-color content-right" %>
       </div>
+      <div>
+        <strong><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color content-right' %></strong>
+      </div>
     <% else %>
       <div>
         <%= link_to "Login", new_user_session_path, class: "no-decor-color" %>
