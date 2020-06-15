@@ -4,22 +4,14 @@
   display: flex;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   align-items: center;
   background-color: white;
   color: $darkgrey;
   justify-content: space-between;
-  height: 30%;
+  height: 20%;
   width: 100%;
   background-color: $s-lightgrey;
 }
-
-// .footer-copyright {
-//   width: 100%;
-//   display: flex;
-//   // width: 33.333%;
-// }
 
 .footer-copyright div {
   margin-bottom: 0px !important;
@@ -31,13 +23,6 @@
   justify-content: flex-start !important;
   width: 100%;
   display: flex;
-
-    // width: 33.333%;
-  // justify-content: space-evenly;
-}
-
-.footer-links {
-
 }
 
 .footer-links a {
