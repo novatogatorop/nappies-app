@@ -4,7 +4,7 @@ const dropdownPopup = () => {
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
-  const nappiesCon =document.querySelector(".nappies-container")
+  // const nappiesCon =document.querySelector(".nappies-container")
   const footer =document.querySelector(".footer")
   listOpen.addEventListener('click', (event) => {
     dropdownList.style.display = "block";
@@ -12,7 +12,7 @@ const dropdownPopup = () => {
     footer.style.display = "none";
     listClose.style.display = "flex";
     listOpen.style.display = "none";
-    nappiesCon.style.display = "none";
+    // nappiesCon.style.display = "none";
     dropdownMobile.style.width = "100%";
     dropdownMobile.style.height = "100vh";
   });
@@ -24,14 +24,14 @@ const dropdownClose = () => {
   const dropdownMobile =document.querySelector(".dropdown-mobile")
   const dropdownList =document.querySelector(".dropdown-list")
   const searchButton =document.querySelector(".search-button-navbar")
-  const nappiesCon =document.querySelector(".nappies-container")
+  // const nappiesCon =document.querySelector(".nappies-container")
   const footer =document.querySelector(".footer")
   listClose.addEventListener('click', (event) => {
     dropdownList.style.display = "none";
     listClose.style.display = "none";
     listOpen.style.display = "flex";
     footer.style.display = "flex";
-    nappiesCon.style.display = "flex";
+    // nappiesCon.style.display = "flex";
     listOpen.style.marginBottom = "0px";
     searchButton.style.display = "block";
     dropdownMobile.style.width = "";
