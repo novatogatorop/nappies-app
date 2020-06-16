@@ -142,26 +142,6 @@ places =[
     toy: true,
     high_chair: false,
     play_area: false
-  },
-  {
-    name: 'Pasticceria Castelnuovo',
-    address: 'Via dei Tulipani 18, Milano',
-    user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Restaurant'),
-    changing_table: false,
-    toy: true,
-    high_chair: true,
-    play_area: false
-  },
-  {
-    name: 'Bar Luce',
-    address: 'Largo Isarco 2, Milano',
-    user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Restaurant'),
-    changing_table: true,
-    toy: true,
-    high_chair: true,
-    play_area: true
   }
 ]
 Place.create!(places)
