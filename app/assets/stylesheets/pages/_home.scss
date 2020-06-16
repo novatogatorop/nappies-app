@@ -95,14 +95,26 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .response {
-  color: $normalgrey;
+  color: $darkgrey;
   text-align: center;
   margin-bottom: $space-med;
+  font-size: $f-med;
+  font-weight: $heavy-fw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-// DESKTOP
-// @media only screen and (max-width: 575px) {
-//   body {
-//     font-size: $f-base;
-//   }
-// }
+@media only screen and (min-width: 768px) {
+  .response {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+// Large tablets and desktops
+@media only screen and (min-width: 1220px) {
+  .response {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
