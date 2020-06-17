@@ -8,12 +8,19 @@ Type.destroy_all
 puts 'Creating users'
 users = [
   {
-  username: "Lala",
-  first_name: "Lala",
-  last_name: "Lala",
-  email: "lala@example.com",
+  username: "Kim",
+  first_name: "Kim",
+  last_name: "Wexler",
+  email: "kim@example.com",
   password: 123123,
   admin: true
+  },
+  username: "Lalo",
+  first_name: "Lalo",
+  last_name: "Salamanca",
+  email: "lalo@example.com",
+  password: 123123,
+  admin: false
   },
 ]
 User.create!(users)
