@@ -68,18 +68,20 @@
       </div>
     </div>
     <% if user_signed_in? %>
-      <div class="admin-box">
-        <div>ADMIN</div>
-          <div class="admin-authorize">
-            <% if policy(@place).edit? %>
-              <div><i class="far fa-edit"></i> <%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></div>
-            <% end %>
-            <div> | </div>
-            <% if policy(@place).destroy? %>
-              <div><i class="far fa-trash-alt"></i> </i><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor', method: :delete, data: {confirm: "Are you sure?"} %></div>
-            <% end %>
-          </div>
-      </div>
+      <% if current_user.admin? %>
+        <div class="admin-box">
+          <div>ADMIN</div>
+            <div class="admin-authorize">
+              <% if policy(@place).edit? %>
+                <div><i class="far fa-edit"></i> <%= link_to 'Edit', edit_place_path(@place), :class => 'no-decor' %></div>
+              <% end %>
+              <div> | </div>
+              <% if policy(@place).destroy? %>
+                <div><i class="far fa-trash-alt"></i> </i><%= link_to 'Destroy', place_path(@place.id), :class => 'no-decor', method: :delete, data: {confirm: "Are you sure?"} %></div>
+              <% end %>
+            </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div
