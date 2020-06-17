@@ -1,0 +1,22 @@
+.navbar-bottom {
+  position: absolute;
+}
+
+.navbar-bottom-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 60px;
+  width: 100%;
+  bottom: 0%;
+  z-index: 1;
+  position: fixed;
+  background-color: white;
+  align-items: center;
+  justify-items: center;
+  border: $border-light;
+}
+
+.navbar-facility-icon {
+  height: $f-lg;
+  width: $f-lg;
+}
