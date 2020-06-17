@@ -21,7 +21,7 @@ users = [
   email: "lalo@example.com",
   password: 123123,
   admin: false
-  },
+  }
 ]
 User.create!(users)
 puts "Done with Users #{ User.count}"
