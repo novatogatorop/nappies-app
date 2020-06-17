@@ -15,6 +15,7 @@ users = [
   password: 123123,
   admin: true
   },
+  {
   username: "Lalo",
   first_name: "Lalo",
   last_name: "Salamanca",
@@ -23,6 +24,7 @@ users = [
   admin: false
   }
 ]
+
 User.create!(users)
 puts "Done with Users #{ User.count}"
 
@@ -33,6 +35,12 @@ types = [
   },
   {
     name: 'Coffee Shop'
+  },
+  {
+    name: 'Art Gallery'
+  },
+  {
+    name: 'Store'
   }
 ]
 Type.create!(types)
@@ -43,7 +51,7 @@ places =[
   {
     name: "me Collectors Room Berlin",
     address: "Maybachufer 20, Berlin",
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Coffee Shop'),
     changing_table: true,
     toy: true,
@@ -53,7 +61,7 @@ places =[
   {
     name: "Populus Coffee",
     address: "Maybachufer 20, Berlin",
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Coffee Shop'),
     changing_table: true,
     toy: true,
@@ -63,7 +71,7 @@ places =[
   {
     name: 'Berlinische Galerie',
     address: 'Alte Jakobstraße 124-128, Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Restaurant'),
     changing_table: true,
     toy: true,
@@ -73,7 +81,7 @@ places =[
   {
     name: 'Black Isle Bakery',
     address: 'Linienstraße 54, Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Coffee Shop'),
     changing_table: false,
     toy: false,
@@ -83,7 +91,7 @@ places =[
   {
     name: 'Bonanza Coffee Roasters',
     address: 'Adalbertstraße 70, 10999 Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Restaurant'),
     changing_table: false,
     toy: true,
@@ -91,29 +99,9 @@ places =[
     play_area: false
   },
   {
-    name: 'Pasticceria Castelnuovo',
-    address: 'Via dei Tulipani 18, Milano',
-    user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Restaurant'),
-    changing_table: false,
-    toy: true,
-    high_chair: true,
-    play_area: false
-  },
-  {
-    name: 'Dussmann Das KulturKaufhaus',
-    address: 'Largo Isarco 2, Milano',
-    user: User.find_by(username: 'Lala'),
-    type: Type.find_by(name: 'Restaurant'),
-    changing_table: true,
-    toy: true,
-    high_chair: true,
-    play_area: true
-  },
-  {
     name: "Populus Coffee",
     address: "Maybachufer 20, Berlin",
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Coffee Shop'),
     changing_table: true,
     toy: false,
@@ -123,7 +111,7 @@ places =[
   {
     name: 'Berlinische Galerie',
     address: 'Alte Jakobstraße 124-128, Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Restaurant'),
     changing_table: true,
     toy: false,
@@ -133,7 +121,7 @@ places =[
   {
     name: 'Black Isle Bakery',
     address: 'Linienstraße 54, Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Coffee Shop'),
     changing_table: false,
     toy: false,
@@ -143,7 +131,7 @@ places =[
   {
     name: 'Bonanza Coffee Roasters',
     address: 'Adalbertstraße 70, 10999 Berlin',
-    user: User.find_by(username: 'Lala'),
+    user: User.find_by(username: 'Kim'),
     type: Type.find_by(name: 'Restaurant'),
     changing_table: false,
     toy: true,
