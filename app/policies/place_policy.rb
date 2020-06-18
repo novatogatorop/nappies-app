@@ -12,6 +12,22 @@ class PlacePolicy < ApplicationPolicy
     true
   end
 
+  def filter_by_changing_table?
+    true
+  end
+
+  def filter_by_high_chair?
+    true
+  end
+
+  def filter_by_toy?
+    true
+  end
+
+  def filter_by_play_area?
+    true
+  end
+
   def show?
     true
   end

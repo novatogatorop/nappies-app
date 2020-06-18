@@ -3,10 +3,10 @@
 
     <div class="navbar-bottom">
       <div class="navbar-bottom-box">
-        <div class="navbar-changing-table"><%= image_tag "icon-diaper.png", class: 'navbar-facility-icon' %> </div>
-        <div class="navbar-high-chair"><%= image_tag "icon-high-chair.png", class: 'navbar-facility-icon' %></div>
-        <div class="navbar-toys"><%= image_tag "icon-toy.png", class: 'navbar-facility-icon' %></div>
-        <div class="navbar-play-area"><%= image_tag "icon-play-area.png", class: 'navbar-facility-icon' %></div>
+        <div><%= link_to 'Diaper', filter_by_changing_table_places_path, class: 'no-decor' %></div>
+        <div><%= link_to 'High Chair', filter_by_high_chair_places_path, class: 'no-decor' %></div>
+        <div><%= link_to 'Toy', filter_by_toy_places_path, class: 'no-decor' %></div>
+        <div><%= link_to 'Play Area', filter_by_play_area_places_path, class: 'no-decor' %></div>
       </div>
     </div>
     <div class="btn-list-box">

@@ -1,4 +1,11 @@
 class Place < ApplicationRecord
+  # keep the default scope first (if any)
+  scope :filter_by_changing_table, -> { where(changing_table: true) }
+  scope :filter_by_high_chair, -> { where(high_chair: true) }
+  scope :filter_by_toy, -> { where(toy: true) }
+  scope :filter_by_play_area, -> { where(play_area: true) }
+
+  # followed by association macros
   belongs_to :user
   belongs_to :type
   # has_many :facilities, through: :place_facilities
@@ -9,6 +16,8 @@ class Place < ApplicationRecord
   has_one_attached :photo4
   has_one_attached :photo5
 
+
+  # and validation macros
   validates :name, presence: true
   validates :address, presence: true
   validates :type_id, presence: true
@@ -26,10 +35,6 @@ class Place < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  # scope :changing_table, -> { where(changing_table: true) }
-  # scope :toy, -> { where(toy: true) }
-  # scope :high_chair, -> { where(high_chair: true) }
-  # scope :play_area, -> { where(play_area: true) }
 
   # def self.search_by(search_term)
   #   where("LOWER(address) LIKE :search_term", search_term: "%#{search_term.downcase}%")

@@ -1,0 +1,13 @@
+<div class="navbar-bottom">
+  <div class="navbar-bottom-box">
+    <div class="navbar-changing-table"><%= image_tag "icon-diaper.png", class: 'navbar-facility-icon' %> </div>
+    <div class="navbar-high-chair"><%= image_tag "icon-high-chair.png", class: 'navbar-facility-icon' %></div>
+    <div class="navbar-toys"><%= image_tag "icon-toy.png", class: 'navbar-facility-icon' %></div>
+    <div class="navbar-play-area"><%= image_tag "icon-play-area.png", class: 'navbar-facility-icon' %></div>
+  </div>
+</div>
+
+<%= link_to 'Changing Table', places_path(changing_table: true, class: 'button') %>
+<%= link_to 'High Chair', places_path(high_hair: true, class: 'button') %>
+<%= link_to 'Toy', places_path(toy: true, class: 'button') %>
+<%= link_to 'Play Area', link, class: 'button') %>
