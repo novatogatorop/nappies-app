@@ -10,12 +10,6 @@ class PlacesController < ApplicationController
     query = params[:query]
     results = query.present? ? Place.global_search(query) : Place.all
 
-    # @places = query.present? ? Place.global_search(query) : Place.all # creates an anonymous scope
-    # @places = @places.filter_by_changing_diaper(params[:changing_table]) if params[:changing_table].present?
-    # @places = @places.filter_by_high_chair(params[:high_chair]) if params[:high_chair].present?
-    # @places = @places.filter_by_toy(params[:toy]) if params[:toy].present?
-    # @places = @places.filter_by_play_area(params[:play_area]) if params[:play_area].present?
-
     if params[:facility].blank? || params[:facility] == 'Select Facility'
       @places = results
     else

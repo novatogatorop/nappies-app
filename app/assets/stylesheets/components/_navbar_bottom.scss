@@ -1,5 +1,6 @@
 .navbar-bottom {
   position: absolute;
+  z-index: 99;
 }
 
 .navbar-bottom-box {
@@ -16,7 +17,6 @@
   border: $border-light;
 }
 
-.navbar-facility-icon {
-  height: $f-lg;
-  width: $f-lg;
+.navbar-facility-icon img{
+  height: 40px;
 }
