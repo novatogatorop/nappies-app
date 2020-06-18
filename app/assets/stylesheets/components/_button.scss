@@ -45,40 +45,6 @@
   }
 }
 
-.btn-nappies {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: $nappies;
-  letter-spacing: 1px;
-  color: white !important;
-  border: 0.05rem solid;
-  border-color: $nappies;
-  border-radius: 5px;
-  &:hover {
-    color: $nappies !important;
-    text-decoration: none;
-    background-color: white;
-  }
-}
-
-.btn-minor {
-  color: $darkgrey;
-  background-color: transparent;
-  letter-spacing: 1px;
-  border: 0.05rem solid;
-  border-radius: 5px;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-color: $lightgrey;
-  &:hover {
-  border-color: $darkgrey;
-  }
-}
-
 .no-decor-color {
   text-decoration: none;
   color: $darkgrey;
@@ -101,11 +67,12 @@
 // MAP BUTTON
 .btn-map-box {
   position: absolute;
+  z-index: 3;
 }
 
 .btn-map {
   left: 40%;
-  bottom: 5%;
+  bottom: 15%;
   z-index: 1;
   position: fixed;
   font-size: $f-med;
@@ -128,10 +95,14 @@
 }
 
 // LIST BUTTON
+.btn-list-box {
+  position: absolute;
+  z-index: 3;
+}
 .btn-list {
   display: none;
   left: 40%;
-  bottom: 5%;
+  bottom: 15%;
   z-index: 3;
   position: fixed;
   font-size: $f-med;
