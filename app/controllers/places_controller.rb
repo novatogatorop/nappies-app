@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, except: [ :new, :create, :edit, :update, :destroy ]
   before_action :set_place, only: [ :show, :edit, :update, :destroy ]
 
 
