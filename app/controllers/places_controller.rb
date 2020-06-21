@@ -16,7 +16,7 @@ class PlacesController < ApplicationController
       # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair
       symbol = params[:facility].gsub(/ /, '_').downcase!.to_sym
       # @places = results.where(:high_chair => true)
-      @places = results.where(symbol => true)
+      results = results.where(symbol => true)
     end
 
     if @places.present?

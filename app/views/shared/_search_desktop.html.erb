@@ -3,6 +3,8 @@
       <%= text_field_tag :query, params[:query],
         class: "search-input placeholder-search",
         placeholder: "City, place name, type..."%>
+
+      <%= select_tag :type, :id, Type.all.order('name ASC'), :id, :name,{include_blank: 'Select Type'}, class: "select2 search-select" %>
       <%= select_tag "facility", options_for_select(['Select Facility',
                 'Changing Table',
                 'Toy',
