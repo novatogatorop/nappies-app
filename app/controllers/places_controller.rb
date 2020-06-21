@@ -8,15 +8,21 @@ class PlacesController < ApplicationController
     @places = policy_scope(Place)
     @places = Place.all
     query = params[:query]
-    results = query.present? ? Place.global_search(query) : Place.all
+    @places = query.present? ? Place.global_search(query) : Place.all
 
     if params[:facility].blank? || params[:facility] == 'Select Facility'
-      @places = results
+      @places
     else
       # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair
       symbol = params[:facility].gsub(/ /, '_').downcase!.to_sym
       # @places = results.where(:high_chair => true)
-      results = results.where(symbol => true)
+      @places = @places.where(symbol => true)
+    end
+
+    if params[:type].blank? || params[:type] == 'Select Type'
+      @places
+    else
+      @places = @places.
     end
 
     if @places.present?
