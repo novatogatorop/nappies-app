@@ -20,7 +20,7 @@
 <%= simple_form_for :search, url: places_path, method: "GET", html: { class: 'search-form' } do |f| %>
 <div class="search-box">
   <%= f.input :query, label: false, placeholder: "City, place name, type...", input_html: { class: "search-input placeholder-search", value: "" } %>
-  <%= f.association :type, as: :select, :collection => Type.all(:name => 'name'), input_html: { class: "search-input placeholder-search", multiple: "", title:"Type..." } %>
+  <%= f.input :type, as: :select, :collection => @types, label: false, placeholder: "City, place name, type...", input_html: { class: "select2 search-select" } %>
   <%= f.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false %>
   <%= f.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false %>
   <%= f.input :toy, as: :boolean, checked_value: true, unchecked_value: false %>
@@ -28,7 +28,5 @@
   <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
 </div>
 <% end %>
-
-
 
 
