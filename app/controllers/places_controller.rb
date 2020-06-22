@@ -18,7 +18,8 @@ class PlacesController < ApplicationController
       @places
     else
       @places = Place.geocoded
-      @response = "No results for '#{params[:search][:query]}'."
+      @response = "No results for found."
+      # @response = "No results for '#{params[:search][:query]}'."
     end
 
     @markers = @places.map do |place|
@@ -31,76 +32,6 @@ class PlacesController < ApplicationController
       }
     end
   end
-
-  # def filter_by_changing_table
-  #   @places = Place.global_search(params[:search][:query]) if params[:search][:query].present?
-  #   @places = Place.filter_by_changing_table
-  #   skip_authorization
-
-  #   @markers = @places.map do |place|
-  #     {
-  #       lat: place.latitude,
-  #       lng: place.longitude,
-  #       infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
-  #       # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-  #       image_url: helpers.asset_url('map-pin-nappies-border-small.png')
-  #     }
-  #   end
-
-  #   render 'places/index'
-  # end
-
-  # def filter_by_high_chair
-  #   @places = Place.filter_by_high_chair
-  #   skip_authorization
-
-  #   @markers = @places.map do |place|
-  #     {
-  #       lat: place.latitude,
-  #       lng: place.longitude,
-  #       infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
-  #       # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-  #       image_url: helpers.asset_url('map-pin-nappies-border-small.png')
-  #     }
-  #   end
-
-  #   render 'places/index'
-  # end
-
-  # def filter_by_toy
-  #   @places = Place.global_search(params[:search][:query]) if params[:search][:query].present?
-  #   @places = Place.filter_by_toy
-  #   skip_authorization
-
-  #   @markers = @places.map do |place|
-  #     {
-  #       lat: place.latitude,
-  #       lng: place.longitude,
-  #       infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
-  #       # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-  #       image_url: helpers.asset_url('map-pin-nappies-border-small.png')
-  #     }
-  #   end
-
-  #   render 'places/index'
-  # end
-
-  # def filter_by_play_area
-  #   @places = Place.filter_by_play_area
-  #   skip_authorization
-
-  #   @markers = @places.map do |place|
-  #     {
-  #       lat: place.latitude,
-  #       lng: place.longitude,
-  #       infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
-  #       # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-  #       image_url: helpers.asset_url('map-pin-nappies-border-small.png')
-  #     }
-  #   end
-
-  #   render 'places/index'
-  # end
 
   def show
     @markers = Array.new
