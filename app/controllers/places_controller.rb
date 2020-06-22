@@ -5,11 +5,14 @@ class PlacesController < ApplicationController
   def index
     @places = policy_scope(Place)
     @places = Place.all
-    @places = Place.global_search(params[:search][:query]) if params[:search][:query].present?
-    @places = @places.filter_by_changing_table if params[:search][:changing_table] == 'true'
-    @places = @places.filter_by_high_chair if params[:search][:high_chair] == 'true'
-    @places = @places.filter_by_toy if params[:search][:toy] == 'true'
-    @places = @places.filter_by_play_area if params[:search][:play_area ] == 'true'
+
+    @places = Place.global_search(params[:search][:query]) if params[:search] && params[:search][:query].present?
+    @places = @places.filter_by_changing_table if params[:search] && params[:search][:changing_table] == 'true'
+    @places = @places.filter_by_high_chair if params[:search] && params[:search][:high_chair] == 'true'
+    @places = @places.filter_by_toy if params[:search] && params[:search][:toy] == 'true'
+    @places = @places.filter_by_play_area if params[:search] && params[:search][:play_area ] == 'true'
+
+
 
     if @places.present?
       @places
