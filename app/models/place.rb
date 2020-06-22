@@ -7,7 +7,7 @@ class Place < ApplicationRecord
 
   # followed by association macros
   belongs_to :user
-  belongs_to :type
+  belongs_to :type, class_name: "Type"
   # has_many :facilities, through: :place_facilities
   # has_many :place_facilities, dependent: :destroy
   has_one_attached :photo1

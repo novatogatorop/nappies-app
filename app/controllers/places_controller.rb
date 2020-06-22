@@ -7,6 +7,7 @@ class PlacesController < ApplicationController
     @places = Place.all
 
     @places = Place.global_search(params[:search][:query]) if params[:search] && params[:search][:query].present?
+    @places = @places.filter_by_type if params[:search] && params[:search][:type].present?
     @places = @places.filter_by_changing_table if params[:search] && params[:search][:changing_table] == 'true'
     @places = @places.filter_by_high_chair if params[:search] && params[:search][:high_chair] == 'true'
     @places = @places.filter_by_toy if params[:search] && params[:search][:toy] == 'true'
@@ -117,7 +118,6 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
-    # @place_facility = PlaceFacility.new
     @place.user = current_user
     authorize @place
     if @place.save
