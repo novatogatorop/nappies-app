@@ -5,10 +5,10 @@ class PlacesController < ApplicationController
   def index
     @places = policy_scope(Place)
     @places = Place.all
-    @types = Type.order(:name)
+    @types = Type.order(name: :asc)
 
-    @places = Place.global_search(params[:search][:query]) if params[:search] && params[:search][:query].present?
     @places = @places.joins(:type).where(types: { id: params[:search][:type] }) if params[:search] && params[:search][:type].present?
+    @places = Place.global_search(params[:search][:query]) if params[:search] && params[:search][:query].present?
     @places = @places.filter_by_changing_table if params[:search] && params[:search][:changing_table] == 'true'
     @places = @places.filter_by_high_chair if params[:search] && params[:search][:high_chair] == 'true'
     @places = @places.filter_by_toy if params[:search] && params[:search][:toy] == 'true'
@@ -18,8 +18,7 @@ class PlacesController < ApplicationController
       @places
     else
       @places = Place.geocoded
-      @response = "No results for found."
-      # @response = "No results for '#{params[:search][:query]}'."
+      @response = "Sorry, no results found."
     end
 
     @markers = @places.map do |place|
