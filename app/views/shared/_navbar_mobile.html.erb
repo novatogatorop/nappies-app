@@ -32,21 +32,19 @@
     <button class="search-button-navbar"><i class="fas fa-search"></i></button>
     <button class="search-button-x"><i class="fas fa-times"></i></button>
     <div class="search-form-mobile">
-      <%= form_for :search, url: places_path, class: "search-form form-container", method: :get do %>
-        <div class="search-box-mobile">
-            <%= text_field_tag :query, params[:query],
-              class: "search-input-mobile",
-              placeholder: "City, place name, type..."%>
-          <%= select_tag "facility", options_for_select(['Select Facility',
-                    'Changing Table',
-                    'Toy',
-                    'High Chair',
-                    'Play Area']), class: "select2 search-select-mobile" %>
-          <div class="search-popup-footer">
-            <button type="submit" class="search-submit-navbar"><i class="fas fa-search"></i> search</button>
-          </div>
+
+      <%= simple_form_for :search, url: places_path, method: "GET", html: { class: 'search-form' } do |f| %>
+        <div class="search-box">
+          <%= f.input :query, label: false, placeholder: "City, place name, type...", input_html: { class: "search-input-mobile" } %>
+          <%= f.input :type, as: :select, :collection => @types, :label_method => :name, :value_method => :id, label: false, prompt: "Select Type", input_html: { class: "select2 search-select-mobile" }  %>
+          <%= f.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false, label: false, input_html: { class: "input-changing-table" } %>
+          <%= f.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "input-high-chair" } %>
+          <%= f.input :toy, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "input-toy" } %>
+          <%= f.input :play_area, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "input-play-area" } %>
+          <button type="submit" class="search-submit-navbar"><i class="fas fa-search"></i> search</button>
         </div>
       <% end %>
+
     </div>
   </div>
 </div>

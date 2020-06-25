@@ -1,6 +1,13 @@
 <div class="nappies-container">
-  <% if !@response.present? %>
+  <div class="navbar-bottom">
+    <div class="navbar-bottom-box">
+      <div class="navbar-changing-table"><%= image_tag "icon-diaper.png", class: 'navbar-facility-icon' %> </div>
+      <div class="navbar-high-chair"><%= image_tag "icon-high-chair.png", class: 'navbar-facility-icon' %></div>
+      <div class="navbar-toys"><%= image_tag "icon-toy.png", class: 'navbar-facility-icon' %></div>
+      <div class="navbar-play-area"><%= image_tag "icon-play-area.png", class: 'navbar-facility-icon' %></div>
     </div>
+  </div>
+  <% if !@response.present? %>
     <div class="btn-list-box">
       <a class=btn-list href="#all-cards"><i class="fas fa-list"></i></a>
     </div>
