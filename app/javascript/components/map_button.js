@@ -33,7 +33,6 @@ const mapButton = () => {
     btnMap.style.display = "none";
     btnList.style.display = "block";
     cards.style.paddingTop = "0";
-    // cards.style.marginTop = "20vh";
     map.style.marginTop = "10vh";
     nappies.style.marginTop = "0";
     footer.style.display = "none";

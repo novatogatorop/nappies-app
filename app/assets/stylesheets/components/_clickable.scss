@@ -1,0 +1,26 @@
+// .clickable {
+//   background: white;
+// }
+
+// .clickable.active {
+//   background: #F2F2F2;
+// }
+
+.clickable:hover {
+  // background: $s-lightgrey;
+}
+
+
+.clickable-changing-table {
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.clickable-changing-table.active {
+  background: #F2F2F2;
+}
