@@ -6,3 +6,13 @@
     <div class="clickable nav-play-area"><%= image_tag "icon-play-area.png", class: 'navbar-icon' %></div>
   </div>
 </div>
+
+
+<div class="navbar-bottom">
+  <div class="navbar-bottom-box">
+    <%= link_to 'Changing Table', places_path(changing_table: true, class: 'button') %>
+    <%= link_to 'High Chair', places_path(high_hair: true, class: 'button') %>
+    <%= link_to 'Toy', places_path(toy: true, class: 'button') %>
+    <%= link_to 'Play Area', link, class: 'button') %>
+  </div>
+</div>
