@@ -1,18 +1,9 @@
-<!-- <div class="navbar-bottom">
-  <div class="navbar-bottom-box">
-    <div class="clickable nav-changing-table"><%= image_tag "icon-diaper.png", class: 'navbar-icon' %> </div>
-    <div class="clickable nav-high-chair"><%= image_tag "icon-high-chair.png", class: 'navbar-icon' %></div>
-    <div class="clickable nav-toys"><%= image_tag "icon-toy.png", class: 'navbar-icon' %></div>
-    <div class="clickable nav-play-area"><%= image_tag "icon-play-area.png", class: 'navbar-icon' %></div>
-  </div>
-</div> -->
-
-
 <div class="navbar-bottom">
   <div class="navbar-bottom-box">
+    <div><%= link_to image_tag('icon-all.png'), places_path, class: 'navbar-icon' %></div>
     <div><%= link_to image_tag('icon-diaper.png'), filter_by_changing_table_places_path, class: 'navbar-icon' %></div>
     <div><%= link_to image_tag('icon-high-chair.png'), filter_by_high_chair_places_path, class: 'navbar-icon' %></div>
-    <div><%= link_to image_tag('icon-toy.png'), filter_by_toy_places_path, class: 'navbar-facility-icon' %></div>
+    <div><%= link_to image_tag('icon-toy.png'), filter_by_toy_places_path, class: 'navbar-icon' %></div>
     <div><%= link_to image_tag('icon-play-area.png'), filter_by_play_area_places_path, class: 'navbar-icon' %></div>
   </div>
 </div>
