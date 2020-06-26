@@ -5,7 +5,7 @@
 
 .navbar-bottom-box {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   height: 60px;
   width: 100%;
   bottom: 0%;
@@ -17,6 +17,6 @@
   border: $border-light;
 }
 
-.navbar-icon {
+.navbar-icon img{
   height: 40px;
 }
