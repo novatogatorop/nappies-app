@@ -1,3 +1,5 @@
+const navBottom =document.querySelector(".navbar-bottom-box")
+
 const searchPopup = () => {
   const searchPopup =document.querySelector(".search-form-mobile")
   const searchButton =document.querySelector(".search-button-navbar")
@@ -10,6 +12,7 @@ const searchPopup = () => {
     searchButton.style.display = "none";
     searchButtonX.style.display = "flex";
     footer.style.display = "none";
+    navBottom.style.display = "none";
     dropdown.style.display = "none";
     searchMobile.style.width = "100%";
     searchMobile.style.height = "100vh";
@@ -29,6 +32,7 @@ const closePopup = () => {
     searchButton.style.display = "flex";
     dropdown.style.display = "block";
     footer.style.display = "flex";
+    navBottom.style.display = "grid";
     searchMobile.style.width = "";
     searchMobile.style.height = "0";
   });

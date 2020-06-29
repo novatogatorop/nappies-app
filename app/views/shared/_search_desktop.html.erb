@@ -1,17 +1,11 @@
-<%= form_for :search, url: places_path, class: "search-form", method: :get do %>
+<%= simple_form_for :search, url: places_path, method: "GET", html: { class: 'search-form' } do |f| %>
   <div class="search-box">
-      <%= text_field_tag :query, params[:query],
-        class: "search-input placeholder-search",
-        placeholder: "City, place name, type..."%>
-      <%= select_tag "facility", options_for_select(['Select Facility',
-                'Changing Table',
-                'Toy',
-                'High Chair',
-                'Play Area']), class: "select2 search-select" %>
-      <%#= submit_tag "🔎", class: "search-submit"  %>
-      <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+    <%= f.input :query, label: false, placeholder: "City, place name, type...", input_html: { class: "search-input placeholder-search" } %>
+    <%= f.input :type, as: :select, :collection => Type.limit(5), label: false, prompt: "Select Type", input_html: { class: "select2 search-select" }  %>
+    <%= f.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "d-input-changing-table" } %>
+    <%= f.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "d-input-high-chair" } %>
+    <%= f.input :toy, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "d-input-toy" } %>
+    <%= f.input :play_area, as: :boolean, checked_value: true, unchecked_value: false, input_html: { class: "d-input-play-area" } %>
+    <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
   </div>
 <% end %>
-
-
-

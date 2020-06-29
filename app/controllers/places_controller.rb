@@ -2,32 +2,25 @@ class PlacesController < ApplicationController
   skip_before_action :authenticate_user!, except: [ :new, :create, :edit, :update, :destroy ]
   before_action :set_place, only: [ :show, :edit, :update, :destroy ]
 
-
   def index
-
     @places = policy_scope(Place)
     @places = Place.all
-    query = params[:query]
-    results = query.present? ? Place.global_search(query) : Place.all
+    @types = Type.order(name: :asc)
 
-    if params[:facility].blank? || params[:facility] == 'Select Facility'
-      @places = results
-    else
-      # 'High Chair' -> 'High_Chair' -> 'high_chair' -> :high_chair
-      symbol = params[:facility].gsub(/ /, '_').downcase!.to_sym
-      # @places = results.where(:high_chair => true)
-      @places = results.where(symbol => true)
-    end
+    @places = @places.joins(:type).where(types: { id: params[:search][:type] }) if params[:search] && params[:search][:type].present?
+    @places = Place.global_search(params[:search][:query]) if params[:search] && params[:search][:query].present?
+    @places = @places.filter_by_changing_table if params[:search] && params[:search][:changing_table] == 'true'
+    @places = @places.filter_by_high_chair if params[:search] && params[:search][:high_chair] == 'true'
+    @places = @places.filter_by_toy if params[:search] && params[:search][:toy] == 'true'
+    @places = @places.filter_by_play_area if params[:search] && params[:search][:play_area ] == 'true'
 
     if @places.present?
       @places
     else
       @places = Place.geocoded
-      @response = "No results for '#{query}'."
+      @response = "Sorry, no results found."
     end
 
-
-    # @geo_places = @places.geocoded
     @markers = @places.map do |place|
       {
         lat: place.latitude,
@@ -122,7 +115,6 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(place_params)
-    # @place_facility = PlaceFacility.new
     @place.user = current_user
     authorize @place
     if @place.save

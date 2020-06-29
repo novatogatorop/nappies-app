@@ -1,9 +1,15 @@
 @media only screen and (max-width: 945px) {
   .navbar-desktop { display: none;}
+
+  .search-desktop { display: none !important;}
 }
 
 @media only screen and (min-width: 947px) {
   .navbar-mobile {
+    display: none !important;
+  }
+
+  .navbar-bottom {
     display: none !important;
   }
 
@@ -43,7 +49,11 @@
   }
 
   .content-right {
-    margin-left: $space-med;
+    margin-left: $space-lg;
+  }
+
+  .search-icon {
+    font-size: 20px;
   }
 }
 

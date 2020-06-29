@@ -1,14 +1,8 @@
 <div class="nappies-container">
+<div class="search-desktop">
+  <%= render 'shared/search_desktop' %>
+</div>
   <% if !@response.present? %>
-
-    <div class="navbar-bottom">
-      <div class="navbar-bottom-box">
-        <div><%= link_to image_tag('icon-diaper.png'), filter_by_changing_table_places_path, class: 'navbar-facility-icon' %></div>
-        <div><%= link_to image_tag('icon-high-chair.png'), filter_by_high_chair_places_path, class: 'navbar-facility-icon' %></div>
-        <div><%= link_to image_tag('icon-toy.png'), filter_by_toy_places_path, class: 'navbar-facility-icon' %></div>
-        <div><%= link_to image_tag('icon-play-area.png'), filter_by_play_area_places_path, class: 'navbar-facility-icon' %></div>
-      </div>
-    </div>
     <div class="btn-list-box">
       <a class=btn-list href="#all-cards"><i class="fas fa-list"></i></a>
     </div>
@@ -69,6 +63,8 @@
 
     <div class="response">
       <%= @response %>
+      <div></div>
+      <!-- <div>It seems we can’t find any results based on your search.</div> -->
     </div>
 
   <% end %>
