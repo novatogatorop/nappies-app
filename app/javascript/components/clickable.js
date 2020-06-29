@@ -1,22 +1,27 @@
-const box = document.querySelector(".navbar-bottom-box");
-const items = document.querySelector(".navbar-bottom-items");
-
-const iconClickable = () => {
-  items.forEach(el => {
-    el.addEventListener('click', function(){
-      box.querySelector('.active').classList.remove('.active')
-    });
-  });
-};
+// const box = document.querySelector(".navbar-bottom-box");
+// const items = document.querySelector(".navbar-bottom-items");
+// const currentLocation = location.href;
+// const icons = document.querySelector(".navbar-icon");
+// const iconsLength = icons.length
 
 // const iconClickable = () => {
-//   clicks.forEach((click) => {
-//     click.addEventListener("click", (event) => {
-//       click.classList.toggle("active");
-//     });
-//   });
+//   for(let i = 0, i<iconsLength, i++){
+//     if(iconsLength[i].href === currentLocation){
+//       icons[i].className = "active"
+//     }
+//   }
 // };
 
 
 
-export { iconClickable };
+// // const iconClickable = () => {
+// //   clicks.forEach((click) => {
+// //     click.addEventListener("click", (event) => {
+// //       click.classList.toggle("active");
+// //     });
+// //   });
+// // };
+
+
+
+// export { iconClickable };
