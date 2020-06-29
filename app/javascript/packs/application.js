@@ -6,7 +6,7 @@ import { searchPopup, closePopup } from '../components/search_mobile';
 import { dropdownPopup, dropdownClose } from '../components/dropdown_mobile';
 import { initSelect2 } from '../components/init_select2';
 import { mapButton, listButton } from '../components/map_button';
-// import { iconClickable } from '../components/clickable';
+import { searchIcon } from '../components/search_icon';
 
 
 
@@ -21,7 +21,7 @@ dropdownClose();
 initSelect2();
 mapButton();
 listButton();
-// iconClickable();
+searchIcon();
 
 //  var elements = document.getElementsByClassName("child");
 // for(var i = 0; i < elements.length; i++)
