@@ -11,8 +11,6 @@
       <div>
         <% if current_user.admin? %>
           <%= link_to "Create A Place", new_place_path, class: "no-decor-color" %>
-        <% else %>
-          <a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a>
         <% end %>
       </div>
       <div>
@@ -20,6 +18,7 @@
       </div>
     <% else %>
       <div class="search-icon"><i class="fas fa-search"></i></div>
+      <div><a class="no-decor-color content-right" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></div>
       <div>
         <%= link_to "Login", new_user_session_path, class: "no-decor-color content-right" %>
       </div>
