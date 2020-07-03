@@ -27,7 +27,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
         # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+        image_url: helpers.asset_url('map-pin-baby.png')
       }
     end
   end
@@ -42,7 +42,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
         # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+        image_url: helpers.asset_url('map-pin-baby.png')
       }
     end
 
@@ -59,7 +59,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
         # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+        image_url: helpers.asset_url('map-pin-baby.png')
       }
     end
 
@@ -76,7 +76,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
         # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+        image_url: helpers.asset_url('map-pin-baby.png')
       }
     end
 
@@ -93,7 +93,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         infoWindow: render_to_string(partial: "map_box", locals: { place: place }),
         # infoWindow: { content: render_to_string(partial: "/places/map_box", locals: { place: place }) },
-        image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+        image_url: helpers.asset_url('map-pin-baby.png')
       }
     end
 
@@ -104,7 +104,7 @@ class PlacesController < ApplicationController
     @markers = Array.new
     @markers << { lat: @place.latitude,
                   lng: @place.longitude,
-                  image_url: helpers.asset_url('map-pin-nappies-border-small.png')
+                  image_url: helpers.asset_url('map-pin-baby.png')
                  }
   end
 
