@@ -13,8 +13,9 @@ const listButton = () => {
       cards.style.marginTop = "0";
       cards.style.paddingTop = "80px";
       map.style.marginTop = "0";
+      map.classList.add("hidden");
+      map.classList.remove("shown");
       cards.style.display = "block";
-      map.style.display = "none";
       footer.style.display = "flex";
       navbar.style.display = "flex";
     });
@@ -34,11 +35,11 @@ const mapButton = () => {
       btnMap.style.display = "none";
       btnList.style.display = "block";
       cards.style.paddingTop = "0";
-      map.style.marginTop = "10vh";
       footer.style.display = "none";
       cards.style.display = "none";
       navbar.style.display = "none";
-      map.style.display = "block";
+      map.classList.remove("hidden");
+      map.classList.add("shown");
     });
   }
 

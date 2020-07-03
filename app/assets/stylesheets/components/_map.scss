@@ -5,7 +5,14 @@
 .index-map {
   z-index: 2;
   width: 100vw;
+}
+
+.index-map.shown {
   height: 100vh;
+}
+
+.index-map.hidden {
+  height: 0vh;
 }
 
 // MAP INFO WINDOW
