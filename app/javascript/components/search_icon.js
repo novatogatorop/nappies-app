@@ -5,7 +5,8 @@ const nappiesCon = document.querySelector(".nappies-container")
 
 const searchIcon = () => {
   icon.addEventListener("click", function() {
-    search.style.display = (search.dataset.toggled ^= 1) ? "block" : "none";
+    search.classList.toggle("open");
+    // search.style.display = (search.dataset.toggled ^= 1) ? "block" : "none";
     nappiesCon.classList.toggle("extra-p");
   });
 };
