@@ -1,13 +1,10 @@
 <div class="nappies-container">
-<div class="search-desktop">
-  <%= render 'shared/search_desktop' %>
-</div>
   <% if !@response.present? %>
-    <div class="btn-list-box">
-      <a class=btn-list href="#all-cards"><i class="fas fa-list"></i></a>
-    </div>
     <div class="btn-map-box">
       <a class=btn-map href="#map"><i class="fas fa-map-marked-alt"></i></a>
+    </div>
+    <div class="btn-list-box">
+      <a class=btn-list href="#all-cards"><i class="fas fa-list"></i></a>
     </div>
     <div id="all-cards" class="index-cards">
       <div class="nappies-cards container-cards">

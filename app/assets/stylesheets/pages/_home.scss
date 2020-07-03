@@ -56,8 +56,15 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 15vh;
   position: relative;
+}
+
+.extra-p {
+  padding-top: 80px;
+}
+
+.nappies-container#extra-p {
+  padding-top: 30vh;
 }
 
 // DEVISE
