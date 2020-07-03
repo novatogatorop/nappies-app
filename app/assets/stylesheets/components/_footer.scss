@@ -8,10 +8,12 @@
   background-color: white;
   color: $darkgrey;
   justify-content: space-between;
-  height: 20vh;
+  // height: 20vh;
   width: 100%;
   background-color: $s-lightgrey;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
+  padding-bottom: 80px;
+  padding-top: 20px;
 }
 
 .footer-copyright div {
@@ -43,7 +45,8 @@
   .footer {
     padding-left: 32px;
     padding-right: 32px;
-    margin-bottom: 0px;
+    padding-bottom: 32px !important;
+    padding-top: 32px;
   }
 }
 
@@ -52,6 +55,5 @@
   .footer {
     padding-left: 72px;
     padding-right: 72px;
-    margin-bottom: 0px;
   }
 }
