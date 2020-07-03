@@ -5,14 +5,13 @@ const listButton = () => {
   const map =document.querySelector(".index-map")
   const cards =document.querySelector(".index-cards")
   const footer =document.querySelector(".footer")
-  const nappies =document.querySelector(".nappies-container")
   const navbar =document.querySelector(".navbar-mobile")
   if(btnListBox){
     btnListBox.addEventListener('click', (event) => {
       btnMap.style.display = "block";
       btnList.style.display = "none";
       cards.style.marginTop = "0";
-      cards.style.paddingTop = "10vh";
+      cards.style.paddingTop = "80px";
       map.style.marginTop = "0";
       cards.style.display = "block";
       map.style.display = "none";
@@ -29,16 +28,13 @@ const mapButton = () => {
   const map =document.querySelector(".index-map")
   const cards =document.querySelector(".index-cards")
   const footer =document.querySelector(".footer")
-  const nappies =document.querySelector(".nappies-container")
   const navbar =document.querySelector(".navbar-mobile")
-
   if(btnMapBox){
     btnMapBox.addEventListener('click', (event) => {
       btnMap.style.display = "none";
       btnList.style.display = "block";
       cards.style.paddingTop = "0";
       map.style.marginTop = "10vh";
-      nappies.style.marginTop = "0";
       footer.style.display = "none";
       cards.style.display = "none";
       navbar.style.display = "none";

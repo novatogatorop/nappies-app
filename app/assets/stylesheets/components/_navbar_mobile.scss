@@ -10,6 +10,24 @@
   border: $border-light;
 }
 
+// LOGO
+.logo-mobile {
+  display: flex;
+  align-items: center;
+  height: 60px
+}
+
+.m-logo-text {
+    // font-size: $f-med;
+    color: $nappies !important;
+    font-weight: $heavy-fw !important;
+    // font-size: $f-s;
+    &:hover {
+      color: $nappies-light;
+      text-decoration: none !important;
+    }
+  }
+
 // DROPDOWN
 
 .list-navbar{
