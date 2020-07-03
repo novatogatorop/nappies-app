@@ -1,3 +1,11 @@
+.index-cards {
+  background-color: white;
+  margin-top: 0px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
 .nappies-cards {
   display: grid;
   grid-template-columns: 300px;
@@ -56,6 +64,7 @@
 // Small tablets and smartphones landscape view
 @media only screen and (min-width: 768px) {
   .container-cards {
+    margin-top: 32px;
     padding-left: 32px;
     padding-right: 32px;
   }
