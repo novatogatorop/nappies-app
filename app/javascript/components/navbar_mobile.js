@@ -1,6 +1,5 @@
 const navMobile = document.querySelector(".navbar-mobile")
-var lastScrollTop = 0
-
+var lastScrollTop = window.pageYOffset;
 
 const navbarMobile = () => {
   window.addEventListener("scroll", function() {
