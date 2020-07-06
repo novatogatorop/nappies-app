@@ -7,7 +7,7 @@ import { dropdownPopup, dropdownClose } from '../components/dropdown_mobile';
 import { initSelect2 } from '../components/init_select2';
 import { mapButton, listButton } from '../components/map_button';
 import { searchIcon } from '../components/search_icon';
-import { navbarMobile } from '../components/navbar_mobile';
+// import { navbarMobile } from '../components/navbar_mobile';
 
 
 
@@ -23,4 +23,4 @@ initSelect2();
 mapButton();
 listButton();
 searchIcon();
-navbarMobile();
+// navbarMobile();
