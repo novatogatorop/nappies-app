@@ -45,6 +45,8 @@ const initMapbox = () => {
       })
     );
 
+    if (map.tap) map.tap.disable();
+
     // fullscreen button
     // map.addControl(new mapboxgl.FullscreenControl());
   };
