@@ -33,6 +33,8 @@ const initMapbox = () => {
        duration: 0
      });
 
+    map.resize();
+
     // Disables the "scroll to zoom" interaction.
     map.scrollZoom.disable();
 

@@ -22,7 +22,7 @@ const mapButton = () => {
       // map
       map.classList.remove("hidden");
       map.classList.add("shown");
-      map.style.height="100vh";
+      // map.style.height="100vh";
 
       // navbar
       navbar.style.display = "none";
@@ -48,7 +48,7 @@ const listButton = () => {
       // map
       map.classList.add("hidden");
       map.classList.remove("shown");
-      map.style.height="100vh";
+      // map.style.height="100vh";
 
       // navbar
       navbar.style.display = "flex";
