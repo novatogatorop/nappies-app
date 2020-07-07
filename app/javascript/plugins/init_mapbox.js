@@ -27,13 +27,22 @@ const initMapbox = () => {
     addMarkersToMap(map, markers)
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+    map.fitBounds(bounds, {
+       padding: 70,
+       maxZoom: 15,
+       duration: 0,
+       scrollZoom      : false,
+       boxZoom         : false,
+       doubleClickZoom : false
+     });
 
-    // Add zoom and rotation controls to the map.
-    map.addControl(new mapboxgl.NavigationControl());
+    // map.scrollWheelZoom.disable();
 
     // disable map zoom when using scroll
     map.scrollZoom.disable();
+
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
 
     // Add geolocate control to the map.
     map.addControl(
@@ -44,8 +53,6 @@ const initMapbox = () => {
         trackUserLocation: true
       })
     );
-
-    if (map.tap) map.tap.disable();
 
     // fullscreen button
     // map.addControl(new mapboxgl.FullscreenControl());
