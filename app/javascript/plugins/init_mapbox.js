@@ -36,7 +36,7 @@ const initMapbox = () => {
        doubleClickZoom : false
      });
 
-    // map.scrollWheelZoom.disable();
+    map.scrollWheelZoom.disable();
 
     // disable map zoom when using scroll
     map.scrollZoom.disable();
