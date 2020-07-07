@@ -28,7 +28,25 @@ const initMapbox = () => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
     map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // disable map zoom when using scroll
     map.scrollZoom.disable();
+
+    // Add geolocate control to the map.
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+          },
+        trackUserLocation: true
+      })
+    );
+
+    // fullscreen button
+    // map.addControl(new mapboxgl.FullscreenControl());
   };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
@@ -38,14 +56,15 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/navigation-guidance-day-v4'
     });
 
-    map.addControl(
-      new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true
-          },
-        trackUserLocation: true
-      })
-    );
+    // // Add geolocate control to the map.
+    // map.addControl(
+    //   new mapboxgl.GeolocateControl({
+    //     positionOptions: {
+    //       enableHighAccuracy: true
+    //       },
+    //     trackUserLocation: true
+    //   })
+    // );
 
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers)
