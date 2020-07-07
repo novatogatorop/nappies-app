@@ -30,16 +30,26 @@ const initMapbox = () => {
     map.fitBounds(bounds, {
        padding: 70,
        maxZoom: 15,
-       duration: 0,
-       scrollZoom      : false,
-       boxZoom         : false,
-       doubleClickZoom : false
+       duration: 0
      });
 
-    map.scrollWheelZoom.disable();
-
-    // disable map zoom when using scroll
+    // Disables the "scroll to zoom" interaction.
     map.scrollZoom.disable();
+
+    // Disables the "drag to rotate" interaction.
+    map.dragRotate.disable();
+
+    // Enables the "double click to zoom" interaction.
+    map.doubleClickZoom.enable();
+
+    // Disables the "drag to pan" interaction.
+    map.dragPan.disable();
+
+    // doesn't allow the user to zoom and rotate the map by pinching on a touchscreen
+    map.touchZoomRotate.disable();
+
+    // allows the user to pitch the map by dragging up and down with two fingers
+    map.touchPitch.enable();
 
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
@@ -53,9 +63,6 @@ const initMapbox = () => {
         trackUserLocation: true
       })
     );
-
-    // fullscreen button
-    // map.addControl(new mapboxgl.FullscreenControl());
   };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
