@@ -82,10 +82,9 @@
   color: white;
   border-radius: 2.5rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,.1);
-  transition: 0.2s ease;
   &:hover {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
   }
 }
 
@@ -112,10 +111,9 @@
   color: white;
   border-radius: 2.5rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,.1);
-  transition: all 0.3s ease-in-out;
   &:hover {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
   }
 }
 
@@ -124,12 +122,29 @@
   color: white;
 }
 
-@media only screen and (min-width: 947px) {
+// Small tablets and smartphones landscape view
+@media only screen and (min-width: 768px) {
   .btn-map {
-    bottom: 5%;
+    bottom: 10%;
+    width: 10vw;
+    left: 45%;
   }
 
   .btn-list {
-    bottom: 5%;
+    bottom: 10%;
+    width: 10vw;
+    left: 45%;
   }
 }
+
+// @media only screen and (min-width: 947px) {
+//   .btn-map {
+//     bottom: 10%;
+//     width: 10vw;
+//   }
+
+//   .btn-list {
+//     bottom: 10%;
+//     width: 10vw;
+//   }
+// }

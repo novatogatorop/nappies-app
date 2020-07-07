@@ -1,9 +1,10 @@
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 946px) {
   .navbar-desktop { display: none;}
 
   .search-desktop { display: none !important;}
 }
 
+// Tablets and small desktops
 @media only screen and (min-width: 947px) {
   .navbar-mobile {
     display: none !important;

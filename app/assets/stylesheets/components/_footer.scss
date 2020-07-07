@@ -11,9 +11,8 @@
   // height: 20vh;
   width: 100%;
   background-color: $s-lightgrey;
-  // margin-bottom: 60px;
-  padding-bottom: 80px;
   padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 .footer-copyright div {
@@ -41,12 +40,19 @@
   color: $darkgrey;
 }
 
+// Small tablets and smartphones landscape view
 @media only screen and (min-width: 768px) {
   .footer {
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 32px !important;
+  }
+}
+
+// // Tablets and small desktops
+@media only screen and (min-width: 947px) {
+  .footer {
     padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -55,5 +61,7 @@
   .footer {
     padding-left: 72px;
     padding-right: 72px;
+    // padding-top: 32px !important;
+    // padding-bottom: 32px !important;
   }
 }
