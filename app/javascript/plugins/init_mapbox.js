@@ -48,9 +48,6 @@ const initMapbox = () => {
     // doesn't allow the user to zoom and rotate the map by pinching on a touchscreen
     map.touchZoomRotate.disable();
 
-    // allows the user to pitch the map by dragging up and down with two fingers
-    map.touchPitch.enable();
-
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
 

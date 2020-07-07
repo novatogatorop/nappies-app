@@ -6,7 +6,7 @@ const map =document.querySelector(".index-map")
 const cards =document.querySelector(".index-cards")
 const footer =document.querySelector(".footer")
 const navbar =document.querySelector(".navbar-mobile")
-const navbarDesktop =document.querySelector(".navbar-desktop")
+// const navbarDesktop =document.querySelector(".navbar-desktop")
 const navBottom =document.querySelector(".navbar-bottom")
 
 const mapButton = () => {
@@ -26,7 +26,7 @@ const mapButton = () => {
 
       // navbar
       navbar.style.display = "none";
-      navbarDesktop.style.display = "none";
+      // navbarDesktop.style.display = "none";
       navBottom.style.display = "none";
 
       // footer
@@ -52,7 +52,7 @@ const listButton = () => {
 
       // navbar
       navbar.style.display = "flex";
-      navbarDesktop.style.display = "flex";
+      // navbarDesktop.style.display = "flex";
       navBottom.style.display = "flex";
 
       // footer
