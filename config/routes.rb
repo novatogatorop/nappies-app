@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'places#index'
+
   resources :places do
     collection do
       get :filter_by_changing_table
@@ -9,5 +10,10 @@ Rails.application.routes.draw do
       get :filter_by_play_area
     end
   end
+
+  get '/privacy', to: 'pages#privacy', as: 'privacy'
+  get '/terms', to: 'pages#terms', as: 'terms'
+  get '/cookies', to: 'pages#cookies', as: 'cookies'
+
   resources :types, only: [:index, :new, :create, :edit, :update, :destroy]
 end
