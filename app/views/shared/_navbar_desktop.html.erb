@@ -4,23 +4,27 @@
       <div>
         <% if current_user.admin? %>
           <%= link_to "Create A Place", new_place_path, class: "no-decor-color" %>
+        <% else %>
+          <div><a class="no-decor-color content-right" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></div>
         <% end %>
       </div>
     <% else %>
       <div><a class="no-decor-color content-right" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></div>
     <% end %>
   </div>
+
   <div class="logo-desktop">
     <%= link_to "NAPPIES", places_path, class: "logo-text" %>
   </div>
-  <!-- <div class="search-desktop">
-    <%#= render 'shared/search_desktop' %>
-  </div> -->
+
   <div class="content-navbar">
     <% if user_signed_in? %>
       <div class="search-icon"><i class="fas fa-search"></i></div>
       <div>
         <%= link_to current_user.username.upcase, edit_user_registration_path, class: "no-decor-color content-right" %>
+      </div>
+      <div>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color content-right' %>
       </div>
     <% else %>
       <div class="search-icon"><i class="fas fa-search"></i></div>
@@ -28,7 +32,7 @@
         <%= link_to "Login", new_user_session_path, class: "no-decor-color content-right" %>
       </div>
       <div>
-        <strong><%= link_to "SIGN UP", new_user_registration_path, class: "no-decor-color content-right" %></strong>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "no-decor-color content-right" %>
       </div>
     <% end %>
   </div>
