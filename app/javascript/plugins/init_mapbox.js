@@ -39,16 +39,16 @@ const initMapbox = () => {
     map.scrollZoom.disable();
 
     // Disables the "drag to rotate" interaction.
-    map.dragRotate.disable();
+    map.dragRotate.enable();
 
     // Enables the "double click to zoom" interaction.
     map.doubleClickZoom.enable();
 
     // Disables the "drag to pan" interaction.
-    map.dragPan.disable();
+    map.dragPan.enable();
 
     // doesn't allow the user to zoom and rotate the map by pinching on a touchscreen
-    map.touchZoomRotate.disable();
+    map.touchZoomRotate.enable();
 
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
@@ -70,16 +70,6 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/navigation-guidance-day-v4'
     });
-
-    // // Add geolocate control to the map.
-    // map.addControl(
-    //   new mapboxgl.GeolocateControl({
-    //     positionOptions: {
-    //       enableHighAccuracy: true
-    //       },
-    //     trackUserLocation: true
-    //   })
-    // );
 
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers)
