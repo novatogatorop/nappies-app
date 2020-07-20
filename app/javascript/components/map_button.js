@@ -6,7 +6,6 @@ const map =document.querySelector(".index-map")
 const cards =document.querySelector(".index-cards")
 const footer =document.querySelector(".footer")
 const navbar =document.querySelector(".navbar-mobile")
-// const navbarDesktop =document.querySelector(".navbar-desktop")
 const navBottom =document.querySelector(".navbar-bottom")
 
 const mapButton = () => {
