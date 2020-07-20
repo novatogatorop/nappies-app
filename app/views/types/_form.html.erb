@@ -1,13 +1,11 @@
 <%= simple_form_for(@type) do |t| %>
-  <%#= p.error_notification %>
-  <%#= p.error_notification message: p.object.errors[:base].to_sentence if p.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <p><%= t.input :name %></p>
   </div>
 
   <div class="form-actions mt-5">
-    <%= t.button :submit, :class => 'account-submit' %>
-    <%= link_to 'Cancel', types_path, :class => 'no-decor-color' %>
+    <%= link_to 'Cancel', types_path, :class => 'btn-n btn-n-secondary mr-auto' %>
+    <%= t.button :submit, :class => 'btn-n btn-n-primary' %>
   </div>
 <% end %>

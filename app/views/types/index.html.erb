@@ -1,8 +1,7 @@
-<div class="main-container">
-  <div class="index-container">
-    <div class="sub-container-type">
-      <div class="place-card-details">
-        <h1 class="mb-4">Type of places</h1>
+<div class="form-container">
+  <div class="account-page-form-box">
+      <!-- <div class="place-card-details"> -->
+        <h1 class="mt-5 mb-5">Type of places</h1>
         <% @types.each do |t| %>
           <p class="card-type mb-3">
             - <strong><%= t.name %></strong>
@@ -10,8 +9,7 @@
             / <%= link_to "✖️", t, method: :delete, data: {confirm: "Are you sure?"} %>
           </p>
         <% end %>
-        <h2 class="mt-4"><%= link_to 'Create Type', new_type_path, :class => 'no-decor' %></h2>
-      </div>
-    </div>
+        <h4 class="mt-5 mb-5"><%= link_to 'Create Type', new_type_path, :class => 'no-decor-color' %></h4>
+      <!-- </div> -->
   </div>
 </div>

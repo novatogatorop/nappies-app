@@ -4,6 +4,7 @@
       <div>
         <% if current_user.admin? %>
           <%= link_to "Create A Place", new_place_path, class: "no-decor-color" %>
+          <%= link_to "Type", types_path, class: "no-decor-color content-right" %>
         <% else %>
           <div><a class="no-decor-color content-right" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></div>
         <% end %>

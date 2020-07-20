@@ -6,13 +6,14 @@
     <div class="dropdown-list">
       <ul>
         <% if user_signed_in? %>
-          <li><%= link_to current_user.username.upcase, edit_user_registration_path, :class => 'no-decor-dropdown' %></li>
+          <li><%= link_to current_user.username.upcase, edit_user_registration_path, :class => 'no-decor-color' %></li>
           <% if current_user.admin? %>
-            <li><%= link_to "Create A Place", new_place_path, :class => 'no-decor-dropdown' %></li>
+            <li><%= link_to "Create A Place", new_place_path, :class => 'no-decor-color' %></li>
+            <li><%= link_to "Type", types_path, :class => 'no-decor-color' %></li>
           <% else %>
-            <li><a class="no-decor-dropdown" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
+            <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
           <% end %>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-dropdown' %></li>
+          <li><strong><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color' %></strong></li>
           <%# if current_user.admin? %>
             <%# if current_user[:photo] %>
               <!-- <li><%#= cl_image_tag current_user.photo.key, height: 400, crop: :fill, class: "avatar" %></li> -->
