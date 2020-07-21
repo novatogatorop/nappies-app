@@ -20,6 +20,9 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  #mail_form
+  # config.mailer = 'MailForm::Base'
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
