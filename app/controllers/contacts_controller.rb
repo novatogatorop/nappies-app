@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     authorize @contact
     if @contact.deliver
       flash.now[:error] = nil
-      redirect_to places_path, notice: 'Message sent successfully'
+      # redirect_to contacts_path, notice: 'Message sent successfully'
     else
       flash.now[:error] = 'Cannot send message'
       render :new

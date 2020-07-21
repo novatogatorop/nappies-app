@@ -10,10 +10,12 @@
 
 .index-map.shown {
   height: 100vh;
+  display: block;
 }
 
 .index-map.hidden {
   height: 0vh;
+  display: none;
 }
 
 // MAP INFO WINDOW
