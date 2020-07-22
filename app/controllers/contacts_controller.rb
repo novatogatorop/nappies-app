@@ -8,30 +8,14 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new()
-    @contact.name = params[:name]
-    @contact.email = params[:email]
-    @contact.message = params[:message]
-    authorize @contact
-    if @contact.deliver
-      flash.now[:error] = nil
-      # render json: {message: "Email sent successfully"}
-    else
-      flash.now[:error] = 'Cannot send message'
-      render :new
-    end
-  end
-
-  def create
     @contact = Contact.new(params[:contact])
-    # @contact.request = request
     authorize @contact
     if @contact.deliver
       flash.now[:error] = nil
       # redirect_to contacts_path, notice: 'Message sent successfully'
     else
       flash.now[:error] = 'Cannot send message'
-      render :new
+      render 'contacts/new'
     end
   end
 end

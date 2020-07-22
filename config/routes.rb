@@ -18,6 +18,6 @@ Rails.application.routes.draw do
 
   resources :types, only: [:index, :new, :create, :edit, :update, :destroy]
 
-  # match '/contacts', to: 'contacts#new', via: 'get'
-  resources :contacts, only: [:new, :create]
+  get "/contact_us", to: "contacts#new", as: 'contact_us'
+  post "/contacts", to: "contacts#create"
 end

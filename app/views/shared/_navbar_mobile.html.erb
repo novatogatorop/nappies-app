@@ -11,7 +11,7 @@
             <li><%= link_to "Create A Place", new_place_path, :class => 'no-decor-color' %></li>
             <li><%= link_to "Type", types_path, :class => 'no-decor-color' %></li>
           <% else %>
-            <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
+            <li><%= link_to 'Recommend A Place', contact_us_path, :class => 'no-decor-color' %></li>
           <% end %>
           <li><strong><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'no-decor-color' %></strong></li>
           <%# if current_user.admin? %>
@@ -22,7 +22,8 @@
             <%# end %>
           <%# end %>
         <% else %>
-            <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li>
+            <!-- <li><a class="no-decor-color" target="_blank" href="mailto:nappiesapp@gmail.com">Recommend A Place</a></li> -->
+            <li><%= link_to 'Recommend A Place', contact_us_path, :class => 'no-decor-color' %></li>
             <li><%= link_to "Login", new_user_session_path, :class => 'no-decor-color' %></li>
             <li><strong><%= link_to "SIGN UP", new_user_registration_path, :class => 'no-decor-color' %></strong></li>
         <% end %>
