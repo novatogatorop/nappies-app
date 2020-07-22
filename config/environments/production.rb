@@ -7,7 +7,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.sendgrid.net',
     port: 587,
-    domain: 'www.nappiesapp.com',
+    domain: 'nappiesapp.com',
     user_name: 'nappiesapp@gmail.com',
     password: 'abcdefghij',
     authentication: :plain,
