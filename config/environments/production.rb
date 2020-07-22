@@ -4,18 +4,15 @@ Rails.application.configure do
 
   # Setup the mailer config
   config.action_mailer.delivery_method = :smtp
-
-  # config.action_mailer.perform_deliveries = true
-
-  ActionMailer::Base.smtp_settings = {
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :user_name => ENV['SENDGRID_USERNAME'],
-  :password => ENV['SENDGRID_PASSWORD'],
-  :domain => 'nappiesapp.com',
-  :enable_starttls_auto => true
-}
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    domain: 'www.nappiesapp.com',
+    user_name: 'nappiesapp@gmail.com',
+    password: 'abcdefghij',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

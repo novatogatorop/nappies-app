@@ -2,6 +2,19 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Setup the mailer config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    domain: 'www.nappiesapp.com',
+    user_name: 'nappiesapp@gmail.com',
+    password: 'abcdefghij',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
