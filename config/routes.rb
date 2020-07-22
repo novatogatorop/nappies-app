@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/privacy', to: 'pages#privacy', as: 'privacy'
   get '/terms', to: 'pages#terms', as: 'terms'
   get '/cookies', to: 'pages#cookies', as: 'cookies'
+  get '/about', to: 'pages#about', as: 'about'
 
   resources :types, only: [:index, :new, :create, :edit, :update, :destroy]
 

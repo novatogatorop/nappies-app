@@ -12,4 +12,7 @@ class PagesController < ApplicationController
 
   def cookies
   end
+
+  def about
+  end
 end

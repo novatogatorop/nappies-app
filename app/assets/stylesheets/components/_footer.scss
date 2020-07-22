@@ -14,6 +14,10 @@
   padding-bottom: 80px;
 }
 
+.sub-footer-title {
+  font-weight: $heavy-fw;
+}
+
 .footer-terms {
   margin: 1rem 0rem 2rem 0rem;
   flex-direction: column !important;
@@ -40,14 +44,30 @@
   color: $darkgrey;
 }
 
-.cookies {
+.footer-links div {
+  font-size: $f-lg;
+  color: $darkgrey;
+  text-decoration: none;
+  margin-right: 16px;
+  margin-left: 0rem !important;
+}
+
+.footer-links div:hover {
+  color: $darkgrey;
+}
+
+.ios-badge {
+  height: 2rem;
+}
+
+.sub-footer {
   display: flex;
   flex-direction: column;
   align-items: left;
   margin-bottom: $space-med;
 }
 
-.cookies div {
+.sub-footer  div {
   margin-right: 16px;
 }
 
@@ -58,29 +78,6 @@
 
 .footer-copyright div {
   margin-bottom: 0px !important;
-}
-
-// COOKIES
-.cookies-box {
-  background-color: white;
-  margin-top: 0px;
-  padding-top: 112px;
-  padding-bottom: 20px;
-  width: 100%;
-}
-
-.cookies-box div {
-  margin-bottom: $space-lg;
-}
-
-.cookies-box h1, .cookies-box h2 {
-  margin-bottom: $space-sm;
-}
-
-
-.cookies-box li {
-  // list-style: none;
-  margin-left: 32px;
 }
 
 // Small tablets and smartphones landscape view
