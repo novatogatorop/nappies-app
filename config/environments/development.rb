@@ -9,7 +9,7 @@ Rails.application.configure do
     port: 587,
     domain: 'www.nappiesapp.com',
     user_name: 'nappiesapp@gmail.com',
-    password: 'abcdefghij',
+    password: '21PineCone',
     authentication: :plain,
     enable_starttls_auto: true
   }
