@@ -20,7 +20,6 @@ gem 'pg_search', '~> 2.3.0'
 gem 'cloudinary', '~> 1.12.0'
 gem 'geocoder'
 gem 'mail_form'
-gem 'sendgrid-ruby'
 
 
 group :development do

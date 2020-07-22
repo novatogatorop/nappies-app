@@ -1,7 +1,7 @@
 class Contact < ActiveRecord::Base
   include MailForm::Delivery
 
-  attributes :name, :email, :message
+  attributes :name, :email, :message, :form
 
   def headers
     {
