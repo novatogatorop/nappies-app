@@ -6,8 +6,8 @@ class Contact < ActiveRecord::Base
   def headers
     {
       to: "nappiesapp@gmail.com",
-      subject: "User created an account"
-      :from => %("#{name}" <#{email}>)
+      subject: "User created an account",
+      from: %("#{name}" <#{email}>)
     }
   end
 end
