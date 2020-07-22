@@ -1,28 +1,6 @@
 <div class="form-container">
-  <div class="account-page-form-box">
-    <h1 class="sign-title">Message Form</h1>
-    <%#= render 'form', contact: @contact %>
-
-    <%= form_for @contact do |f| %>
-      <%= f.label :name %><br>
-      <%= f.text_field :name, required: true %>
-
-      <br>
-
-      <%= f.label :email %><br>
-      <%= f.email_field :email, required: true %>
-
-      <br>
-
-      <%= f.label :message %><br>
-      <%= f.text_area :message, as: :text %>
-
-      <div class="hidden">
-        <%= f.label :nickname %><br>
-        <%= f.text_field :nickname, hint: 'Leave this field blank' %>
-      </div>
-
-      <%= f.submit 'Send message', class: "btn btn-n" %><br>
-    <% end %>
+  <div class="form-box">
+    <h1 class="sign-title">Send Us a Message</h1>
+    <%= render 'form', contact: @contact %>
   </div>
 </div>
