@@ -2,17 +2,32 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "https://nappiesapp.com" }
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Setup the mailer config
+  Rails.application.routes.default_url_options[:host] = "https://nappiesapp.com"
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default charset: 'utf-8'
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'www.nappiesapp.com',
-    user_name: 'nappiesapp@gmail.com',
-    password: '21PineCone',
-    authentication: :plain,
+    address: 'smtp.gmail.com'
+    port: 587
+    domain: 'www.nappiesapp.com'
+    user_name: 'nappiesapp@gmail.com'
+    password: 'dklunsebrwfhafzc'
+    authentication: :plain
     enable_starttls_auto: true
   }
+
+  # Setup the mailer config
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   domain: 'www.nappiesapp.com',
+  #   user_name: 'nappiesapp@gmail.com',
+  #   password: '21PineCone',
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

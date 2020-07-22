@@ -1,12 +1,17 @@
-class Contact < ActiveRecord::Base
-  include MailForm::Delivery
+class Contact < MailForm::Base
+  attribute :name,      validate: true
+  attribute :email,     validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  # attribute :file,      :attachment => true
 
-  attributes :name, :email, :message, :form
+  attribute :message
+  attribute :nickname, captcha: true
 
+  # Declare the e-mail headers. It accepts anything the mail method
+  # in ActionMailer accepts.
   def headers
     {
+      subject: "Contact Form",
       to: "nappiesapp@gmail.com",
-      subject: "User created an account",
       from: %("#{name}" <#{email}>)
     }
   end
