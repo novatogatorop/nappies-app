@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  require 'mail_form'
   skip_before_action :authenticate_user!, only: [ :new, :create ]
 
   def new
