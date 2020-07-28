@@ -8,6 +8,13 @@
   margin-top: 60px;
 }
 
+// Tablets and small desktops
+@media only screen and (min-width: 947px) {
+  .show-images {
+    margin-top: 80px;
+  }
+}
+
 .show-details-box {
   display: flex;
   flex-direction: column;
