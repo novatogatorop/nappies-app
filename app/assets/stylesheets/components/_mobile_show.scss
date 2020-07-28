@@ -5,7 +5,14 @@
   white-space: nowrap;
   width: 100vw;
   overflow-x: auto;
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+// Tablets and small desktops
+@media only screen and (min-width: 947px) {
+  .show-images {
+    margin-top: 80px;
+  }
 }
 
 .show-details-box {

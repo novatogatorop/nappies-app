@@ -7,9 +7,15 @@
 // Small tablets and smartphones landscape view
 @media only screen and (min-width: 768px) {
   .cookies-box {
-    margin-top: 32px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+
+// Tablets and small desktops
+@media only screen and (min-width: 947px) {
+  .cookies-box {
+    margin-top: 100px;
   }
 }
 
