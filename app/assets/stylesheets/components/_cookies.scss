@@ -1,0 +1,22 @@
+.cookies-box {
+  margin-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// Small tablets and smartphones landscape view
+@media only screen and (min-width: 768px) {
+  .cookies-box {
+    margin-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+// Large tablets and desktops
+@media only screen and (min-width: 1220px) {
+  .cookies-box {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
