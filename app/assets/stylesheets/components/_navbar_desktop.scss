@@ -29,10 +29,10 @@
   }
 
   .logo-text {
-    // font-size: $f-med;
     color: $nappies !important;
     font-weight: $heavy-fw !important;
     font-size: $f-med;
+    letter-spacing: 0.5rem;
     &:hover {
       color: $nappies-light;
       text-decoration: none !important;
