@@ -5,6 +5,7 @@ class PlacesController < ApplicationController
   def index
     @places = policy_scope(Place)
     @places = Place.all
+    # @places = @places.sample
     @types = Type.order(name: :asc)
 
     @places = @places.joins(:type).where(types: { id: params[:search][:type] }) if params[:search] && params[:search][:type].present?
@@ -15,7 +16,7 @@ class PlacesController < ApplicationController
     @places = @places.filter_by_play_area if params[:search] && params[:search][:play_area ] == 'true'
 
     if @places.present?
-      @places
+      @places = @places.shuffle
     else
       @places = Place.geocoded
       @response = "Sorry, no results found."
