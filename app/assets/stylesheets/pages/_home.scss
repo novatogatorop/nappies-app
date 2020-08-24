@@ -118,15 +118,20 @@ textarea.form-control {
 }
 
 .about {
-  padding: 10px 60px;
-  font-size: 50px;
+  margin-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
   font-weight: $heavy-fw;
   letter-spacing: 1.5px;
 }
 
 @media only screen and (min-width: 768px) {
   .about {
-    padding: 10px 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 42px;
     font-size: 70px;
   }
   .response {
@@ -136,10 +141,18 @@ textarea.form-control {
   }
 }
 
+// Tablets and small desktops
+@media only screen and (min-width: 947px) {
+  .about {
+    margin-top: 110px;
+  }
+}
+
 // Large tablets and desktops
 @media only screen and (min-width: 1220px) {
   .about {
-    padding: 10px 150px;
+    padding-left: 150px;
+    padding-right: 150px;
     font-size: 90px;
   }
   .response {
