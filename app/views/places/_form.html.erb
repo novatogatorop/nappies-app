@@ -1,4 +1,4 @@
-<%= simple_form_for(@place) do |p| %>
+<%= simple_form_for(place) do |p| %>
   <%= p.error_notification %>
   <%= p.error_notification message: p.object.errors[:base].to_sentence if p.object.errors[:base].present? %>
 
@@ -9,10 +9,15 @@
     <div><%= p.association :type, label: false, include_blank: "Select type of place", input_html: { class: "select2 rounded-sm" }, include_hidden: false  %></div>
     <label>Facility *</label>
     <div class="form-facility-box">
-      <p><%= p.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false %></p>
-      <p><%= p.input :toy, as: :boolean, checked_value: true, unchecked_value: false %></p>
-      <p><%= p.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false %></p>
-      <p><%= p.input :play_area, as: :boolean, checked_value: true, unchecked_value: false %></p>
+      <p><%= p.input :changing_table, as: :radio_buttons %></p>
+      <p><%= p.input :toy, as: :radio_buttons %></p>
+      <p><%= p.input :high_chair, as: :radio_buttons %></p>
+      <p><%= p.input :play_area, as: :radio_buttons %></p>
+
+      <%#= p.input :changing_table, as: :boolean, checked_value: true, unchecked_value: false %>
+      <%#= p.input :toy, as: :boolean, checked_value: true, unchecked_value: false %>
+      <%#= p.input :high_chair, as: :boolean, checked_value: true, unchecked_value: false %>
+      <%#= p.input :play_area, as: :boolean, checked_value: true, unchecked_value: false %>
     </div>
     <label>Photos</label>
     <div class="form-facility-box">
