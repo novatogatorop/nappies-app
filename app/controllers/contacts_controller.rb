@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
   # require 'mail_form'
   skip_before_action :authenticate_user!, only: [ :new, :create ]
+  invisible_captcha only: [:create, :update], honeypot: :subtitle
 
   def new
     @contact = Contact.new
