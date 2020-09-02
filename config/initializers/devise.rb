@@ -18,10 +18,10 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = ENV["GMAIL_EMAIL"]
+  config.mailer_sender = 'nappiesapp@gmail.com'
 
   #mail_form
-  config.mailer = 'MailForm::Base'
+  # config.mailer = 'MailForm::Base'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
