@@ -2,31 +2,18 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'nappiesapp.com',
-    user_name: ENV["GMAIL_EMAIL"],
-    password: ENV["GMAIL_PASSWORD"],
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
-
-  # # Setup the mailer config
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {
   #   address: 'smtp.gmail.com',
   #   port: 587,
-  #   domain: 'www.nappiesapp.com',
-  #   user_name: 'nappiesapp@gmail.com',
-  #   password: '21PineCone',
+  #   domain: 'nappiesapp.com',
+  #   user_name: ENV["GMAIL_EMAIL"],
+  #   password: ENV["GMAIL_PASSWORD"],
   #   authentication: :plain,
   #   enable_starttls_auto: true
   # }
-
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
