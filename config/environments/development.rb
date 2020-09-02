@@ -11,8 +11,6 @@ Rails.application.configure do
     domain: 'nappiesapp.com',
     user_name: ENV["GMAIL_EMAIL"],
     password: ENV["GMAIL_PASSWORD"],
-    # user_name: 'nappiesapp@gmail.com',
-    # password: 'dklunsebrwfhafzc',
     authentication: :plain,
     enable_starttls_auto: true
   }
