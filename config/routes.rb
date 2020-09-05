@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'contacts/contact'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'users/registrations' }
+
   root to: 'places#index'
 
   resources :places do
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about', as: 'about'
 
   resources :types, only: [:index, :new, :create, :edit, :update, :destroy]
+
+  # resources :contacts, only: [:new, :create]
 
   get "/contact_us", to: "contacts#new", as: 'contact_us'
   post "/contacts", to: "contacts#create"
