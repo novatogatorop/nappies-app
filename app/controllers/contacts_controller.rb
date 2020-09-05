@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  # require 'mail_form'
+  require 'mail_form'
   skip_before_action :authenticate_user!, only: [ :new, :create ]
   invisible_captcha only: [:create, :update], honeypot: :subtitle
 
@@ -9,14 +9,19 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(contact_params)
     authorize @contact
     if @contact.deliver
       flash.now[:error] = nil
-      # redirect_to contacts_path, notice: 'Message sent successfully'
     else
       flash.now[:error] = 'Cannot send message'
       render 'contacts/new'
     end
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :email, :message, :subtitle)
   end
 end
