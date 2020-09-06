@@ -1,5 +1,7 @@
-<p>Welcome <%= @email %>!</p>
+<h1 class="mt-5">Thank you for signing up!</h1>
+<h4 class="mt-5">Please take a second to confirm <%= @email %>! as your email address:</h4>
+<h4 class="mt-5"><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token), :class => 'no-decor-color' %></h4>
+<h4 class="mt-5">If you have any questions, simply reply to this email. We'd love to help.</h4>
 
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token), :class => 'no-decor-color' %></p>
+<h4 class="mt-5">Enjoy,</h4>
+<h4 class="mt-5">Nappies Team</h4>

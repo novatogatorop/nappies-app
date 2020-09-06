@@ -1,21 +1,46 @@
 .alert {
-  width: 97.7% !important;
-  position: fixed;
-  top: 67px;
-  right: .5%;
-  z-index: 1000;
-  color: $darkgrey;
+  width: 100% !important;
+  top: 80px;
+  z-index: 2;
+  color: $darkgrey !important;
+  border-radius: 0px !important;
+  background-color: $s-lightgrey !important;
+  // width: 97.7% !important;
+  // position: fixed;
+  // top: 67px;
+  // right: .5%;
+  // z-index: 1000;
+  // color: $darkgrey;
 }
 
 .alert-info {
   background-color: $s-lightgrey !important;
   border-color: transparent !important;
-  border-radius: 5px;
+  border-radius: 0px !important;
 }
 
-// Small tablets and smartphones landscape view
+.alert-dismissible {
+  background-color: $s-lightgrey !important;
+  border-color: transparent !important;
+  border-radius: 0px !important;
+}
+
+.alert-warning {
+  background-color: $s-lightgrey !important;
+  border-color: transparent !important;
+  border-radius: 0px !important;
+}
+
 @media only screen and (min-width: 768px) {
+  /* line 18, app/assets/stylesheets/components/_alert.scss */
   .alert {
-    width: 50% !important;
+    width: 100% !important;
   }
 }
+
+// // Small tablets and smartphones landscape view
+// @media only screen and (min-width: 768px) {
+//   .alert {
+//     width: 100% !important;
+//   }
+// }
